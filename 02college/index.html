@@ -21,6 +21,9 @@
     $('.prevBtn').click(function() {
       mySlider.goToPrevSlide();
     });
+    var myslider2 = $(".btslider").bxSlider({
+        controls: false
+    });
   });
 
   </script>
@@ -257,17 +260,59 @@
 
       </li>
       <li class="video">
-        <ul>
-          <li>
-            <img src="image/video.jpg" alt="">
-            <div class="play"></div>
-          </li>
-        </ul>
+          <img src="image/video.jpg" alt="">
+          <ul class="button">
+              <li>
+                <div class="play"></div>
+              </li>
+              <li>
+                <div class="tri"></div>
+              </li>
+            </ul>
       </li>
-      <li>08</li>
+      <li>
+        <div class="btSlideWrap">
+          <ul class="btslider">
+            <li><img src="image/bt_slide.jpg" alt="">
+                <ul class="box">
+                  <li><h3>2017년 신 편입생 2차모집</h3></li>
+                  <li><h2>2017.7.1 ~ 7.10</h2></li>
+                  <li><a href="#">입학사전 예약</a></li>
+                </ul>
+            </li>
+            <li><img src="image/bt_slide.jpg" alt=""></li>
+            <li><img src="image/bt_slide.jpg" alt=""></li>
+            <li><img src="image/bt_slide.jpg" alt=""></li>
+          </ul>
+
+        </div>
+      </li>
     </ul>
   </div>
+  <div class="btWrap clearfix">
+
+      <ul class="btContents_1">
+        <li>
+          <a href="#">학사일정</a>
+        </li>
+        <li>
+          <img src="image/left.png" alt="">
+        </li>
+        <li>
+          <a href="#">2016 07</a>
+        </li>
+        <li>
+          <img src="image/right.png" alt="">
+        </li>
+      </ul>
+      <ul class="btContents_2">
+        <li><a href="#">2016 - 1학기 성적 열람 및 상담 신청 </a></li>
+        <li><a href="#">성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ...</a></li>
+      </ul>
+
+  </div>
 </div>
+
 </body>
 
 </html>
