@@ -531,13 +531,19 @@ cursor: pointer;
 .bx-pager {
     position: absolute;
     top:-5px;
-    right: 0px;
+    right: 0;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a.active {
     background: #f74239;
 }
 
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: -30px;
+    width: 25%;
+    height:20%;
+}
 
 
 .box{
