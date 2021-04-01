@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="css/jquery.bxslider.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="colorbox.css">
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery.bxslider.js"></script>
+  <script src="js/jquery.colorbox-min.js"></script>
+
   <script>
   $(document).ready(function() {
     var mySlider = $(".slider").bxSlider({
@@ -24,7 +27,13 @@
     var myslider2 = $(".btslider").bxSlider({
         controls: false
     });
+    $(".youtube").colorbox({
+      iframe:true,
+      innerWidth:700,
+      innerHeight:393.75
+    });
   });
+
 
   </script>
 </head>
@@ -40,7 +49,10 @@
         </ul>
         <ul class="right_rnb">
           <li><a href="">글자크기</a></li>
-          <li><a href=""></a></li>
+          <li class="mp clearfix"><a href="">
+            <div class="squre1"><img src="image/m.png" alt=""></div>
+            <div class="squre2"><img src="image/plus.png" alt=""></div>
+          </a></li>
           <li><a href="">찾아오시는길</a></li>
           <li><a href="">ENGLISH</a></li>
           <li><a href="">사이트맵</a></li>
@@ -68,52 +80,7 @@
     </div>
 
   </header>
-  <!--    <div class="content">
-  <section class="clearfix section1">
-  <div class="textbox">
-  <h3>함께 나누며 세상을 이끌어</h3>
-  <h2>세계로향하는 한국대학교</h2>
-</div>
-<ul class="icons clearfix">
-<li><a href="#">
-<img src="image/icon01.png" alt="">
-</a></li>
-<li><a href="#">
-<img src="image/icon02.png" alt="">
-</a></li>
-<li><a href="#">
-<img src="image/icon03.png" alt="">
-</a></li>
-<li><a href="#">
-<img src="image/icon04.png" alt="">
-</a></li>
-</ul>
-</section>
-<section class="section2 clearfix">
-<ul class="article">
-<li>
-<img src="image/slide.jpg" alt="">
 
-<div class="textSlide">
-<p><b>한국</b>에서<br><b>시작</b>하는<br>새로운 <b>꿈</b></p>
-<a href="#">자세히 보기</a>
-</div>
-</li>
-</ul>
-<ul class="article">
-<li>
-<img src="image/book.jpg" alt="">
-<div class="text">
-<p>APP으로 스마트 도서관 바로 이용하자</p>
-<p>모바일 열람증은<br>도서관 자료실 자료대출 등에<br>사용할수 있습니다</p>
-<a href="#">자세히 보기</a>
-</div>
-</li>
-</ul>
-</section>
-
-
-</div>-->
 
 <div id="contents">
   <!--100%-->
@@ -168,15 +135,23 @@
       </li>
       <li>
         <!--25%-->
-        <ul class="smartLib">
-          <li>
-            <p><b>APP</b>으로<br><b>스마트 도서관</b><br>바로이용하자<i>!</i></p>
-            <p>모바일 열람증은<br>도서관 자료실 / 도서대출 등에<br>사용 할 수 있습니다.</p>
+        <ul class="Lib">
+          <li><img src="image/book.jpg" alt="">
+                <ul class="smartLib">
+                  <li>
+                    <p><b>APP</b>으로<br><b>스마트 도서관</b><br>바로이용하자<i>!</i></p>
+                  </li>
+                  <li><p>모바일 열람증은<br>도서관 자료실/도서대출 등에<br>사용 할 수 있습니다.</p>
+                  </li>
+
+                  <li>
+                  <a href="#">자세히 보기</a>
+                  </li>
+                  </ul>
           </li>
-          <li>
-            <a href="#">자세히 보기</a>
-          </li>
-        </ul>
+
+
+      </ul>
       </li>
       <li class="container03">
 
@@ -261,14 +236,20 @@
       </li>
       <li class="video">
           <img src="image/video.jpg" alt="">
-          <ul class="button">
-              <li>
-                <div class="play"></div>
-              </li>
-              <li>
+          <a href="https://www.youtube.com/embed/xQwA7adVEmA" class="youtube">
+            <div><div class="play"></div>
                 <div class="tri"></div>
+          </div>
+          </a>
+          <!-- <ul class="button">
+
+              <li>
+                  <div class="play"></div>
               </li>
-            </ul>
+              <li>
+                <div class="tri youtube" onclick="location.href='https://www.youtube.com/embed/xQwA7adVEmA'"></div>
+              </li>
+            </ul> -->
       </li>
       <li>
         <div class="btSlideWrap">
@@ -291,9 +272,9 @@
   </div>
   <div class="btWrap clearfix">
 
-      <ul class="btContents_1">
+      <ul class="btContents_1 clearfix">
         <li>
-          <a href="#">학사일정</a>
+          <h3>학사일정</h3>
         </li>
         <li>
           <img src="image/left.png" alt="">
@@ -305,14 +286,32 @@
           <img src="image/right.png" alt="">
         </li>
       </ul>
-      <ul class="btContents_2">
-        <li><a href="#">2016 - 1학기 성적 열람 및 상담 신청 </a></li>
-        <li><a href="#">성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ...</a></li>
+      <ul class="btContents_2 clearfix">
+        <li><p>2016 - 1학기 성적 열람 및 상담 신청 </p></li>
+        <li><p>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ...</p></li>
       </ul>
+
 
   </div>
 </div>
-
+<footer >
+  <div class="footerWrap">
+    <ul class="sitemap clearfix">
+      <li><a href="#">회사 소개</a></li>
+      <li><a href="#">한국 대학교</a></li>
+      <li><a href="#">개인정보취급방침</a></li>
+      <li><a href="#">이용정책</a></li>
+      <li><a href="#">입점/제휴문의 및 광고</a></li>
+      <li><a href="#">이메일 무단수집거부</a></li>
+    </ul>
+    <ul class="add">
+      <li><p>대표자:홍길동 서울특별시 구로구 구로로300(구로동 6가) 사업자등록번호:123-56-7890234</p></li>
+      <li><p>통신판매업 신고번호 : 제 1234-서울 구로구-1004호 개인정보관리 책임자:홍길동 소비자피해보상보험</p></li>
+      <li><p>고객센터 : 1234-5678 FAX : 02-1234-5678 HANGUKUNIVERSITY @HANGUK.COM</p></li>
+    </ul>
+    <div class="copy">COPYRIGHT &copy; HANGUK.ALL RIGHTS RESERVED.</div>
+  </div>
+</footer>
 </body>
 
 </html>
