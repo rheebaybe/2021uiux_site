@@ -399,7 +399,6 @@ margin-right: 20px;
   background: #fff;
   left: 0px;
   top:15px;
-
 }
 
 .notice li p, time{
@@ -407,7 +406,7 @@ margin-right: 20px;
   font-size: 14px;
 }
 .notice li p{
-  position: relative;
+  
   text-indent:10px
 }
 .notice li p time{
