@@ -134,14 +134,6 @@ padding-top: 10px;
 
 
 
-/*본문1*/
-
-
-
-
-
-
-
 
 
 
@@ -184,7 +176,7 @@ padding-top: 10px;
 
 .icons{
   float: right;
-  text-align: center;
+  /* text-align: center; */
 
 }
 .icons li {
@@ -343,12 +335,11 @@ padding:90px 40px;
   font-weight: bold;
   margin-bottom: 32px;
 }
-.hotlink{
+/* .hotlink{
   width: 225px;
 
-}
+} */
 .hotlink li{
-
   float: left;
 margin-right: 20px;
 
@@ -356,10 +347,9 @@ margin-right: 20px;
 .hotlink li:last-child{
   margin-right: 0;
 }
-.hotlink li img{
-
+/* .hotlink li img{
   text-align: center;
-}
+} */
 
 .text_link p{
   font-size: 12px;
