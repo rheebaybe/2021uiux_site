@@ -239,6 +239,7 @@ padding-top: 10px;
 
 .textSlide{
   position: absolute;
+  width: 185px;
   left:85px;
   bottom:85px;
 }
@@ -291,12 +292,12 @@ padding-top: 10px;
 
 .Lib img{
   position: absolute;
-
+  width:100%;
 }
 
 .smartLib{
 position: absolute;
-width:300px;
+width:100%;
 padding:90px 40px;
 }
 
@@ -422,7 +423,7 @@ margin-right: 20px;
 .notice li p time{
   position: absolute;
   right:0;
-
+  width:84px;
 }
 
 
@@ -578,7 +579,7 @@ cursor: pointer;
 position: absolute;
 top:40px;
 left:20px;
-
+width: 372px;
 }
 
 .box li h3{
