@@ -85,10 +85,7 @@ line-height: 40px;
 
 
 
-.line{
-  position: absolute;
 
-}
 
 .lnb {
   width: 1200px;
@@ -289,7 +286,6 @@ padding-top: 10px;
 #contents .container02>ul>li:nth-child(2){
   height:450px;
   position: relative;
-
 
 }
 
