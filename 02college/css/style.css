@@ -540,7 +540,6 @@ left:0;
 
 
 #contents .container02>ul>li:nth-child(8){
-
   width:75%;
 }
 
@@ -558,7 +557,7 @@ left:0;
 
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
     position: absolute;
-    /* bottom: -30px; */
+    
     width: 25%;
     height:20%;
 }
@@ -568,7 +567,7 @@ left:0;
 position: absolute;
 top:40px;
 left:20px;
-width: 372px;
+/* width: 372px; */
 }
 
 .box li h3{
