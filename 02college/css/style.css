@@ -462,7 +462,8 @@ background: rgba(51, 51, 51, 0.8);
   height:20%;
   width: 100%;
   top:-100%;
-  display:flex;
+
+   display:flex;
   justify-content: center;
   align-items: center;
 
@@ -557,7 +558,7 @@ left:0;
 
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
     position: absolute;
-    
+
     width: 25%;
     height:20%;
 }
