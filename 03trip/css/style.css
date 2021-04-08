@@ -245,6 +245,8 @@ float: left;
 
 
 .section_right{
+  width: 400px;
+  float: left;
   position: relative;
   z-index: 50;
 }
@@ -325,3 +327,4 @@ margin-bottom: 16px;
 .bold{
   font-weight: bold;
 }
+
