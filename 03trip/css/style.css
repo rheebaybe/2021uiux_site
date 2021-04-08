@@ -152,6 +152,8 @@ float: left;
 .section_left{
   position: relative;
   margin-right: 36px;
+  
+  z-index: 30;
 }
 
 
@@ -262,6 +264,7 @@ float: left;
   z-index: 10;
   position: absolute;
   top: 0;
+  right:10px;
 }
 
 
