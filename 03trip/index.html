@@ -13,11 +13,11 @@
   <script src="js/jquery.bxslider.js"></script>
   
   <script>
-    $(document).ready(function(){     /*document는 body=문서를 의미 , ready는 이게 준비가되면이라는 의미*/
-        $(".slider").bxSlider({     /*선택자slider 내가 만든거니까 "가 붙는다*/
+    $(document).ready(function(){     
+        $(".slider").bxSlider({     
             controls:false,
             pagerCustom:".sliderTab",
-            auto:true,
+            auto:false,            
             mode:"vertical"
         });
         $(".slider2").bxSlider({
@@ -75,7 +75,7 @@
     <div class="container"> <!--100%-->
       <div class="content_top clearfix"><!--980---->
         <div class="section_left">
-         
+         <div class="sliderWrap">
           <ul class="slider">
             <li>
                 <div class="tableWrap">
@@ -107,7 +107,7 @@
             <li>
               <div class="tableWrap">
               <div class="table">
-                  <h2>Lorem ipsum dolor sit. 3 </h2>
+                  <h2>Lorem ipsum dolor sit. 4 </h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, ad.</p>
                   
               </div>
@@ -120,6 +120,7 @@
             <a href="#" data-slide-index="2">렌트카</a>
             <a href="#" data-slide-index="3">휴양지</a>
           </div>
+        </div> 
           <ul class="gallery clearfix">
             <li class="mr16">
               <a href="#">
