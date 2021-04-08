@@ -5,26 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" href="css/jquery.bxslider.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/reset.css">
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery.bxslider.js"></script>
-  <script src="js/jquery.colorbox-min.js"></script>
+  
+  <script>
+    $(document).ready(function(){     /*document는 body=문서를 의미 , ready는 이게 준비가되면이라는 의미*/
+        $(".slider").bxSlider({     /*선택자slider 내가 만든거니까 "가 붙는다*/
+            controls:false,
+            pagerCustom:".sliderTab",
+            auto:true,
+            mode:"vertical"
+        });
+        $(".slider2").bxSlider({
+                auto:true,
+                pager:false                
+                
+            });
+    });
+</script>
 </head>
+
 <body>
 <div id="wrap"><!--100%-->
   <header><!--100%-->
     <div class="blue"><!--980-->
       <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
-      <div class="search">
+      <div class="search clearfix">
         <h2>SEARCH</h2>
-        <p>검색어 입력하세요.</p>
-        <img src="images/search_button.png" alt="">
+        <p class="s_text">검색어 입력하세요.</p>
+        <div class="bt"><img src="images/search_button.png" alt=""></div>
       </div>
-      <div class="contact">
-        <p class="number"><b>+82</b>02 1234 5678</p>
-        <ul class="sns">
+      <div class="contact clearfix">
+        <div class="number">
+          <p><b>+82</b> 02 1234 5678</p>
+        </div>
+        <ul class="sns clearfix">
           <li><a href="#"><img src="images/FB 1.png" alt=""></a></li>
           <li><a href="#"><img src="images/tw 1.png" alt=""></a></li>
           <li><a href="#"><img src="images/blog 1.png" alt=""></a></li>
@@ -33,14 +52,184 @@
       </div>
     </div>
     <div class="gray"><!--100%-->
-      <ul class="nav"><!--980-->
+      
+      <ul class="nav clearfix"><!--980-->
+        <span class="wall">|</span>
         <li><a href="#">여행도시</a></li>
+        <span class="wall">|</span>
         <li><a href="#">호텔예약</a></li>
+        <span class="wall">|</span>
         <li><a href="#">렌트카</a></li>
+        <span class="wall">|</span>
         <li><a href="#">여행TIP</a></li>
+        <span class="wall">|</span>
         <li><a href="#">회사소개</a></li>
+        <span class="wall">|</span>
         <li><a href="#">커뮤니티</a></li>
+        <span class="wall">|</span>
       </ul>
+      
+    </div>
+    <div class="line"></div>
+
+    <div class="container"> <!--100%-->
+      <div class="content_top clearfix"><!--980---->
+        <div class="section_left">
+         
+          <ul class="slider">
+            <li>
+                <div class="tableWrap">
+                <div class="table">
+                    <h2>Lorem ipsum dolor sit. 1 </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, ad.</p>
+                    
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="tableWrap">
+                <div class="table">
+                    <h2>Lorem ipsum dolor sit. 2 </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, ad.</p>
+                    
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="tableWrap">
+                <div class="table">
+                    <h2>Lorem ipsum dolor sit. 3 </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, ad.</p>
+                    
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="tableWrap">
+              <div class="table">
+                  <h2>Lorem ipsum dolor sit. 3 </h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, ad.</p>
+                  
+              </div>
+            </div>
+            </li>
+          </ul>
+          <div class="sliderTab">
+            <a href="#" data-slide-index="0">공항예약</a>
+            <a href="#" data-slide-index="1">호텔예약</a>
+            <a href="#" data-slide-index="2">렌트카</a>
+            <a href="#" data-slide-index="3">휴양지</a>
+          </div>
+          <ul class="gallery clearfix">
+            <li class="mr16">
+              <a href="#">
+                <img src="images/banner01.png" alt="france">
+                <div class="plan clearfix">
+                  <p class="count">프랑스</p><p class="price">￦1,900,000~</p>
+                  <div class="r_btn"><img src="images/r_link.png" alt=""></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/banner06.png" alt="japan">
+                <div class="plan clearfix">
+                  <p class="count jap">일본</p><p class="price">￦890,000~</p>
+                  <div class="r_btn"><img src="images/r_link.png" alt=""></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="section_right">
+          <h2>TRAVEL GO</h2>
+          <p>지금, 여행이 떠나고 싶다면?<br>
+            하이미디어와 여행을 떠나자!</p>
+        </div>
+        <div class="bul"><img src="images/02b.png" alt=""></div>
+      </div>
+      <div class="content_gal clearfix"><!--980-->        
+        <ul class="gallery_m mb16 clearfix">        
+          <li class="mr16">
+            <ul class="slider2">
+              <li>
+                <a href="#">
+                  <img src="images/banner02.png" alt="paris">
+                  <div class="grade clearfix">
+                    <p class="place">HILLTON HOTEL (PARIS)</p><p class="star1">★★★</p><p class="star2">★★</p>
+                    
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/banner02.png" alt="paris">
+                  <div class="grade clearfix">
+                    <p class="place">HILLTON HOTEL (PARIS)</p><p class="star1">★★★</p><p class="star2">★★</p>
+                    
+                  </div>
+                </a>
+              </li>
+            </ul> 
+          </li>
+          <li class="mr16">
+            <ul class="slider2">
+              <li>
+                <a href="#">
+                  <img src="images/banner07.png" alt="paris">
+                  <div class="grade clearfix">
+                    <p class="place">HILLTON HOTEL (PARIS)</p><p class="star1">★★★</p><p class="star2">★★</p>
+                    
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/banner07.png" alt="paris">
+                  <div class="grade clearfix">
+                    <p class="place">HILLTON HOTEL (PARIS)</p><p class="star1">★★★</p><p class="star2">★★</p>
+                    
+                  </div>
+                </a>
+              </li>
+            </ul> 
+          </li>
+          <li class="mr16">
+            <a href="#">
+              <img src="images/banner08.png" alt="paris">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/banner08.png" alt="paris">
+            </a>
+          </li>
+        </ul>
+      </div> 
+      <div class="content_gal">
+        <ul class="gallery_m clearfix">
+          <li class="mr16">
+            <a href="#">
+              <img src="images/banner04.png" alt="paris">
+            </a>
+          </li>
+          <li class="mr16">
+            <a href="#">
+              <img src="images/banner09.png" alt="paris">
+            </a>
+          </li>
+          <li class="mr16">
+            <a href="#">
+              <img src="images/banner05.png" alt="paris">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/banner10.png" alt="paris">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 </div>
