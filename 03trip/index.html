@@ -13,11 +13,11 @@
   <script src="js/jquery.bxslider.js"></script>
   
   <script>
-    $(document).ready(function(){     /*document는 body=문서를 의미 , ready는 이게 준비가되면이라는 의미*/
-        $(".slider").bxSlider({     /*선택자slider 내가 만든거니까 "가 붙는다*/
+    $(document).ready(function(){     
+        $(".slider").bxSlider({     
             controls:false,
             pagerCustom:".sliderTab",
-            auto:true,
+            auto:false,            
             mode:"vertical"
         });
         $(".slider2").bxSlider({
@@ -33,21 +33,33 @@
 <div id="wrap"><!--100%-->
   <header><!--100%-->
     <div class="blue"><!--980-->
-      <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+      <div class="logo"><a href="#"><img src="images/logo.png" alt="logo"></a></div>
       <div class="search clearfix">
         <h2>SEARCH</h2>
         <p class="s_text">검색어 입력하세요.</p>
-        <div class="bt"><img src="images/search_button.png" alt=""></div>
+        <div class="bt"><img src="images/search_button.png" alt="bt"></div>
       </div>
       <div class="contact clearfix">
         <div class="number">
           <p><b>+82</b> 02 1234 5678</p>
         </div>
         <ul class="sns clearfix">
-          <li><a href="#"><img src="images/FB 1.png" alt=""></a></li>
-          <li><a href="#"><img src="images/tw 1.png" alt=""></a></li>
-          <li><a href="#"><img src="images/blog 1.png" alt=""></a></li>
-          <li><a href="#"><img src="images/in 1.png" alt=""></a></li>
+          <li>
+            <a href="#"><img src="images/FB.png" alt="fb">
+            </a>
+          </li>
+          <li>
+            <a href="#"><img src="images/tw.png" alt="tw">
+            </a>
+          </li>
+          <li>
+            <a href="#"><img src="images/blog.png" alt="b">
+            </a>
+          </li>
+          <li>
+            <a href="#"><img src="images/in.png" alt="in">
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -55,17 +67,29 @@
       
       <ul class="nav clearfix"><!--980-->
         <span class="wall">|</span>
-        <li><a href="#">여행도시</a></li>
+        <li>
+          <a href="#">여행도시</a>
+        </li>
         <span class="wall">|</span>
-        <li><a href="#">호텔예약</a></li>
+        <li>
+          <a href="#">호텔예약</a>
+        </li>
         <span class="wall">|</span>
-        <li><a href="#">렌트카</a></li>
+        <li>
+          <a href="#">렌트카</a>
+        </li>
         <span class="wall">|</span>
-        <li><a href="#">여행TIP</a></li>
+        <li>
+          <a href="#">여행TIP</a>
+        </li>
         <span class="wall">|</span>
-        <li><a href="#">회사소개</a></li>
+        <li>
+          <a href="#">회사소개</a>
+        </li>
         <span class="wall">|</span>
-        <li><a href="#">커뮤니티</a></li>
+        <li>
+          <a href="#">커뮤니티</a>
+        </li>
         <span class="wall">|</span>
       </ul>
       
@@ -75,7 +99,7 @@
     <div class="container"> <!--100%-->
       <div class="content_top clearfix"><!--980---->
         <div class="section_left">
-         
+         <div class="sliderWrap mb16">
           <ul class="slider">
             <li>
                 <div class="tableWrap">
@@ -107,7 +131,7 @@
             <li>
               <div class="tableWrap">
               <div class="table">
-                  <h2>Lorem ipsum dolor sit. 3 </h2>
+                  <h2>Lorem ipsum dolor sit. 4 </h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, ad.</p>
                   
               </div>
@@ -120,14 +144,18 @@
             <a href="#" data-slide-index="2">렌트카</a>
             <a href="#" data-slide-index="3">휴양지</a>
           </div>
-          <ul class="gallery clearfix">
+        </div> 
+          <ul class="gallery mb16 clearfix">
             <li class="mr16">
-              <a href="#">
+              <a href="#"> 
                 <img src="images/banner01.png" alt="france">
-                <div class="plan clearfix">
-                  <p class="count">프랑스</p><p class="price">￦1,900,000~</p>
-                  <div class="r_btn"><img src="images/r_link.png" alt=""></div>
-                </div>
+                  <div class="plan clearfix">
+                    <p class="count">프랑스</p>
+                    <p class="price">￦1,900,000~</p>
+                    <div class="r_btn">
+                      <img src="images/r_link.png" alt="r">
+                    </div>
+                  </div> 
               </a>
             </li>
             <li>
@@ -135,7 +163,7 @@
                 <img src="images/banner06.png" alt="japan">
                 <div class="plan clearfix">
                   <p class="count jap">일본</p><p class="price">￦890,000~</p>
-                  <div class="r_btn"><img src="images/r_link.png" alt=""></div>
+                  <div class="r_btn"><img src="images/r_link.png" alt="r"></div>
                 </div>
               </a>
             </li>
@@ -146,7 +174,7 @@
           <p>지금, 여행이 떠나고 싶다면?<br>
             하이미디어와 여행을 떠나자!</p>
         </div>
-        <div class="bul"><img src="images/02b.png" alt=""></div>
+        <div class="bul"><img src="images/02b.png" alt="풍선"></div>
       </div>
       <div class="content_gal clearfix"><!--980-->        
         <ul class="gallery_m mb16 clearfix">        
@@ -156,8 +184,8 @@
                 <a href="#">
                   <img src="images/banner02.png" alt="paris">
                   <div class="grade clearfix">
-                    <p class="place">HILLTON HOTEL (PARIS)</p><p class="star1">★★★</p><p class="star2">★★</p>
-                    
+                    <p class="place">HILLTON HOTEL (PARIS)</p>
+                    <p class="star1">★★★</p><p class="star2">★★</p>                    
                   </div>
                 </a>
               </li>
@@ -196,7 +224,11 @@
           </li>
           <li class="mr16">
             <a href="#">
-              <img src="images/banner08.png" alt="paris">
+              <img src="images/banner03.png" alt="paris">
+              <div class="weather clearfix">
+              <p class="place">20℃ 구름조금</p><p class="explain">습도60% 바람 남남동 2m/s</p>
+                
+              </div>
             </a>
           </li>
           <li>

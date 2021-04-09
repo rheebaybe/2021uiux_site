@@ -151,7 +151,8 @@ float: left;
 
 .section_left{
   position: relative;
-  margin-right: 36px;
+  margin-right: 36px;  
+  z-index: 30;
 }
 
 
@@ -169,24 +170,20 @@ float: left;
 
 .sliderTab {
   position: absolute;  
-  width: 132px;
-  background: orange;
+  width: 132px;  
   left: 0;
   top:0;
-
 }
 
 .sliderTab a {
   display: block;
   height: calc(301px / 4);
-  text-align: center;
-  line-height: 74px;
+  padding:27px ;  
   background: #0099cb;
 }
 
 .sliderTab a:nth-child(2){
   background: #006599;
-
 }
 
 
@@ -198,24 +195,26 @@ float: left;
 
 /* 갤러리 */
 
-.gallery{
-  margin-bottom: 16px;
-}
+
 .gallery li{
-  float: left;
+  float: left;  
   position: relative;
 }
+
+.gallery li img{
+  display: block;
+} 
+/*공백때문에 블럭처리*/
 
 .plan{
   position: absolute;
   bottom:0;  
-  width: 233px;
+  width: 100%;
   height: 50px;
   background: #152630;
   padding:15px 20px;
 
 }
-
 
 .plan .count{
   float: left;
@@ -243,6 +242,8 @@ float: left;
 
 
 .section_right{
+  width: 387px;
+  float: left;
   position: relative;
   z-index: 50;
 }
@@ -262,6 +263,7 @@ float: left;
   z-index: 10;
   position: absolute;
   top: 0;
+  right:10px;
 }
 
 
@@ -281,6 +283,15 @@ float: left;
   width: 233px;
   height: 240px; 
   margin-right: 0;
+}
+.bx-wrapper {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: #fff;
+  
+  margin-bottom: 0;
 }
 
 .slider2 li{
@@ -310,6 +321,36 @@ float: left;
   float: left;
   color:#fff;
 }
+
+
+
+
+
+
+.gallery_m li{
+  position: relative;
+}
+
+.weather{
+  position: absolute;
+  bottom:0;
+  padding-top:15px;
+  padding-bottom: 9px;
+  width: 233px;
+  height: 65px;
+  background: #529351;
+  text-indent: 17px;
+  
+}
+
+
+.weather .explain{
+
+}
+
+
+
+
 /* common */
 .mr16{
   margin-right: 16px !important
@@ -322,3 +363,4 @@ margin-bottom: 16px;
 .bold{
   font-weight: bold;
 }
+
