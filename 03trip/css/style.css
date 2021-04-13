@@ -66,7 +66,7 @@ position: relative;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  
+  cursor: pointer;
 }
 .searchWrap .searchset:focus{
   outline:none;
@@ -95,7 +95,7 @@ position: relative;
 .contact .number p{
   color: #fff;
   font-size: 28px;
-  line-height: 28px;
+  
   
 }
 
@@ -161,15 +161,34 @@ float: left;
 
 .container{
   background-image: url(../images/main_bg.png);
-  
+  z-index: 10;
 }
+
+.img00{
+  position: absolute;
+  left: -1000px;
+  bottom:-1000px;
+  animation-name:air;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  z-index: 20;
+}
+
+@keyframes air{
+  to{
+      left:100%;
+      bottom:100%;
+  }
+}
+
+
 
 .content_top{
   position: relative;
   width: 980px;  
   margin: 0 auto;
   padding-top: 60px;
-  
+  z-index: 90;
 }
 
 .section_left{
@@ -270,6 +289,7 @@ float: left;
  background-image: url(../images/search_button.png);
  background-repeat: no-repeat;
  background-position: 91px 70%;
+ cursor: pointer;
 }
 
 
@@ -371,7 +391,7 @@ float: left;
   width: 387px;
   float: left;
   position: relative;
-  z-index: 50;
+  z-index: 90;
 }
 
 
@@ -397,7 +417,7 @@ float: left;
 
 .bul{
   
-  z-index: 10;
+  z-index: 20;
   position: absolute;
   top: 20px;
   right:10px;
@@ -416,6 +436,7 @@ float: left;
 .content_gal{
   width: 980px;
   margin: 0 auto;
+  z-index: 90;
 }
 
 
@@ -425,7 +446,7 @@ float: left;
 
 
 .content_gal .bx-wrapper {
- 
+  
   width: 233px;
   height: 240px; 
   margin-right: 0;
@@ -593,20 +614,20 @@ float: left;
 
 .bg1{  
   background: #3BBEBE;  
-  transition: .8s;
+  
   padding-top: 50px;
 }
 .bg2{  
   background: #2C2D31;
-  transition: .8s;
+  
 }
 .bg3{  
   background: #202C3D;
-  transition: .8s;
+  
 }
 .bg4{  
   background: #01774D;  
-  transition: .8s;
+  
 }
 
 .textbox01,.textbox02,.textbox03,.textbox04{
@@ -762,12 +783,19 @@ float: left;
 
 
 
-.content_gal .gallery_m li:hover .textbox01,.textbox02,.textbox03,.textbox04{
+.content_gal .gallery_m li:hover .textbox01,
+.content_gal .gallery_m li:hover .textbox02,
+.content_gal .gallery_m li:hover .textbox03,
+.content_gal .gallery_m li:hover .textbox04
+{
 opacity: 1;
 }
 
 
-.content_gal .gallery_m li:hover .bg1,.bg2,.bg3,.bg4{
+.content_gal .gallery_m li:hover .bg1,
+.content_gal .gallery_m li:hover .bg2,
+.content_gal .gallery_m li:hover .bg3,
+.content_gal .gallery_m li:hover .bg4{
 opacity: 0.5;
 }
 
