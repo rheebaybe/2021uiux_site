@@ -163,6 +163,24 @@ float: left;
   z-index: 10;
 }
 
+.img01{
+  position: absolute;
+  left:100px;
+  top:50%;
+  animation-name: poong;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+}
+
+@keyframes poong{
+  to{
+      top:40%;
+  }
+}
+
+
 .img00{
   position: absolute;
   left: -1000px;
