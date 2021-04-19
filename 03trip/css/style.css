@@ -187,7 +187,7 @@ float: left;
   width: 980px;  
   margin: 0 auto;
   padding-top: 60px;
-  z-index: 90;
+  /* z-index: 90; */
 }
 
 .section_left{
@@ -203,22 +203,23 @@ float: left;
   position: relative;
   margin-right: 36px;  
   z-index: 30;
+  /* 풍선위치 */
 }
 
 .sliderWrap{
   width: 483px;
   height: 300px;
-  position: relative; 
- 
+  /* position: relative; 
+  */
 }
 
-.slider{
+/* .slider{
   width: 100%;
   height: 100%;
-}
+} */
 
 .slider li fieldset{
-  width: 100%;
+  /* width: 100%; */
   height: 300px;
   border: none;
 }
@@ -229,7 +230,7 @@ float: left;
 
 
 .formWrap fieldset .forms li{
-  width: 276px;
+  /* width: 276px; */
   
 }
 
@@ -464,14 +465,13 @@ float: left;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
-  background: #fff;
-  
+  background: #fff;  
   margin-bottom: 0;
 }
-
+/* 
 .slider2 li{
   position: relative;
-}
+} */
 
 
 .nextBtn,.prevBtn{
@@ -658,27 +658,13 @@ float: left;
   opacity: 0;
 
 }
-.textbox01 .title{
-  padding-left: 10px;
-}
-.textbox01 .title img{
-  float: left;
-}
 
 
-.textbox01 h2, .textbox01 p{
-  color:#fff;
-}
 
-.textbox01 h2{
-  font-size: 20px;
-  float: left;
-}
-.textbox01 p{
-  font-size: 14px;
-}
 
-.textbox02{   
+
+
+.textbox02,.textbox03,.textbox04{   
   /* width: 200px;
   height: 88px;   */
   position: absolute;
@@ -687,82 +673,77 @@ float: left;
   opacity: 0;
 
 }
-.textbox02 .title{
+.textbox01 .title,
+.textbox02 .title,
+.textbox03 .title,
+.textbox04 .title{
   padding-left: 24px;
 }
-.textbox02 .title img{
+
+.textbox01 .title img,
+.textbox02 .title img,
+.textbox03 .title img,
+.textbox04 .title img{
   float: left;
 }
 
-
-.textbox02 h2, .textbox02 p{
+.textbox01 h2, .textbox01 p,
+.textbox02 h2, .textbox02 p,
+.textbox03 h2, .textbox03 p,
+.textbox04 h2, .textbox04 p{
   color:#fff;
 }
-
-.textbox02 h2{
+.textbox01 h2,
+.textbox02 h2,
+.textbox03 h2,
+.textbox04 h2{
   font-size: 20px;
   float: left;
 }
-.textbox02 p{
+.textbox01 p,
+.textbox02 p,
+.textbox03 p,
+.textbox04 p{
   font-size: 14px;
 }
 
-.textbox03{   
-  /* width: 200px;
-  height: 88px;   */
+/* .textbox03{   
+   width: 200px;
+  height: 88px;  
   position: absolute;
   bottom: 10px;
   left: 30px;
   opacity: 0;
 
-}
-.textbox03 .title{
-  padding-left: 24px;
-}
-.textbox03 .title img{
-  float: left;
-}
+} */
 
 
-.textbox03 h2, .textbox03 p{
+
+
+/* .textbox03 h2, .textbox03 p{
   color:#fff;
-}
+} */
 
-.textbox03 h2{
+/* {
   font-size: 20px;
   float: left;
 }
 .textbox03 p{
   font-size: 14px;
-}
-.textbox04{  
-  /* width: 200px;
-  height: 88px;   */
-  position: absolute;
-  bottom: 10px;
-  left: 30px;
-  opacity: 0;
+} */
 
-}
-.textbox04 .title{
-  padding-left: 24px;
-}
-.textbox04 .title img{
-  float: left;
-}
-
-
+/* 
 .textbox04 h2, .textbox04 p{
   color:#fff;
-}
+} */
 
-.textbox04 h2{
+/* .textbox04 h2{
   font-size: 20px;
   float: left;
-}
-.textbox04 p{
+} */
+/* {
   font-size: 14px;
-}
+} */
 
 .cWrap{
   position: absolute;
