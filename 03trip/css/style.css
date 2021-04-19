@@ -903,11 +903,11 @@ footer{
 }
 
 .mb16{
-margin-bottom: 16px;  
+margin-bottom: 16px !important;  
 }
 
 .mb70{
-  margin-bottom: 70px;
+  margin-bottom: 70px !important
 }
 
 .bold{
@@ -915,5 +915,5 @@ margin-bottom: 16px;
 }
 
 .mr6{
-  margin-right: 6px;
+  margin-right: 6px !important;
 }
