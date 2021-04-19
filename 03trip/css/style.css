@@ -807,6 +807,50 @@ opacity: 0.5;
 
 
 
+/* 회사소개 style */
+
+.containercompany{
+  background: #eee;
+  position: relative;
+  height: 1200px;
+}
+
+.topImg{
+  background-image: url(../images/subimg01.jpg);
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 50px;
+}
+
+
+.topImg h3{
+  color:#fff;
+  text-align: center;
+  font-size: 40px;
+}
+
+.contentsPic{
+  width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  position: absolute;
+  top:150px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:20px
+}
+.contentsPic 
+
+
+
+
+/* ----------------푸터---------------- */
+
+
+
+
 footer{
   width: 100%;
 
