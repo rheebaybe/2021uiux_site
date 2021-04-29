@@ -17,15 +17,55 @@
               auto:true,
               pager:false,
               controls:false
-           });            
+           }); 
+
+           const headPos = $("header").offset().top;
+        //    const navPos = $(".nav").offset().top;
+           
+
+           $(window).scroll(function(){
+               let scrollY = $(window).scrollTop();
+
+               if(0 < scrollY){
+                    $("header").addClass("headS");
+               }else{
+                   $("header").removeClass("headS");
+               }
+                           
+           });
+           $(".toggleMenu").click(function(){
+            const toggle = $(".toggleMenu").attr("class");
+
+            if(toggle == "toggleMenu"){
+                $(".toggleMenu").addClass("change");
+                
+                $(".nav").stop().animate({top:0});
+
+            }else{
+                $(".toggleMenu").removeClass("change");
+                
+                $(".nav").stop().animate({top:"-100%"});
+            }
+            });
+            
+            $(".mainmenu > li").click(function(){
+                let t = $(this).index();            
+                $(".submenu").hide().eq(t).show();
+                $(".submenu").css("background","#fff");
+                $(".submenu > li > a").css("color","#313131");
+                
+            });
+            $(".mainmenu > li").find("a").click(function(e){
+                e.preventDefault();
+            })
         });
     </script>
 </head>
 <body>
     <header>
-        <div class="nav clearfix">
+    <div class="nav clearfix">
         <h1><img src="images/logo.png" alt="동국제강"></h1>
-        <ul class="clearfix">
+        <ul class="mainmenu clearfix">
             <li><a href="company.html">회사소개</a>
                 <ul class="submenu">
                     <li><a href="#">경영이념</a></li>
@@ -54,24 +94,35 @@
             </li>
             <li><a href="recruit.html">인재경영</a>
                 <ul class="submenu">
-                    <li><a href="#">인재경영</a></li>                    
+                    <li><a href="#">인재채용</a></li>                    
                 </ul>
             </li>
             <li><a href="news_list.html">홍보센터</a>
                 <ul class="submenu">
-                    <li><a href="#">홍보센터</a></li>                    
+                    <li><a href="#">뉴스룸</a></li>                    
                 </ul>
             </li>
         </ul> 
         </div>
+        <div class="toggleMenu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </header>
     <div class="sliderWrap">
         <ul class="slider">
-            <li><img src="images/slide01.png" alt=""></li>
+            <li><img src="images/slide01.png" alt="">
+                <div class="textWrap">
+                    <p>동국제강은 지구를 탄생시킨<br>
+                        철의 에너지를 미래를 여는<br>
+                        순환 에너지로 바꿔갑니다</p>
+                </div>
+            </li>
             <li><img src="images/slide02.png" alt=""></li>
             <li><img src="images/slide03.png" alt=""></li>
         </ul>
     </div>   
-    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus totam esse illum provident, corporis optio labore accusantium possimus suscipit nulla a temporibus fugit eaque velit et consequatur maiores commodi sed perspiciatis hic id aut exercitationem asperiores! Necessitatibus eaque deleniti fugit obcaecati quisquam magni aut libero ratione saepe in, qui sequi labore quibusdam! Quaerat sunt autem libero, commodi nobis numquam quibusdam consequuntur! Rem, fuga dicta. Ullam autem quia neque excepturi, labore repudiandae quaerat assumenda et nobis porro cum culpa numquam nemo expedita at aliquid quos explicabo blanditiis sunt asperiores impedit qui iure. Quam maiores quisquam itaque? Laudantium, quibusdam. Quam maiores quas cumque natus nemo ut possimus laboriosam illo! Optio nam, iste adipisci beatae ea exercitationem nulla sapiente reprehenderit sed obcaecati minus esse odio doloribus saepe? Fuga quam itaque repellendus nam hic consequuntur? Odit perspiciatis ipsa, numquam delectus sed, quidem nesciunt ea soluta magnam nihil obcaecati nemo exercitationem sequi optio laborum saepe excepturi voluptas? Error tempora officiis assumenda praesentium iure blanditiis atque nihil provident rerum eveniet iste deleniti eligendi animi quo libero, earum natus sed recusandae dolores pariatur amet! Ducimus iste similique veritatis quam cumque autem minima odio quod voluptatibus veniam quia sequi necessitatibus, neque ut nostrum dolores ea itaque facere recusandae velit mollitia labore! Delectus vero eligendi minus ullam maiores sed ratione cupiditate ducimus labore a ea quos fugit debitis vitae placeat sint consequatur obcaecati natus, sit incidunt! Cumque nisi saepe libero accusantium quos mollitia ea! Quia a sint illo laborum incidunt in facilis ea cupiditate veniam earum porro quam reiciendis iusto repudiandae tempore provident eaque, accusantium nihil distinctio! Cupiditate ullam omnis alias voluptate ut dignissimos fugit! Quo hic corporis sint commodi voluptate magni aliquam. Suscipit deleniti laboriosam consequatur voluptates, voluptatem dignissimos recusandae quam, fugit sint totam omnis voluptas nostrum ipsam possimus illo saepe optio mollitia iure eveniet! Ut quidem provident asperiores assumenda, fugit tempora consequuntur distinctio voluptatem hic ullam libero, doloribus tenetur, sequi rerum. Repudiandae molestiae rerum totam, praesentium itaque ducimus aspernatur quis laborum! Cumque dicta praesentium iste quos autem ratione. Obcaecati necessitatibus temporibus quisquam porro quod minima laborum vero deserunt! Cupiditate molestiae sint porro amet ipsa natus, ad dolores non? Facilis molestiae maxime necessitatibus recusandae magnam illo aperiam temporibus soluta consectetur, in iusto, eius consequatur. Labore non, nemo itaque ex odio eveniet necessitatibus harum ducimus molestias animi consequatur eos odit possimus beatae neque corporis veniam laboriosam. Quis ipsum amet sit! Ea a, excepturi odio nam itaque doloribus consequuntur aperiam quas similique numquam et non modi rem distinctio natus dolorem facere sequi inventore vel. Maxime perferendis voluptates, eius excepturi obcaecati quaerat labore officiis reiciendis magnam debitis. Nam non corrupti autem labore similique sed temporibus quaerat architecto velit amet dolorem, sit repellendus, quae distinctio reiciendis quis ea inventore fuga praesentium? Adipisci odit soluta voluptatibus obcaecati. Consequuntur unde impedit magni sapiente eius dolores ipsa aspernatur itaque magnam doloremque accusamus aperiam quasi optio blanditiis in aliquam iure expedita id, recusandae dolorem. Cumque beatae vel quisquam totam vitae fugit qui, quas quibusdam dolores esse reprehenderit porro inventore quia minus tempora maiores impedit quam officiis laudantium fugiat voluptatem hic. Suscipit distinctio dolor odio commodi ad vero modi facilis neque iusto dolorem. Iusto adipisci quidem ullam doloremque aliquam! Itaque cupiditate facilis odit unde! Quis deleniti et, quaerat placeat quo mollitia sunt corrupti quia accusantium, soluta, repellat ipsa veniam? Est, tempore asperiores delectus hic similique inventore nobis dicta excepturi corrupti corporis voluptates nisi, animi porro eos officiis ducimus, aliquam laboriosam sunt incidunt voluptate? Asperiores eum est maiores eveniet. Architecto delectus aut nesciunt dolorem sint? Rerum nesciunt veniam obcaecati facilis aspernatur! Officiis commodi voluptatum earum deserunt nostrum ratione molestias. Iste sapiente numquam, nisi debitis aut quod reiciendis mollitia obcaecati magnam, voluptatibus laboriosam tenetur voluptates. Laborum perspiciatis illum iure quasi esse perferendis voluptas dolore, ipsa in quo saepe neque doloribus voluptate error aspernatur numquam consequatur vero dolor architecto alias dolorum totam eos quos. Iusto ab labore temporibus corporis sequi vitae voluptatem veniam quibusdam magni harum ut natus eveniet mollitia ad quidem, excepturi facere ea ipsum nisi placeat beatae maiores! Sunt minima necessitatibus maxime maiores ipsum accusantium vero excepturi! Harum eveniet porro repudiandae nesciunt est, voluptatibus ullam minima quidem eaque, dicta cupiditate totam aperiam, iure quae. Aut dolorem odit, nam exercitationem obcaecati a enim aliquam iure repellat libero repellendus id ipsum, dolores corrupti deleniti hic ea perspiciatis impedit quas fuga, autem mollitia! Adipisci, accusantium! Quod qui laboriosam voluptate magnam vel. Quam exercitationem, delectus sint commodi non inventore, esse asperiores nulla amet quibusdam quasi! Numquam quidem rerum nihil, ratione officiis repellendus, alias natus dolore sint cum reprehenderit expedita hic quae provident officia doloribus nobis exercitationem. Assumenda veniam similique ducimus at iste necessitatibus natus, dolores doloribus sit quas cupiditate ut eius beatae ad. Velit ratione accusantium commodi dolore quam vel laborum, et odio magnam eum, aspernatur vitae eligendi consequatur voluptatum iure corrupti error aliquam aut assumenda asperiores. Veritatis, quisquam ex nostrum esse expedita voluptatum et. Nostrum dolorem officia debitis cum eos in molestias facilis sunt, blanditiis autem nesciunt velit error, dicta mollitia commodi nemo iure? Voluptates, perferendis ea error nulla deserunt dolorum nihil quod! Eligendi eveniet temporibus quasi, consectetur explicabo natus harum mollitia eos iusto laboriosam nesciunt? Saepe, consequuntur. Reiciendis laudantium aliquid, nostrum autem ipsa hic quidem veniam aspernatur quam ducimus laborum inventore libero earum, dolorum veritatis voluptatem a? Error commodi doloremque, dicta aliquid dolore, iusto voluptates dolores, eum dolorem debitis laboriosam natus tempore veritatis explicabo nulla facere reiciendis! Delectus dolorem illum, cupiditate nemo deleniti error voluptatibus vel dolore a rem beatae placeat natus ad provident ex rerum distinctio! Excepturi iste dolorum beatae? Similique alias id, error laboriosam optio recusandae atque nisi, aliquid facere aperiam aliquam libero eos voluptas fuga. Amet tempora commodi possimus, ut voluptas iure asperiores cumque obcaecati assumenda ex debitis cum corporis iusto reprehenderit inventore dolores. Illum nesciunt labore autem magnam necessitatibus, qui dolore ratione. Excepturi harum, tempora nisi dolorum, cum vitae placeat enim aperiam adipisci et tempore doloribus laborum itaque temporibus ipsum praesentium qui inventore nobis eos dolore. Eius quis quos fugiat quibusdam similique, accusantium debitis iste quia quasi beatae ex sequi quod laudantium laborum cupiditate libero.</p>
 </body>
 </html>

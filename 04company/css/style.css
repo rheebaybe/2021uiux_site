@@ -1,73 +1,221 @@
 @charset "UTF-8";
 
 
-
-/* 메뉴 */
-
-header{    
-    background: #313131;   
-}
-
-.nav{
-    width: 1240px;
-    height: 100px;
-    margin: 0 auto;
-    padding: 18px 0 17px 0;
-    position: relative;
-    z-index: 1;
-}
-
-.nav h1{
-    float: left;
-    padding:8px;
-}
-.nav ul{
-    float: right;
-}
-.nav ul li{
-    float: left;
-    position: relative;
-}
-
-.nav ul li a{
-    display: block;
-    text-align: center;
-    width: calc( 842px / 6 );
-    padding:20px;
-    color:#fff;
-    font-size: 18px;
-    font-weight: bold;
-    background: #313131;
-}
-
-.nav ul li a:hover{
-    color: #313131;
-    background: #fff;
-}
-
-
-.nav ul li:hover .submenu {
-    display: block;
-
-}
-
-
-
-
-.submenu{
-    display: none;
+/* 토글메뉴 */
+.toggleMenu{
+    width: 40px;
+    height: 50px;    
     position: absolute;
-    background: #313131;
+    cursor: pointer;
+    right: 0;
+    top: 12px;
+    display: none;
     
 }
-
-
-
-/* 슬라이더 */
-
-.sliderWrap{    
-    margin: 0 auto;
+.toggleMenu div{
+    width: 26px;
+    height: 4px;
+    background: #fff;    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition:0.3s;
 }
-.sliderWrap .slider li img{
-    width: 100%;
+.bar1{
+    top: 4px;
+}
+.bar2{
+    top: 14px;
+}
+.bar3{
+    top: 24px;
+}
+.toggleMenu.change .bar1{
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%) rotate(-45deg);           
+
+}
+.toggleMenu.change .bar2{
+    opacity: 0;        
+
+}
+.toggleMenu.change .bar3{
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%) rotate(45deg);           
+
+}
+
+
+@media screen and (max-width:700px){
+    header{
+        width: 100%;
+        height: 48px;
+        background: #313131;
+        z-index: 9999;
+        position: relative;
+    }
+    .nav h1{
+        display: none;
+    }
+    .toggleMenu{
+        display: block;
+    }
+    
+
+    .nav{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background:#313131;
+        left:0;
+        top:100%;        
+        transition:.3s
+      }
+
+    .nav ul li a{
+        color:#fff;
+        display: block;
+        width: 100%;
+        padding-left: 24px;
+        line-height: 48px;
+    }  
+    .nav .submenu{
+        display: none;
+    }
+
+
+
+      /* 슬라이더 */
+
+    .sliderWrap{   
+        
+        width: 100%;
+        
+        
+    }
+    .sliderWrap .slider li img{
+        width: 100%;
+    }
+
+    .textWrap{
+        position: absolute;
+        bottom: 17px;
+        left:16px;
+        
+        
+    }
+    .textWrap p{
+        color:#fff;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+}
+    
+@media screen and (min-width:701px){
+
+    .nav ul{
+        float: right;    
+    
+    }
+       
+    header{
+        position: absolute;
+        width: 100%;        
+        z-index: 20;    
+    }
+
+   
+    
+    header.headS{    
+        background: #313131;
+        position: fixed;
+    }
+    
+    .submenu{
+        display: none;
+        position: absolute;
+        background: #fff;
+                                                       
+    }
+    .nav{
+        width: 1240px;
+        height: 100px;
+        margin: 0 auto;
+        padding: 18px 0 17px 0;
+        position: relative;
+        top: 0;
+        transition: .3s;
+        z-index: 30;
+    }
+    
+    .nav h1{
+        float: left;
+        padding:8px;
+    }
+    
+    .nav ul li{
+        float: left;
+        position: relative;
+        
+    }
+
+   
+    .nav ul li a{
+        display: block;
+        text-align: center;
+        width: calc( 842px / 6 );
+        padding:20px;
+        color:#fff;
+        font-size: 18px;
+        font-weight: bold;
+        
+    }
+  
+    .nav:hover a{
+        color: #313131;
+    }
+    header:hover{
+        background: #fff;
+    }
+    .nav:hover .submenu{
+        display: block;
+    
+    }
+    .nav:hover {
+        height: 100px;
+        background: #fff;
+    }
+    
+  
+    
+    /* 슬라이더 */
+
+    .sliderWrap{    
+        width: 100%;
+        _position: absolute;
+        top: 0;
+        z-index: 10;
+        
+    }
+    .sliderWrap .slider li img{
+        width: 100%;
+    }
+
+    .textWrap{
+        position: absolute;
+        top: 30%;
+        left:30%;
+        
+        
+    }
+    .textWrap p{
+        color:#fff;
+        font-size: 40px;
+        font-weight: 400;
+    }
+        
+    
 }
