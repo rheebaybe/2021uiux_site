@@ -7,11 +7,16 @@
     <title>동국제강</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/colorbox.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
+    <script src="js/wow.js"></script>
     <script>
+        new WOW().init();
         $(document).ready(function(){
            var mySlider = $('.slider').bxSlider({
               auto:true,
@@ -57,17 +62,39 @@
             });
             $(".mainmenu > li").find("a").click(function(e){
                 e.preventDefault();
-            })
+            });
+
+
+            $(".news>div").click(function(){
+                let t = $(this).index();
+                console.log(t);
+              $(".newsImg>div").hide().eq(t).show();
+            
+    
+            });
+
+
+            $(".modal").colorbox({rel:"modal"});
+            $(".youtube").colorbox({
+                iframe:true,
+                innerWidth:1024,
+                innerHeight:576
+            });
+   
         });
     </script>
 </head>
 <body>
     <header>
     <div class="nav clearfix">
-        <h1><img src="images/logo.png" alt="동국제강"></h1>
+        <h1 class="stand"><img src="images/logo.png" alt="동국제강"></h1>
+        <h1 class="over"><img src="images/logo02.png" alt="동국제강"></h1>
+        
         <ul class="mainmenu clearfix">
+            
+            <li class="mHome"><a href="index.html"><img src="images/home.png" alt=""></a></li>
             <li><a href="company.html">회사소개</a>
-                <ul class="submenu">
+                <ul class="submenu wow slideInDown" data-wow-delay="0.2s" data-wow-iteration="infinite">
                     <li><a href="#">경영이념</a></li>
                     <li><a href="#">비전</a></li>
                     <li><a href="#">네트워크</a></li>
@@ -104,7 +131,9 @@
             </li>
         </ul> 
         </div>
+        <h2 class="mlogo"><img src="images/mlogo.png" alt="동국제강"></h2>
         <div class="toggleMenu">
+            
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -123,6 +152,63 @@
             <li><img src="images/slide03.png" alt=""></li>
         </ul>
     </div>   
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus totam esse illum provident, corporis optio labore accusantium possimus suscipit nulla a temporibus fugit eaque velit et consequatur maiores commodi sed perspiciatis hic id aut exercitationem asperiores! Necessitatibus eaque deleniti fugit obcaecati quisquam magni aut libero ratione saepe in, qui sequi labore quibusdam! Quaerat sunt autem libero, commodi nobis numquam quibusdam consequuntur! Rem, fuga dicta. Ullam autem quia neque excepturi, labore repudiandae quaerat assumenda et nobis porro cum culpa numquam nemo expedita at aliquid quos explicabo blanditiis sunt asperiores impedit qui iure. Quam maiores quisquam itaque? Laudantium, quibusdam. Quam maiores quas cumque natus nemo ut possimus laboriosam illo! Optio nam, iste adipisci beatae ea exercitationem nulla sapiente reprehenderit sed obcaecati minus esse odio doloribus saepe? Fuga quam itaque repellendus nam hic consequuntur? Odit perspiciatis ipsa, numquam delectus sed, quidem nesciunt ea soluta magnam nihil obcaecati nemo exercitationem sequi optio laborum saepe excepturi voluptas? Error tempora officiis assumenda praesentium iure blanditiis atque nihil provident rerum eveniet iste deleniti eligendi animi quo libero, earum natus sed recusandae dolores pariatur amet! Ducimus iste similique veritatis quam cumque autem minima odio quod voluptatibus veniam quia sequi necessitatibus, neque ut nostrum dolores ea itaque facere recusandae velit mollitia labore! Delectus vero eligendi minus ullam maiores sed ratione cupiditate ducimus labore a ea quos fugit debitis vitae placeat sint consequatur obcaecati natus, sit incidunt! Cumque nisi saepe libero accusantium quos mollitia ea! Quia a sint illo laborum incidunt in facilis ea cupiditate veniam earum porro quam reiciendis iusto repudiandae tempore provident eaque, accusantium nihil distinctio! Cupiditate ullam omnis alias voluptate ut dignissimos fugit! Quo hic corporis sint commodi voluptate magni aliquam. Suscipit deleniti laboriosam consequatur voluptates, voluptatem dignissimos recusandae quam, fugit sint totam omnis voluptas nostrum ipsam possimus illo saepe optio mollitia iure eveniet! Ut quidem provident asperiores assumenda, fugit tempora consequuntur distinctio voluptatem hic ullam libero, doloribus tenetur, sequi rerum. Repudiandae molestiae rerum totam, praesentium itaque ducimus aspernatur quis laborum! Cumque dicta praesentium iste quos autem ratione. Obcaecati necessitatibus temporibus quisquam porro quod minima laborum vero deserunt! Cupiditate molestiae sint porro amet ipsa natus, ad dolores non? Facilis molestiae maxime necessitatibus recusandae magnam illo aperiam temporibus soluta consectetur, in iusto, eius consequatur. Labore non, nemo itaque ex odio eveniet necessitatibus harum ducimus molestias animi consequatur eos odit possimus beatae neque corporis veniam laboriosam. Quis ipsum amet sit! Ea a, excepturi odio nam itaque doloribus consequuntur aperiam quas similique numquam et non modi rem distinctio natus dolorem facere sequi inventore vel. Maxime perferendis voluptates, eius excepturi obcaecati quaerat labore officiis reiciendis magnam debitis. Nam non corrupti autem labore similique sed temporibus quaerat architecto velit amet dolorem, sit repellendus, quae distinctio reiciendis quis ea inventore fuga praesentium? Adipisci odit soluta voluptatibus obcaecati. Consequuntur unde impedit magni sapiente eius dolores ipsa aspernatur itaque magnam doloremque accusamus aperiam quasi optio blanditiis in aliquam iure expedita id, recusandae dolorem. Cumque beatae vel quisquam totam vitae fugit qui, quas quibusdam dolores esse reprehenderit porro inventore quia minus tempora maiores impedit quam officiis laudantium fugiat voluptatem hic. Suscipit distinctio dolor odio commodi ad vero modi facilis neque iusto dolorem. Iusto adipisci quidem ullam doloremque aliquam! Itaque cupiditate facilis odit unde! Quis deleniti et, quaerat placeat quo mollitia sunt corrupti quia accusantium, soluta, repellat ipsa veniam? Est, tempore asperiores delectus hic similique inventore nobis dicta excepturi corrupti corporis voluptates nisi, animi porro eos officiis ducimus, aliquam laboriosam sunt incidunt voluptate? Asperiores eum est maiores eveniet. Architecto delectus aut nesciunt dolorem sint? Rerum nesciunt veniam obcaecati facilis aspernatur! Officiis commodi voluptatum earum deserunt nostrum ratione molestias. Iste sapiente numquam, nisi debitis aut quod reiciendis mollitia obcaecati magnam, voluptatibus laboriosam tenetur voluptates. Laborum perspiciatis illum iure quasi esse perferendis voluptas dolore, ipsa in quo saepe neque doloribus voluptate error aspernatur numquam consequatur vero dolor architecto alias dolorum totam eos quos. Iusto ab labore temporibus corporis sequi vitae voluptatem veniam quibusdam magni harum ut natus eveniet mollitia ad quidem, excepturi facere ea ipsum nisi placeat beatae maiores! Sunt minima necessitatibus maxime maiores ipsum accusantium vero excepturi! Harum eveniet porro repudiandae nesciunt est, voluptatibus ullam minima quidem eaque, dicta cupiditate totam aperiam, iure quae. Aut dolorem odit, nam exercitationem obcaecati a enim aliquam iure repellat libero repellendus id ipsum, dolores corrupti deleniti hic ea perspiciatis impedit quas fuga, autem mollitia! Adipisci, accusantium! Quod qui laboriosam voluptate magnam vel. Quam exercitationem, delectus sint commodi non inventore, esse asperiores nulla amet quibusdam quasi! Numquam quidem rerum nihil, ratione officiis repellendus, alias natus dolore sint cum reprehenderit expedita hic quae provident officia doloribus nobis exercitationem. Assumenda veniam similique ducimus at iste necessitatibus natus, dolores doloribus sit quas cupiditate ut eius beatae ad. Velit ratione accusantium commodi dolore quam vel laborum, et odio magnam eum, aspernatur vitae eligendi consequatur voluptatum iure corrupti error aliquam aut assumenda asperiores. Veritatis, quisquam ex nostrum esse expedita voluptatum et. Nostrum dolorem officia debitis cum eos in molestias facilis sunt, blanditiis autem nesciunt velit error, dicta mollitia commodi nemo iure? Voluptates, perferendis ea error nulla deserunt dolorum nihil quod! Eligendi eveniet temporibus quasi, consectetur explicabo natus harum mollitia eos iusto laboriosam nesciunt? Saepe, consequuntur. Reiciendis laudantium aliquid, nostrum autem ipsa hic quidem veniam aspernatur quam ducimus laborum inventore libero earum, dolorum veritatis voluptatem a? Error commodi doloremque, dicta aliquid dolore, iusto voluptates dolores, eum dolorem debitis laboriosam natus tempore veritatis explicabo nulla facere reiciendis! Delectus dolorem illum, cupiditate nemo deleniti error voluptatibus vel dolore a rem beatae placeat natus ad provident ex rerum distinctio! Excepturi iste dolorum beatae? Similique alias id, error laboriosam optio recusandae atque nisi, aliquid facere aperiam aliquam libero eos voluptas fuga. Amet tempora commodi possimus, ut voluptas iure asperiores cumque obcaecati assumenda ex debitis cum corporis iusto reprehenderit inventore dolores. Illum nesciunt labore autem magnam necessitatibus, qui dolore ratione. Excepturi harum, tempora nisi dolorum, cum vitae placeat enim aperiam adipisci et tempore doloribus laborum itaque temporibus ipsum praesentium qui inventore nobis eos dolore. Eius quis quos fugiat quibusdam similique, accusantium debitis iste quia quasi beatae ex sequi quod laudantium laborum cupiditate libero.</p>
+    
+  <div class="content">
+    <ul class="contList">
+        <li class="wow slideInDown" data-wow-delay="1s"><a href="product.html"><h1 class="title">제강</h1>        
+        <div class="bg"></div>
+        <div class="txtBox">            
+            <h2>제강</h2>
+                <p>국내 최초 친환경 에코아크(Eco-Arc)
+                    전기로를 도입하여
+                   에너지 사용량을 30% 절감하고 
+                   온실가스 배출량도 감축하는
+                    
+                   친환경 기반의 제품생산에 
+                   앞장서고 있습니다. </p>            
+        </div>
+        
+    </a>
+    </li>
+      <li class="viewLIst clearfix wow slideInDown" data-wow-delay="1s">
+        <a href="https://www.youtube.com/embed/1cJ2gaTBbXM" class="youtube modal" data-wow-delay="0">  
+        <img src="images/showroom.png" alt="showroom"></a>  
+    <div class="videoTitle"><p>동국제강 포항공장 쇼룸을 소개합니다</p></div>
+    </li>
+ 
+      <li class="clearfix wow slideInDown" data-wow-delay="0">
+          <div class="newsText">
+        <h2>뉴스</h2>
+        <div class="news">
+            
+            <div><a href="#" onclick="return false">동국제강, 전기로 연속주조 기록 경신</a></div>
+            <div><a href="#" onclick="return false">동국제강 형강 누적 생산 2000만톤 돌파</a></div>
+            <div><a href="#" onclick="return false">사업 잘한 동국제강, 2년 만에 부채 4587억 줄였다</a></div>
+            <div><a href="#" onclick="return false">동국제강, 27년 연속 평화적 임금협상 타결</a></div>
+        </div>
+    </div>
+        <div class="newsImg">
+            <div class="nImg1"><img src="images/newsimg01.png" alt="뉴스이미지"></div>
+            <div class="nImg2"><img src="images/newsimg02.png" alt="뉴스이미지"></div>
+            <div class="nImg3"><img src="images/newsimg03.png" alt="뉴스이미지"></div>
+            <div class="nImg4"><img src="images/newsimg04.png" alt="뉴스이미지"></div>
+            
+        </div>
+
+      </li>
+      <li class="clearfix">
+        <div class="network">
+            <a href="#"><h2>네트워크</h2></a>
+        </div>
+        <div class="netImg">
+            <a href="#"><img src="images/network1.png" alt="네트워크"></a>
+        </div>
+      </li>
+      
+      
+    </ul>
+  </div>
 </body>
 </html>
+
+animate__slideInDown
