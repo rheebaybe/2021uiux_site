@@ -19,7 +19,7 @@
         new WOW().init();
         $(document).ready(function(){
            var mySlider = $('.slider').bxSlider({
-              auto:true,
+              auto:false,
               pager:false,
               controls:false
            }); 
@@ -80,6 +80,29 @@
                 innerWidth:1024,
                 innerHeight:576
             });
+
+            const contPos = $(".cont1").offset().top;
+
+            $(window).scroll(function(){
+                let scrollY = $(window).scrollTop();        
+                
+                
+                if(contPos < scrollY + 300){                     
+                     $("#car1").addClass("move");
+                }else{
+                     $("#car1").removeClass("move");
+                 }
+                if(car2Pos < scrollY + 500){
+                    $("#car2").addClass("move");
+                }else{
+                    $("#car2").removeClass("move");
+                }
+                if(topPos < scrollY + window.innerHeight/2){
+                    $(".top").addClass("view");
+                }else{
+                    $(".top").removeClass("view");
+                }
+            });
    
         });
     </script>
@@ -94,7 +117,7 @@
             
             <li class="mHome"><a href="index.html"><img src="images/home.png" alt=""></a></li>
             <li><a href="company.html">회사소개</a>
-                <ul class="submenu wow slideInDown" data-wow-delay="0.2s" data-wow-iteration="infinite">
+                <ul class="submenu" >
                     <li><a href="#">경영이념</a></li>
                     <li><a href="#">비전</a></li>
                     <li><a href="#">네트워크</a></li>
@@ -141,7 +164,7 @@
     </header>
     <div class="sliderWrap">
         <ul class="slider">
-            <li><img src="images/slide01.png" alt="">
+            <li><video src="video/MAIN_01.mp4" autoplay></video>
                 <div class="textWrap">
                     <p>동국제강은 지구를 탄생시킨<br>
                         철의 에너지를 미래를 여는<br>
@@ -155,7 +178,7 @@
     
   <div class="content">
     <ul class="contList">
-        <li class="wow slideInDown" data-wow-delay="1s"><a href="product.html"><h1 class="title">제강</h1>        
+        <li class="cont1"><a href="product.html"><h1 class="title">제강</h1>        
         <div class="bg"></div>
         <div class="txtBox">            
             <h2>제강</h2>
@@ -170,7 +193,7 @@
         
     </a>
     </li>
-      <li class="viewLIst clearfix wow slideInDown" data-wow-delay="1s">
+      <li class="viewLIst clearfix">
         <a href="https://www.youtube.com/embed/1cJ2gaTBbXM" class="youtube modal" data-wow-delay="0">  
         <img src="images/showroom.png" alt="showroom"></a>  
     <div class="videoTitle"><p>동국제강 포항공장 쇼룸을 소개합니다</p></div>
@@ -207,6 +230,70 @@
       
       
     </ul>
+  </div>
+  <div class="proWrap">
+      <ul class="products">
+          <li><a href="#">
+              <img src="images/" alt="">
+              <h2>컬러강판</h2>
+              <div class="introText">
+                  <p>
+                      세계 최초 컬러강판
+                      브랜드를 론칭하여
+                      전세계 건재용 가전용 컬러강판 시장을
+                      선도하고 있습니다.
+                  </p>
+              </div>
+          </a></li>
+          <li><a href="#">
+              <img src="" alt="">
+              <h2>컬러강판</h2>
+              <div class="introText">
+                  <p>
+                      세계 최초 컬러강판
+                      브랜드를 론칭하여
+                      전세계 건재용 가전용 컬러강판 시장을
+                      선도하고 있습니다.
+                  </p>
+              </div>
+          </a></li>
+          <li><a href="#">
+              <img src="" alt="">
+              <h2>컬러강판</h2>
+              <div class="introText">
+                  <p>
+                      세계 최초 컬러강판
+                      브랜드를 론칭하여
+                      전세계 건재용 가전용 컬러강판 시장을
+                      선도하고 있습니다.
+                  </p>
+              </div>
+          </a></li>
+          <li><a href="#">
+              <img src="" alt="">
+              <h2>컬러강판</h2>
+              <div class="introText">
+                  <p>
+                      세계 최초 컬러강판
+                      브랜드를 론칭하여
+                      전세계 건재용 가전용 컬러강판 시장을
+                      선도하고 있습니다.
+                  </p>
+              </div>
+          </a></li>
+          <li><a href="#">
+              <img src="" alt="">
+              <h2>컬러강판</h2>
+              <div class="introText">
+                  <p>
+                      세계 최초 컬러강판
+                      브랜드를 론칭하여
+                      전세계 건재용 가전용 컬러강판 시장을
+                      선도하고 있습니다.
+                  </p>
+              </div>
+          </a></li>
+      </ul>
   </div>
 </body>
 </html>

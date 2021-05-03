@@ -115,8 +115,9 @@ img{
         
         
     }
-    .sliderWrap .slider li img{
+    .sliderWrap .slider li video{
         width: 100%;
+        height: 100%;
     }
 
     .textWrap{
@@ -325,7 +326,8 @@ img{
     .content{
         position: relative;
         background: #313131;
-        height: 970px;
+        height: 1200px;
+        box-shadow: 10px 15px 15px 3px #000;
     }
     .content .contList{
         width: 1240px;
@@ -335,12 +337,12 @@ img{
         position: absolute;
         left:50%;
         transform: translateX(-50%);
-        top:-150px
+        top:0
     }
     .content .contList>li{
         width: 50%;
         height: 400px;
-        
+        /* box-shadow: 10px 15px 15px 3px #000; */
     }
    
     .content .contList>li:nth-child(1){
@@ -349,6 +351,9 @@ img{
         background-size: hover;
         position: relative;
         /* box-shadow: 10px 15px 15px 3px #000; */
+        
+    }
+    .content .contList>li:nth-child(1).move{
         
     }
     .content .contList>li:nth-child(1) .bg{
@@ -422,7 +427,7 @@ img{
     .content .contList>li:nth-child(2){
         width: 50%;
         background: #313131;
-        box-shadow: 10px 15px 15px 3px #000;
+        box-shadow: 10px 0 55px 2px rgb(0, 0, 0);
         overflow: hidden;
     }
     
@@ -452,7 +457,7 @@ img{
     .content .contList>li:nth-child(3){
         width: 100%;
         background: #313131;
-        box-shadow: 10px 15px 15px 3px #000;
+        box-shadow: 10px 15px 55px 2px rgb(0, 0, 0);
     }
     .content .contList>li:nth-child(3) .newsImg{
         _display: none;
@@ -471,7 +476,7 @@ img{
         font-size: 30px;
         font-weight: bold;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     .content .contList>li:nth-child(3) .newsText h2::after{
     position:absolute;
@@ -503,7 +508,8 @@ img{
     .content .contList>li:nth-child(4){
         width: 100%;
         background: #313131;
-        box-shadow: 10px 15px 15px 3px #000;
+        background: #313131;
+        box-shadow: 10px 15px 55px 2px rgb(0, 0, 0);
     }
     .content .contList>li:nth-child(4) .network{
         width: 25%;
@@ -545,3 +551,13 @@ img{
         width: 100%;
     }
 
+
+
+
+    .proWrap {
+        height: 638px;
+        /* padding: 100px 0px 147px 0px; */
+        background: url(../images/probg.png) no-repeat center fixed;
+        background-size: cover;
+        margin-bottom: 80px;
+      }
