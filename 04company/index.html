@@ -81,29 +81,8 @@
                 innerHeight:576
             });
 
-            const contPos = $(".cont1").offset().top;
-
-            $(window).scroll(function(){
-                let scrollY = $(window).scrollTop();        
-                
-                
-                if(contPos < scrollY + 300){                     
-                     $("#car1").addClass("move");
-                }else{
-                     $("#car1").removeClass("move");
-                 }
-                if(car2Pos < scrollY + 500){
-                    $("#car2").addClass("move");
-                }else{
-                    $("#car2").removeClass("move");
-                }
-                if(topPos < scrollY + window.innerHeight/2){
-                    $(".top").addClass("view");
-                }else{
-                    $(".top").removeClass("view");
-                }
-            });
-   
+         
+            
         });
     </script>
 </head>
@@ -178,7 +157,7 @@
     
   <div class="content">
     <ul class="contList">
-        <li class="cont1"><a href="product.html"><h1 class="title">제강</h1>        
+        <li class="wow slideInLeft"  data-wow-delay="0"><a href="product.html"><h1 class="title">제강</h1>        
         <div class="bg"></div>
         <div class="txtBox">            
             <h2>제강</h2>
@@ -193,13 +172,17 @@
         
     </a>
     </li>
-      <li class="viewLIst clearfix">
-        <a href="https://www.youtube.com/embed/1cJ2gaTBbXM" class="youtube modal" data-wow-delay="0">  
+      <li class="viewLIst clearfix wow slideInRight" data-wow-delay="0">
+        
+        <a href="https://www.youtube.com/embed/1cJ2gaTBbXM" class="youtube modal">  
+            <div class="bg2"></div>
         <img src="images/showroom.png" alt="showroom"></a>  
+        <!-- <div class="showroom"></div> -->
+        
     <div class="videoTitle"><p>동국제강 포항공장 쇼룸을 소개합니다</p></div>
     </li>
  
-      <li class="clearfix wow slideInDown" data-wow-delay="0">
+      <li class="clearfix wow slideInLeft" data-wow-delay="0">
           <div class="newsText">
         <h2>뉴스</h2>
         <div class="news">
@@ -219,7 +202,7 @@
         </div>
 
       </li>
-      <li class="clearfix">
+      <li class="clearfix wow slideInRight" data-wow-delay="0">
         <div class="network">
             <a href="#"><h2>네트워크</h2></a>
         </div>
@@ -231,10 +214,10 @@
       
     </ul>
   </div>
-  <div class="proWrap">
+  <!-- <div class="proWrap">
       <ul class="products">
           <li><a href="#">
-              <img src="images/" alt="">
+              <img src="images/item1_2.png" alt="">
               <h2>컬러강판</h2>
               <div class="introText">
                   <p>
@@ -246,7 +229,7 @@
               </div>
           </a></li>
           <li><a href="#">
-              <img src="" alt="">
+              <img src="images/item2_2.png" alt="">
               <h2>컬러강판</h2>
               <div class="introText">
                   <p>
@@ -258,7 +241,7 @@
               </div>
           </a></li>
           <li><a href="#">
-              <img src="" alt="">
+              <img src="images/item3_2.png" alt="">
               <h2>컬러강판</h2>
               <div class="introText">
                   <p>
@@ -270,7 +253,7 @@
               </div>
           </a></li>
           <li><a href="#">
-              <img src="" alt="">
+              <img src="images/item4_2.png" alt="">
               <h2>컬러강판</h2>
               <div class="introText">
                   <p>
@@ -282,7 +265,7 @@
               </div>
           </a></li>
           <li><a href="#">
-              <img src="" alt="">
+              <img src="images/item5_2.png" alt="">
               <h2>컬러강판</h2>
               <div class="introText">
                   <p>
@@ -294,8 +277,71 @@
               </div>
           </a></li>
       </ul>
-  </div>
+  </div> -->
+
+
+  <div class="container"><!--100%-->
+    <div class="section"><!--1240-->
+        <h4>제품소개</h4>
+        <!-- <p>vision 221</p> -->
+        <ul class="clearfix">
+            <li onclick="">
+                <div class="card">
+                    <img src="images/item1_2.png" alt="">
+                    <div class="card_body"></div>
+                    <h3>컬러강판</h3>
+                    <p>세계 최초 컬러강판
+                        브랜드를 론칭하여 전세계
+                        건재용 가전용 컬러강판 시장을
+                        선도하고 있습니다.</p>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <img src="images/item1_2.png" alt="">
+                    <div class="card_body"></div>
+                    <h3>냉연도금강판</h3>
+                    <p>최상위 도금기술을 적용한
+                        도금강판은 국내외 시장에서
+                        독자성을 인정받고 있습니다.</p>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <img src="images/item1_2.png" alt="">
+                    <div class="card_body"></div>
+                    <h3>후판</h3>
+                    <p>세계 최초 컬러강판
+                        브랜드를 론칭하여 전세계
+                        건재용 가전용 컬러강판 시장을
+                        선도하고 있습니다.</p>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <img src="images/item1_2.png" alt="">
+                    <div class="card_body"></div>
+                    <h3>봉강</h3>
+                    <p>세계 최초 컬러강판
+                        브랜드를 론칭하여 전세계
+                        건재용 가전용 컬러강판 시장을
+                        선도하고 있습니다.</p>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <img src="images/item1_2.png" alt="">
+                    <div class="card_body"></div>
+                    <h3>형강</h3>
+                    <p>세계 최초 컬러강판
+                        브랜드를 론칭하여 전세계
+                        건재용 가전용 컬러강판 시장을
+                        선도하고 있습니다.</p>
+                </div>
+            </li>
+        </ul>
+    </div><!--section-->
+  </div><!--container-->
 </body>
 </html>
 
-animate__slideInDown
