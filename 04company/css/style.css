@@ -205,8 +205,16 @@ img{
         overflow: hidden;
         color:#fff;
     }
-    .content .contList>li:nth-child(2){}
-    .content .contList>li:nth-child(3){order:2}
+    .content .contList>li:nth-child(2){
+
+    }
+    .content .contList>li:nth-child(3){
+        order:2;
+    }
+    .content .contList>li:nth-child(3) div{
+        background-color: rgba();
+    }
+
     .content .contList>li:nth-child(4){}
     .content .contList>li:nth-child(5){order:3}
     .content .contList>li:nth-child(6){order:1}
@@ -673,7 +681,8 @@ img{
       .container .section li{
           float: left;
           width: calc( (100% - 80px) / 5 );
-          background: #313131;
+          background-color: rgba(192,192,192,0.3);
+          
           height: 380px;
           padding-top: 30px;
           border-radius: 20px 0 20px 0;
@@ -701,3 +710,13 @@ img{
           margin-bottom: 10px;
       }
     }
+
+
+
+
+
+
+/* commom     */
+.mb20{
+    margin-bottom: 20px;
+}
