@@ -491,7 +491,19 @@ img{
         
     }
     
-
+    .content .contList>li:nth-child(2) .play{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        /* transform: scale(1); */
+        /* z-index: 90; */
+        width:84px;
+        height:84px;
+        border-color:transparent transparent transparent #fff;
+        border-style:solid solid solid solid;
+        border-width:43px 0 43px 84px;
+    }
 
     
     .content .contList>li:nth-child(2)>img{
@@ -499,8 +511,14 @@ img{
         transition: .3s;
 
     }
-    .content .contList>li:nth-child(2) .bg2:hover .content .contList>li:nth-child(2)>a>img{
+    .content .contList>li:nth-child(2):hover img    
+    {
         transform:scale(1.1)
+    }
+
+    .content .contList>li:nth-child(2):hover .play{
+        transform:scale(1.1);
+        
     }
     .content .contList>li:nth-child(2) .videoTitle{
         width: 100%;
