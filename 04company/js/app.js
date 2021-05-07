@@ -68,12 +68,12 @@ $(document).ready(function(){
         $(".submenu > li > a").css("color","#313131");
         
     });
-    $(".news > div").click(function(){
-        let t = $(this).index();            
-        $(".newsImg").hide().eq(t).show();
+    // $(".news>div").click(function(){
+    //     let t = $(this).index();            
+    //     $(".newsImg>div").hide().eq(t).show();
        
         
-    });
+    // });
     $(".family > li").click(function(){
         let t = $(this).index();            
         $(".familySub").hide().eq(t).show();
