@@ -7,84 +7,19 @@
     <title>동국제강</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="plugin/slick/slick.css">
+<link rel="stylesheet" href="plugin/slick/slick-theme.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 <link rel="stylesheet" href="css/colorbox.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
-    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>    
     <script src="js/jquery.bxslider.js"></script>
     <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/wow.js"></script>
-    <script>
-        new WOW().init();
-        $(document).ready(function(){
-           var mySlider = $('.slider').bxSlider({
-              auto:false,
-              pager:false,
-              controls:false
-           }); 
-
-           const headPos = $("header").offset().top;
-        //    const navPos = $(".nav").offset().top;
-           
-
-           $(window).scroll(function(){
-               let scrollY = $(window).scrollTop();
-
-               if(0 < scrollY){
-                    $("header").addClass("headS");
-               }else{
-                   $("header").removeClass("headS");
-               }
-                           
-           });
-           $(".toggleMenu").click(function(){
-            const toggle = $(".toggleMenu").attr("class");
-
-            if(toggle == "toggleMenu"){
-                $(".toggleMenu").addClass("change");
-                
-                $(".nav").stop().animate({top:0});
-
-            }else{
-                $(".toggleMenu").removeClass("change");
-                
-                $(".nav").stop().animate({top:"-100%"});
-            }
-            });
-            
-            $(".mainmenu > li").click(function(){
-                let t = $(this).index();            
-                $(".submenu").hide().eq(t).show();
-                $(".submenu").css("background","#fff");
-                $(".submenu > li > a").css("color","#313131");
-                
-            });
-            $(".mainmenu > li").find("a").click(function(e){
-                e.preventDefault();
-            });
-
-
-            $(".news>div").click(function(){
-                let t = $(this).index();
-                console.log(t);
-              $(".newsImg>div").hide().eq(t).show();
-            
-    
-            });
-
-
-            $(".modal").colorbox({rel:"modal"});
-            $(".youtube").colorbox({
-                iframe:true,
-                innerWidth:1024,
-                innerHeight:576
-            });
-
-         
-            
-        });
-    </script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/app.js"></script>    
 </head>
 <body>
     <header>
@@ -143,7 +78,8 @@
     </header>
     <div class="sliderWrap">
         <ul class="slider">
-            <li><video src="video/MAIN_01.mp4" autoplay></video>
+            <li>
+                <video src="video/MAIN_01.mp4" autoplay></video>
                 <div class="textWrap">
                     <p>동국제강은 지구를 탄생시킨<br>
                         철의 에너지를 미래를 여는<br>
@@ -177,7 +113,9 @@
         <a href="https://www.youtube.com/embed/1cJ2gaTBbXM" class="youtube modal"> 
             <div class="play"></div> 
             <div class="bg2"></div>
-        <img src="images/showroom.png" alt="showroom"></a>  
+        <img src="images/showroom.png" alt="showroom">
+        </a>  
+        <embed src="https://www.youtube.com/embed/1cJ2gaTBbXM" type="">
         <!-- <div class="showroom"></div> -->
         
     <div class="videoTitle"><p>동국제강 포항공장 쇼룸을 소개합니다</p></div>
@@ -186,12 +124,12 @@
       <li class="clearfix wow slideInLeft" data-wow-delay="0">
           <div class="newsText">
         <h2>뉴스</h2>
-        <div class="news">
+        <div class="news clearfix">
             
-            <div><a href="#" onclick="return false">동국제강, 전기로 연속주조 기록 경신</a></div>
-            <div><a href="#" onclick="return false">동국제강 형강 누적 생산 2000만톤 돌파</a></div>
-            <div><a href="#" onclick="return false">사업 잘한 동국제강, 2년 만에 부채 4587억 줄였다</a></div>
-            <div><a href="#" onclick="return false">동국제강, 27년 연속 평화적 임금협상 타결</a></div>
+            <div><a href="#" onclick="return false">동국제강, 전기로 연속주조 기록 경신</a><i class="fas fa-chevron-right" style="color:#fff"></i></div>
+            <div><a href="#" onclick="return false">동국제강 형강 누적 생산 2000만톤 돌파</a><i class="fas fa-chevron-right" style="color:#fff"></i></div>
+            <div><a href="#" onclick="return false">사업 잘한 동국제강, 2년 만에 부채 4587억 줄였다</a><i class="fas fa-chevron-right" style="color:#fff"></i></div>
+            <div><a href="#" onclick="return false">동국제강, 27년 연속 평화적 임금협상 타결</a><i class="fas fa-chevron-right" style="color:#fff"></i></div>
         </div>
     </div>
         <div class="newsImg">
@@ -205,7 +143,9 @@
       </li>
       <li class="clearfix wow slideInRight" data-wow-delay="0">
         <div class="network">
-            <a href="#"><h2>네트워크</h2></a>
+            <a href="#"><h2>네트워크</h2>
+            <p>실력으로 인정받는 글로벌 철강 벨트</p>
+            </a>
         </div>
         <div class="netImg">
             <a href="#"><img src="images/network1.png" alt="네트워크"></a>
@@ -215,137 +155,168 @@
       
     </ul>
   </div>
-  <!-- <div class="proWrap">
-      <ul class="products">
-          <li><a href="#">
-              <img src="images/item1_2.png" alt="">
-              <h2>컬러강판</h2>
-              <div class="introText">
-                  <p>
-                      세계 최초 컬러강판
-                      브랜드를 론칭하여
-                      전세계 건재용 가전용 컬러강판 시장을
-                      선도하고 있습니다.
-                  </p>
-              </div>
-          </a></li>
-          <li><a href="#">
-              <img src="images/item2_2.png" alt="">
-              <h2>컬러강판</h2>
-              <div class="introText">
-                  <p>
-                      세계 최초 컬러강판
-                      브랜드를 론칭하여
-                      전세계 건재용 가전용 컬러강판 시장을
-                      선도하고 있습니다.
-                  </p>
-              </div>
-          </a></li>
-          <li><a href="#">
-              <img src="images/item3_2.png" alt="">
-              <h2>컬러강판</h2>
-              <div class="introText">
-                  <p>
-                      세계 최초 컬러강판
-                      브랜드를 론칭하여
-                      전세계 건재용 가전용 컬러강판 시장을
-                      선도하고 있습니다.
-                  </p>
-              </div>
-          </a></li>
-          <li><a href="#">
-              <img src="images/item4_2.png" alt="">
-              <h2>컬러강판</h2>
-              <div class="introText">
-                  <p>
-                      세계 최초 컬러강판
-                      브랜드를 론칭하여
-                      전세계 건재용 가전용 컬러강판 시장을
-                      선도하고 있습니다.
-                  </p>
-              </div>
-          </a></li>
-          <li><a href="#">
-              <img src="images/item5_2.png" alt="">
-              <h2>컬러강판</h2>
-              <div class="introText">
-                  <p>
-                      세계 최초 컬러강판
-                      브랜드를 론칭하여
-                      전세계 건재용 가전용 컬러강판 시장을
-                      선도하고 있습니다.
-                  </p>
-              </div>
-          </a></li>
-      </ul>
-  </div> -->
-
 
   <div class="container mb20"><!--100%-->
     <div class="section"><!--1240-->
         <h4>제품소개</h4>
         <!-- <p>vision 221</p> -->
-        <ul class="clearfix">
-            <li onclick="">
+        <div class="slickSlider">
+            <div >
                 <div class="card">
                     <img src="images/item1_2.png" alt="">
-                    <div class="card_body"></div>
+                    <div class="card_body">
                     <h3>컬러강판</h3>
                     <p>세계 최초 컬러강판
                         브랜드를 론칭하여 전세계
                         건재용 가전용 컬러강판 시장을
                         선도하고 있습니다.</p>
+                    </div>    
                 </div>
-            </li>
-            <li>
+            </div>
+            <div>
                 <div class="card">
                     <img src="images/item1_2.png" alt="">
-                    <div class="card_body"></div>
+                    <div class="card_body">
                     <h3>냉연도금강판</h3>
                     <p>최상위 도금기술을 적용한
                         도금강판은 국내외 시장에서
                         독자성을 인정받고 있습니다.</p>
+                    </div>    
                 </div>
-            </li>
-            <li>
+            </div>
+            <div>
                 <div class="card">
                     <img src="images/item1_2.png" alt="">
-                    <div class="card_body"></div>
+                    <div class="card_body">
                     <h3>후판</h3>
                     <p>세계 최초 컬러강판
                         브랜드를 론칭하여 전세계
                         건재용 가전용 컬러강판 시장을
                         선도하고 있습니다.</p>
+                    </div>    
                 </div>
-            </li>
-            <li>
+            </div>
+            <div>
                 <div class="card">
                     <img src="images/item1_2.png" alt="">
-                    <div class="card_body"></div>
+                    <div class="card_body">
                     <h3>봉강</h3>
                     <p>세계 최초 컬러강판
                         브랜드를 론칭하여 전세계
                         건재용 가전용 컬러강판 시장을
                         선도하고 있습니다.</p>
+                    </div>    
                 </div>
-            </li>
-            <li>
+            </div>
+            <div>
                 <div class="card">
                     <img src="images/item1_2.png" alt="">
-                    <div class="card_body"></div>
+                    <div class="card_body">
                     <h3>형강</h3>
                     <p>세계 최초 컬러강판
                         브랜드를 론칭하여 전세계
                         건재용 가전용 컬러강판 시장을
                         선도하고 있습니다.</p>
+                    </div>    
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div><!--section-->
   </div><!--container-->
   <div class="sns">
       <h2>SNS</h2>
+      <ul class="snslist">
+        <li>
+            <img src="images/sns1.png" alt="">
+            <div class="triangle1 triPos1"></div>
+        </li>
+        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" alt=""></a>
+            
+            <div class="snsbox">
+            <h4>되돌아보는 초심,<br>
+                회사에서의 나의 첫 번째 순간은?</h4>
+            <p>2021.04.12 13:57 </p>    
+        </div>
+        </li>
+        <li>
+            <img src="images/sns2.png" alt="">
+            <div class="triangle1 triPos1"></div>
+        </li>
+        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" alt=""></a>
+            
+            <div class="snsbox">
+                <h4>인터지스 창립기념<br>
+                    인터지스가 걸어온 길을 이야기하다</h4>
+                <p>2021.04.12 13:57 </p>    
+            </div>
+        </li>
+        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" alt=""></a>
+            
+            <div class="snsbox">
+                <h4>인터지스 안전팀 <br>
+                    "오늘도 무사히! 안전을 지키지!"</h4>
+                <p>2021.04.12 13:57 </p>    
+            </div>        
+        </li>
+
+        <li><img src="images/sns3.png" alt="">
+            <div class="triangle2 triPos2"></div>
+        </li>
+
+        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" alt=""></a>
+            
+            <div class="snsbox">
+                <h4>꿈으로 이어지는 송원장학생,<br>
+                    그 모든것!</h4>
+                <p>2021.04.12 13:57 </p>    
+            </div>
+        </li>
+        <li><img src="images/sns4.png" alt="">
+            <div class="triangle2 triPos2"></div></li>
+
+      </ul>
       
+  </div><!--sns-->
+
+  <div class="recruit">
+      <div class="recruiText">
+          <h2>We create better life with STEEL</h2>
+          <p>동국제강의 미래를 함께한 당신을 기다립니다.</p>
+
+      </div>
+      <div class="job">
+         <a href="#">지원하기</a>
+      </div>
+  </div>
+
+  <div class="footWrap"><!--100%-->
+      <div class="footer clearfix">
+          <div class="footlogo"><img src="images/logo.png" alt=""></div>
+          <div class="footmain">
+            <ul class="sitemap">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+            <ul class="family clearfix">
+                <li><a href="#" onclick="return false">패밀리 사이트</a>
+                    <ul class="familySub">
+                    <li><a href="#">송원문화재단</a></li>
+                    <li><a href="#">인터지스</a></li>
+                    <li><a href="#">Luxteel</a></li>
+                    <li><a href="#">supermp</a></li>
+                    <li><a href="#">페럼인프라</a></li>
+                    <li><a href="#">페럼클럽</a></li>
+                    </ul>
+            </li>
+            </ul>
+            <p class="address">서울 특별시 중구 을지로 5길 19 페럼타워, TEL 02.317.1114</p>
+            <p class="copyright">COPYRIGHT© 2019 DONGKUKSTEEL MILL CO., LTD. ALL RIGHTS RESERVED.</p>
+
+          </div>
+          
+      </div>
   </div>
 </body>
 </html>
