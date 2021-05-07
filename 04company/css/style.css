@@ -11,7 +11,7 @@ img{
     height: 50px;    
     position: absolute;
     cursor: pointer;
-    right: 0;
+    right: 14px;
     top: 10px;
     display: none;
     
@@ -108,6 +108,9 @@ img{
         display: none;
     }
 
+    .mlogo{
+        padding-left: 16px;
+    }
 
 
       /* 슬라이더 */
@@ -165,6 +168,15 @@ img{
     }
 
 
+
+
+
+
+
+    /* 콘텐츠 */
+
+
+
     .content{height:auto}
     .content .contList{
         width: 100%;
@@ -177,6 +189,14 @@ img{
         height: 100% !important;
         order:11
     }
+
+
+
+
+    /* 제강 */
+
+
+
     .content .contList>li:nth-child(1){
         background-image: url(../images/mainp01.png);
         background-repeat: no-repeat;
@@ -209,6 +229,11 @@ img{
         overflow: hidden;
         color:#fff;
     }
+
+
+    /* 포항쇼룸 */
+
+
     .content .contList>li:nth-child(2){
         order:2;
         margin: 0;
@@ -224,6 +249,15 @@ img{
     .content .contList>li:nth-child(2) .videoTitle{
         display: none;
     }
+
+
+    
+
+
+    /* 뉴스 */
+
+
+
     .content .contList>li:nth-child(3){
         order:3;
         margin-bottom: 10px;
@@ -260,11 +294,20 @@ img{
        display: none;
         
     }
+
+
+
+
+
+    /* 네트워크 */
+
+
     .content .contList>li:nth-child(4){
         order:4;
         margin: 0 16px;        
         position: relative;
-        height: 200px !important;        
+        height: 240px !important; 
+        padding-bottom: 15px;       
         margin-bottom: 10px;
         /* box-shadow: #fff; */
         z-index: 999;
@@ -293,30 +336,43 @@ img{
         font-size: 14px;        
         position: absolute;
         /* bottom: 0; */
-        top: 165px;
+        bottom: 14px;
         left: 0;
         text-align: center;
         display: block;
         color:#fff;
         
     }
+
+
+    /* 제품소개 */
+
+
+
+
     .section{
         order: 5;
         margin: 0 16px;
         background-image: url(../images/mo_bg.png);
         background-repeat: no-repeat;
-        
-        
+        background-position-x: center;
+        background-size: cover;
+        height: 240px;
+        padding-top:22px;
+        margin-bottom: 10px;
     }
     .section h4{
         color:#fff;
         font-size: 20px;
         font-weight: bold;
         text-align: center;
+        margin-bottom: 29px ;
     }
+   
     .section .card img{
-        text-align: center;display: block;
-        margin: 0 auto
+        text-align: center;
+        display: block;
+        margin: 0 auto;
     }
     .section .card_body h3{
         color:#fff;
@@ -326,13 +382,20 @@ img{
     .section .card_body p{
         display: none;
     }
-    .slick-prev{
+    
 
+    .sns h2{
+        display: none;
     }
-    .section button.slick-next::before{
-        background-image: url(../images/arrow_next.png);
-        background-position: center;
-        background-repeat: no-repeat;
+    .snslist .triangle1,
+    .snslist .triangle2{
+        display: none;
+    }
+    .snslist{
+        background: #fff;
+    }
+    .snslist li{
+        float: left;
     }
 }   
 
@@ -534,6 +597,11 @@ img{
         /* box-shadow: 10px 15px 15px 3px #000; */
     }
    
+
+
+    /* 제강 */
+
+
     .content .contList>li:nth-child(1){
         background-image: url(../images/mainp01.png);
         background-repeat: no-repeat;
@@ -612,6 +680,10 @@ img{
     }
 
 
+
+    /* 포항쇼룸 */
+
+
     .content .contList>li:nth-child(2){
         width: 50%;
         background: #313131;
@@ -677,6 +749,10 @@ img{
 
 
 
+    /* 뉴스 */
+
+
+
     .content .contList>li:nth-child(3){
         width: 100%;
         background: #313131;
@@ -734,6 +810,14 @@ img{
         background: #313131;
        
     }
+
+
+
+
+    /* 네트워크 */
+
+
+
     .content .contList>li:nth-child(4) .network{
         width: 25%;
         height: 400px;
@@ -811,7 +895,18 @@ img{
 
 
 
+
+
+
+
+
       /* container */
+
+
+
+      /* 제품소개  */
+
+
 
       .container{
           height: 750px;
@@ -890,6 +985,9 @@ img{
 
 
 
+      /* sns */
+
+
 
       .sns{
          position: relative;         
@@ -935,6 +1033,8 @@ img{
     }
 
     
+
+    /* sns 삼각형 */
 
     .triangle1{
         width: 0px;
@@ -1019,6 +1119,11 @@ img{
         
     }
 
+
+
+
+    /* 인재채용 */
+
     
     .recruit{
         width: 100%;
@@ -1056,6 +1161,9 @@ img{
     }
 
 
+
+
+    /* 푸터 */
 
 
     .footWrap{
