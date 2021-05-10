@@ -76,17 +76,34 @@
             <div class="bar3"></div>
         </div>
     </header>
-
-    <div class="sliderWrap">
+    
+   
+     
+    <div class="sliderWrap" style="position:relative">
         <ul class="slider">
-            <li class="sliderView">
+            <!-- <li class="sliderView">
                 <video src="video/MAIN_01.mp4" autoplay muted loop data-object-fit="cover" class="video"></video>
                 <div class="textWrap">
                     <p>동국제강은 지구를 탄생시킨<br>
                         철의 에너지를 미래를 여는<br>
                         순환 에너지로 바꿔갑니다</p>
                 </div>
-            </li>
+            </li> -->
+            <li ><img src="images/slide02.png" alt="">
+                <!--                <video src="video/MAIN_01.mp4" autoplay muted loop></video>-->
+                                <video id="myVideo" autoplay muted loop>
+                                      <source src="video/MAIN_01.mp4" type="video/mp4">
+                                      <p>이 브라우저는 비디오 태그를 지원하지 않습니다.</p>  
+                                  </video>
+
+                                  <div class="textWrap">
+                                    <p>동국제강은 지구를 탄생시킨<br>
+                                        철의 에너지를 미래를 여는<br>
+                                        순환 에너지로 바꿔갑니다</p>
+                                </div>
+                                
+                            </li>
+                
             <li><img src="images/slide02.png" alt=""></li>
             <li><img src="images/slide03.png" alt=""></li>
         </ul>
@@ -109,17 +126,18 @@
         
     </a>
     </li>
-      <li class="viewLIst clearfix wow slideInRight" data-wow-delay="0">
+      <li class="viewLIst clearfix wow slideInRight"  data-wow-delay="0">
         
         <a href="https://www.youtube.com/embed/1cJ2gaTBbXM" class="youtube modal"> 
-            <div class="play"></div> 
-            <div class="bg2"></div>
-        <img src="images/showroom.png" alt="showroom">
+            <!-- <div class="play"></div> 
+            <div class="bg2"></div> -->
+            <div><i class="play fab fa-youtube"></i></div>
+        <img src="images/showroom.png"alt="showroom">
         </a>  
         <embed src="https://www.youtube.com/embed/1cJ2gaTBbXM" type="">
         <!-- <div class="showroom"></div> -->
         
-    <div class="videoTitle"><p>동국제강 포항공장 쇼룸을 소개합니다</p></div>
+    <div class="videoTitle titleC"><p>동국제강 포항공장 쇼룸을 소개합니다</p></div>
     </li>
  
       <li class="clearfix wow slideInLeft" data-wow-delay="0">
@@ -127,10 +145,18 @@
         <h2>뉴스</h2>
         <div class="news clearfix">
             
-            <div><a href="#" onclick="return false">동국제강, 전기로 연속주조 기록 경신</a><i class="fas fa-chevron-right" style="color:#fff"></i></div>
-            <div><a href="#" onclick="return false">동국제강 형강 누적 생산 2000만톤 돌파</a><i class="fas fa-chevron-right" style="color:#fff"></i></div>
-            <div><a href="#" onclick="return false">사업 잘한 동국제강, 2년 만에 부채 4587억 줄였다</a><i class="fas fa-chevron-right" style="color:#fff"></i></div>
-            <div><a href="#" onclick="return false">동국제강, 27년 연속 평화적 임금협상 타결</a><i class="fas fa-chevron-right" style="color:#fff"></i></div>
+            <div><a href="#" onclick="return false">동국제강, 전기로 연속주조 기록 경신</a><i class="fas fa-chevron-right" style="color:#fff"></i>
+                <!-- <div class="m_news"><img src="images/newsimg01.png" alt=""></div> -->
+            </div>
+            <div><a href="#" onclick="return false">동국제강 형강 누적 생산 2000만톤 돌파</a><i class="fas fa-chevron-right" style="color:#fff"></i>
+                <!-- <div class="m_news"><img src="images/newsimg02.png" alt=""></div> -->
+            </div>
+            <div><a href="#" onclick="return false">사업 잘한 동국제강, 2년 만에 부채 4587억 줄였다</a><i class="fas fa-chevron-right" style="color:#fff"></i>
+                <!-- <div class="m_news"><img src="images/newsimg03.png" alt=""></div> -->
+            </div>
+            <div><a href="#" onclick="return false">동국제강, 27년 연속 평화적 임금협상 타결</a><i class="fas fa-chevron-right" style="color:#fff"></i>
+                <!-- <div class="m_news"><img src="images/newsimg04.png" alt=""></div> -->
+            </div>
         </div>
     </div>
         <div class="newsImg">
@@ -157,7 +183,7 @@
     </ul>
   </div>
 
-  <div class="container mb20"><!--100%-->
+  <div class="container"><!--100%-->
     <div class="section"><!--1240-->
         <h4>제품소개</h4>
         <!-- <p>vision 221</p> -->
@@ -176,7 +202,7 @@
             </div>
             <div>
                 <div class="card">
-                    <img src="images/item1_2.png" alt="">
+                    <img src="images/item2_2.png" alt="">
                     <div class="card_body">
                     <h3>냉연도금강판</h3>
                     <p>최상위 도금기술을 적용한
@@ -187,7 +213,7 @@
             </div>
             <div>
                 <div class="card">
-                    <img src="images/item1_2.png" alt="">
+                    <img src="images/item3_2.png" alt="">
                     <div class="card_body">
                     <h3>후판</h3>
                     <p>세계 최초 컬러강판
@@ -199,7 +225,7 @@
             </div>
             <div>
                 <div class="card">
-                    <img src="images/item1_2.png" alt="">
+                    <img src="images/item4_2.png" alt="">
                     <div class="card_body">
                     <h3>봉강</h3>
                     <p>세계 최초 컬러강판
@@ -211,7 +237,7 @@
             </div>
             <div>
                 <div class="card">
-                    <img src="images/item1_2.png" alt="">
+                    <img src="images/item5_2.png" alt="">
                     <div class="card_body">
                     <h3>형강</h3>
                     <p>세계 최초 컬러강판
@@ -231,7 +257,7 @@
             <img src="images/sns1.png" class="snsPic" alt="">
             <div class="triangle1 triPos1"></div>
         </li>
-        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" alt=""></a>
+        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" class="blog" alt=""></a>
             
             <div class="snsbox">
             <h4>되돌아보는 초심,<br>
@@ -243,19 +269,19 @@
             <img src="images/sns2.png" class="snsPic" alt="">
             <div class="triangle1 triPos1"></div>
         </li>
-        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" alt=""></a>
+        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" class="blog" alt=""></a>
             
             <div class="snsbox">
-                <h4>인터지스 창립기념<br>
-                    인터지스가 걸어온 길을 이야기하다</h4>
+                <a href="#"><h4>인터지스 창립기념<br>
+                    인터지스가 걸어온 길을 이야기하다</h4></a>
                 <p>2021.04.12 13:57 </p>    
             </div>
         </li>
-        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" alt=""></a>
+        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" class="blog" alt=""></a>
             
             <div class="snsbox">
-                <h4>인터지스 안전팀 <br>
-                    "오늘도 무사히! 안전을 지키지!"</h4>
+                <a href="#"><h4>인터지스 안전팀 <br>
+                    "오늘도 무사히! 안전을 지키지!"</h4></a>
                 <p>2021.04.12 13:57 </p>    
             </div>        
         </li>
@@ -264,11 +290,11 @@
             <div class="triangle2 triPos2"></div>
         </li>
 
-        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" alt=""></a>
+        <li class="clearfix"><a href="#"><img src="images/blog_icon.png" class="blog" alt=""></a>
             
             <div class="snsbox">
-                <h4>꿈으로 이어지는 송원장학생,<br>
-                    그 모든것!</h4>
+                <a href="#"><h4>꿈으로 이어지는 송원장학생,<br>
+                    그 모든것!</h4></a>
                 <p>2021.04.12 13:57 </p>    
             </div>
         </li>
@@ -293,7 +319,8 @@
   <div class="footWrap"><!--100%-->
       <div class="footer clearfix">
           <div class="footlogo"><img src="images/logo.png" alt=""></div>
-          <div class="footmain">
+          <div class="m_footlogo"><img src="images/dklogo.png" alt=""></div>
+          <div class="footmain clearfix">
             <ul class="sitemap">
                 <li><a href="#">이용약관</a></li>
                 <li><a href="#">개인정보처리방침</a></li>
@@ -319,6 +346,7 @@
           
       </div>
   </div>
+  <div class="top">Top</div>
 </body>
 </html>
 

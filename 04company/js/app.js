@@ -6,6 +6,7 @@ $(document).ready(function(){
       controls:false
    }); 
 
+    // 슬릭
     var section = $('.slickSlider');
 
     var slickOptions = {
@@ -25,6 +26,15 @@ $(document).ready(function(){
             section.slick('unslick');
         }
     });
+
+
+    // $(window).on('load resize', function() {
+	// 	if($(window).width() > 701) {
+	// 		slider.slick('unslick');
+	// 	}else{
+	// 		slider.not('.slick-initialized').slick(slickOptions);
+	// 	}
+	// });
 //    $('.slickSlider').slick({
 //         lazyLoad: 'ondemand',
 //         slidesToShow: 4,
@@ -46,6 +56,11 @@ $(document).ready(function(){
        }
                    
    });
+
+
+
+//    토글메뉴
+
    $(".toggleMenu").click(function(){
     const toggle = $(".toggleMenu").attr("class");
 
@@ -60,20 +75,35 @@ $(document).ready(function(){
         $(".nav").stop().animate({top:"-100%"});
     }
     });
+
+
+
+
+
+    // 메인메뉴
     
-    $(".mainmenu > li").click(function(){
-        let t = $(this).index();            
-        $(".submenu").hide().eq(t).show();
-        $(".submenu").css("background","#fff");
-        $(".submenu > li > a").css("color","#313131");
-        
-    });
-    // $(".news>div").click(function(){
+    // $(".mainmenu > li").click(function(){
     //     let t = $(this).index();            
-    //     $(".newsImg>div").hide().eq(t).show();
-       
+    //     $(".submenu").hide().eq(t).show();
+    //     $(".submenu").css("background","#fff");
+    //     $(".submenu > li > a").css("color","#313131");
         
     // });
+
+
+
+        $(".mainmenu > li").click(function(){
+        let t = $(this).index();       
+        $(".submenu").slideUp();
+        $(this).find(".submenu").slideDown();
+        $(".submenu").css("background","#fff").find("a").css("color","#313131");
+   });
+   
+
+
+    // 푸터
+
+
     $(".family > li").click(function(){
         let t = $(this).index();            
         $(".familySub").hide().eq(t).show();
@@ -86,13 +116,35 @@ $(document).ready(function(){
     });
 
 
+
+    // 뉴스
+
     $(".news>div").click(function(){
         let t = $(this).index();
-        console.log(t);
+       
       $(".newsImg>div").hide().eq(t).show();
-    
-
     });
+
+
+
+
+    // $(window).resize(function() { 
+    //     if($(window).width() > 701) {
+    //         $(".news>div").click(function(){
+    //             let t = $(this).index();
+         
+    //           $(".m_news>img").hide().eq(t).show();
+            
+    //       ​});    
+            
+    //         }
+        
+    //     });
+
+
+
+
+    // 포항쇼룸 모달
 
 
     $(".modal").colorbox({rel:"modal"});
@@ -102,6 +154,24 @@ $(document).ready(function(){
         innerHeight:576
     });
 
+
+
+
+
+    const topPos = $(".top").offset().top;
+
+    $(window).scroll(function(){
+        let scrollY = $(window).scrollTop();       
+       
+        if(topPos < scrollY + window.innerHeight/2){
+            $(".top").addClass("view");
+        }else{
+            $(".top").removeClass("view");
+        }
+    });
+    $(".top").click(function(){
+        $("html,body").animate({scrollTop:0},1000);
+    });    
  
     
 });
