@@ -128,18 +128,18 @@ $(document).ready(function(){
 
 
 
-    // $(window).resize(function() { 
-    //     if($(window).width() > 701) {
-    //         $(".news>div").click(function(){
-    //             let t = $(this).index();
-         
-    //           $(".m_news>img").hide().eq(t).show();
+    $(window).resize(function() { 
+        if($(window).width() < 701) {
+            //$(".news>div").find("a").click(function(){
+                // let t = $(this).index();
+                // $(".m_news").hide();  
+         //$(this).find('.m_news').show();
             
-    //       ​});    
+         ///​});    
             
-    //         }
+            }
         
-    //     });
+        });
 
 
 
