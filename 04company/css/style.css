@@ -866,7 +866,9 @@ img{
     /* 서브페이지 top */
  
     
- 
+    .subBg{
+        background: #fff;
+    }
     .visualwrap{
         
         width: 100%;
