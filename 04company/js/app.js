@@ -173,5 +173,42 @@ $(document).ready(function(){
         $("html,body").animate({scrollTop:0},1000);
     });    
  
+
+    let num = location.href.indexOf("=") + 1;  // 번호찾기
+    let string = location.href.substring(num);  //문자열자르
+    console.log(string);
+
+     if( location.href.indexOf("=") > 0 ){
+        view(string);
+     }else{
+        view(0)
+     }
+
+     function view(menu){
+           $(".subpageMenu li").removeClass("active").eq(menu).addClass("active");
+           $(".subpage>div").hide().eq(menu).show();
+     }
+     $(".subpageMenu li").click(function(){
+        var menu = $(this).index();
+        view(menu);
+     });
+
+
+
+
+
+     $('.subpageMenu > li').click(function(){
+
+        
+        let t = $(this).index();
+        var offset = $('.prosubpage > div').eq(t).offset();    
+
+        $('html').animate({scrollTop : offset.top - 100}, 400);
+
+    });
+
+
+
+
     
 });

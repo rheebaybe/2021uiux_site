@@ -52,568 +52,6 @@ img{
 }
 
 
-/* 모바일 */
-
-
-@media screen and (max-width:700px){
-
-    body{
-        background: #313131;
-
-    }
-
-    header{
-        width: 100%;
-        height: 48px;
-        background: #313131;
-        z-index: 9999;
-        position: relative;
-    }
-    .nav h1{
-        display: none;
-    }
-    .toggleMenu{
-        display: block;
-    }
-    
-
-    .nav{
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background:#313131;
-        left:0;
-        top: -100%;;        
-        transition:.3s
-      }
-
-    .nav.mHome 
-    {
-        display: block;
-    }  
-  
-    .mlogo{
-        display: block;
-        float: left;
-        padding-top: 12px;
-    }
-
-    .nav ul li a{
-        color:#fff;
-        display: block;
-        width: 100%;
-        padding-left: 24px;
-        line-height: 48px;
-    }  
-    .nav .mainmenu{
-        padding-top: 10px;
-    }
-    
-    .nav .submenu{
-        display: none;
-    }
-
-    .mlogo{
-        padding-left: 16px;
-    }
-
-
-      /* 모바일 슬라이더 */
-
-
-    .sliderWrap .bx-wrapper {
-        -moz-box-shadow: none;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        border: 0 none;
-        margin-bottom: 0px;
-    
-    }
-    /* .slider li video{
-        width: 100%;
-    } */
-    /* .sliderWrap li.slider1st,
-    .sliderWrap li.slider2st{
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size:cover;
-      height:1000px;
-    } */
-    /* .sliderWrap li.slider1st{background-image: url(../images/mainimg01.jpg);}
-    .sliderWrap li.slider2st{background-image: url(../images/mainimg02.jpg);} */
-    /* .sliderWrap .slider_txt{
-      position: absolute;left: 50%;top:30%;transform:translate(-50%,-50%);
-      color:white;text-align: center;
-    }   */
-
-    /* .sliderWrap{           
-        width: 100%;       
-        
-    }
-    .sliderWrap .slider>video{
-        width: 100%;
-        height: 100%;
-    }
-    .sliderWrap .slider li img{
-        width: 100%;
-           
-    } */
-
-    .textWrap{
-        position: absolute;
-        bottom: 17px;
-        left:16px;
-        
-        
-    }
-    .textWrap p{
-        color:#fff;
-        font-size: 12px;
-        font-weight: 400;
-    }
-
-
-    
-    #myVideo {
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-size: 100% 100%;
-        background-color: black;
-        background-position: center center;
-        object-fit: cover;
-        z-index: 3;
-    }
-
-
-
-
-    /* 모바일 콘텐츠 */
-
-
-
-    .content{height:auto}
-    .content .contList{
-        width: 100%;
-        position: relative;
-        top:0
-    }
-    .content .contList>li{
-        /* width: 50%; */
-        box-shadow: 5px 0px 12px -3px rgba(0,0,0,0.78);
-        height: 100% !important;
-        
-    }
-
-
-
-
-    /* 모바일 제강 */
-
-
-
-    .content .contList>li:nth-child(1){
-        background-image: url(../images/mainp01.png);
-        background-repeat: no-repeat;
-        background-size: hover;
-        margin:0 16px;
-        position: relative;
-        margin-bottom: 10px;
-        padding-left: 24px;
-        padding-top: 220px;
-        padding-bottom: 10px;
-    }
-    .content .contList>li:nth-child(1) .title{
-        
-        color:#fff;
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .content .contList>li:nth-child(1) .txtBox{
-        
-      
-    }
-    .content .contList>li:nth-child(1) h2{
-        display: none;
-        
-    }
-    .content .contList>li:nth-child(1) .txtBox p{
-        display: block;
-        width: 175px; 
-        white-space: nowrap;
-        overflow: hidden;
-        color:#fff;
-    }
-
-
-    /* 모바일 포항쇼룸 */
-
-
-    .content .contList>li:nth-child(2){
-        order:2;
-        margin: 0;
-        margin-bottom: 10px;
-    }
-    .content .contList>li:nth-child(2) img{
-        display: none;
-    }
-    .content .contList>li:nth-child(2) embed{
-        width: 100%;
-        height: 100%;
-    } 
-    .content .contList>li:nth-child(2) .videoTitle{
-        display: none;
-    }
-    .content .contList>li:nth-child(2) .play{
-        display: none;
-    }
-
-
-    
-
-
-    /* 모바일 뉴스 */
-
-
-
-    .content .contList>li:nth-child(3){
-        order:3;
-        margin-bottom: 10px;
-        
-    }
-    .content .contList>li:nth-child(3) h2{
-        display: none;
-    }
-    .content .contList>li:nth-child(3) a{
-        /* display: block; */
-        /* width: 100%; */
-        float: left;
-        line-height: 60px;
-        color:#fff;
-        font-size: 14px;
-    }
-  
-    .content .contList>li:nth-child(3) i{
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }    
-    .content .contList>li:nth-child(3) .news{
-        margin: 0 16px;
-    }
-    .content .contList>li:nth-child(3) .news div{
-       
-        height: 60px;
-       text-indent: 24px;
-        position: relative;
-    }
-    .content .contList>li:nth-child(3) .news div:nth-child(1){
-        
-        background: rgba(91,91,91,0.5);
-    }
-    .content .contList>li:nth-child(3) .news div:nth-child(2){
-        
-        background: rgba(91,91,91,0.7);
-    }
-    .content .contList>li:nth-child(3) .news div:nth-child(3){
-        
-        background: rgba(91,91,91,0.8);
-    }
-    .content .contList>li:nth-child(3) .news div:nth-child(4){
-        
-        background: rgba(91,91,91,0.9);
-    }
-    .content .contList>li:nth-child(3) .newsImg img{
-       /* display: block; */
-       display: none;
-       
-       
-        
-    }
-    .content .contList>li:nth-child(3) .m_news img{
-       /* display: block; */
-       display: none;
-       
-       
-        
-    }
-
-    
-
-
-
-
-    /* 모바일 네트워크 */
-
-
-    .content .contList>li:nth-child(4){
-        order:4;
-        margin: 0 16px;        
-        position: relative;
-        height: 240px !important; 
-        padding-bottom: 15px;       
-        margin-bottom: 10px;
-        /* box-shadow: #fff; */
-        z-index: 999;
-        background: #313131;
-        
-    }
-  
-    
-    .content .contList>li:nth-child(4) .netImg img{
-        /* position: absolute;
-        top: 0;
-        left: 0; */
-        max-width:100%;
-        height: auto !important;
-        /* z-index: 90; */
-    }
-    .content .contList>li:nth-child(4) h2{
-        display: none;
-    }
-   
-    .content .contList>li:nth-child(4) .network p{
-        width: 100%;
-        font-size: 14px;        
-        position: absolute;
-        /* bottom: 0; */
-        bottom: 14px;
-        left: 0;
-        text-align: center;
-        display: block;
-        color:#fff;
-        
-    }
-
-
-    /* 모바일 제품소개 */
-
-
-
-
-    .section{
-        order: 5;
-        margin: 0 16px;
-        background-image: url(../images/mo_bg.png);
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-size: cover;
-        height: 240px;
-        padding-top:22px;
-        margin-bottom: 10px;
-    }
-    .section h4{
-        color:#fff;
-        font-size: 20px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 29px ;
-    }
-   
-    .section .card img{
-        text-align: center;
-        display: block;
-        margin: 0 auto;
-    }
-    .section .card_body {
-        padding-top: 10px;
-    }
-    .section .card_body h3{
-        color:#fff;
-        font-size: 14px;
-        text-align: center;
-    }
-    .section .card_body p{
-        display: none;
-    }
-    
-
-
-
-    /* 모바일 sns */
-
-    .sns{
-        
-        margin: 0 16px;
-    }
-    .sns h2{
-        display: none;
-    }
-    .snslist .triangle1,
-    .snslist .triangle2{
-        display: none;
-    }
-    
-
-    .snslist li{
-        
-        margin-bottom: 8px;
-        background: #fff;
-        height: 112px;
-        /* float: left;      */
-       
-    }
-    .snslist .blog{
-        display: none;
-    }
-    .snslist li h4{
-        font-size: 12px;
-
-    }
-    .snslist li .snsPic{
-        float: left;        
-        height: 100%;
-
-    }
-
-    .sns .snslist li:nth-child(1),
-    .sns .snslist li:nth-child(3),
-    .sns .snslist li:nth-child(6),
-    .sns .snslist li:nth-child(8){
-        float: left;
-        width: 37%;
-        padding:5px;
-        
-    }
-
-    
-
-    
-
-    .sns .snslist li:nth-child(2),
-    .sns .snslist li:nth-child(4),
-    .sns .snslist li:nth-child(5),
-    .sns .snslist li:nth-child(7){
-        width: 63%;
-        padding-left:15px;        
-        float: right;
-        box-shadow: 5px 0px 12px -3px rgba(0,0,0,0.78);
-    }
-   
-  
-    .snsbox{
-        position: relative;
-        height: 100%;
-    }
-    .sns .snslist li:nth-child(2) p,
-    .sns .snslist li:nth-child(4) p,
-    .sns .snslist li:nth-child(5) p,
-    .sns .snslist li:nth-child(7) p{
-        color:#575757;
-        font-size:  10px;
-        position: absolute;
-        right: 6px;
-        bottom: 6px;
-    }
-    .sns .snslist li:nth-child(2) h4,
-    .sns .snslist li:nth-child(4) h4,
-    .sns .snslist li:nth-child(5) h4,
-    .sns .snslist li:nth-child(7) h4{
-        position: absolute;
-        font-size: 12px;
-        top: 32px;
-        left: 0;
-    }
-
-
-  
-
-    /* 모바일 인재채용 */
-    
-    .recruit{
-        display: none;
-    }
-
-
-
-    /* 모바일 푸터 */
-
-    .footlogo{
-        display: none;
-    }
-
-    .m_footlogo{
-        display: block;
-        margin-bottom: 10px;
-       
-    }
-    .m_footlogo img{
-        width: 44px;
-        margin: 0 auto;
-    }
-
-
-    .footer{
-        width: 100%;
-        margin: 0 16px;        
-        padding: 20px 40px;
-    }
-
-  
-    
-    
-    .footmain .sitemap li{
-        float: left;      
-
-    }
-    .footmain .sitemap li + li{
-        margin-left: 11px;
-    }
-    .footmain .sitemap li a{
-        color:#B1A7A7;
-        font-size: 14px;
-    }
-
-    .footmain .family{
-        display: none;
-    }
-
-    .address{
-        float: left;
-        font-size: 12px;
-    }
-    .copyright{
-        float: left;
-        font-size: 12px;
-    }
-
-    .top{
-        position: fixed; 
-        width: 45px;
-        height: 45px;
-        background: #313131; 
-        border-radius: 22px;    
-        right: 20px;
-        bottom: 50px;       
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: viewTop 1s infinite alternate;
-        cursor: pointer;
-        opacity: 0;
-        transition:.3s;
-        font-size: 15px;
-        color:#fff;
-    }
-    
-    .top.view{
-        opacity: 1;
-    }
-
-    
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -640,6 +78,7 @@ img{
 
     body{
         background: #313131;
+        
     }    
     .nav ul{
         float: right;    
@@ -648,7 +87,8 @@ img{
        
     header{
         position: absolute;
-        width: 100%;        
+        width: 100%;
+              
         z-index: 20;    
     }
 
@@ -782,7 +222,7 @@ img{
         position: absolute;
         top: 30%;
         left:30%;
-        
+        z-index: 10;
         
     }
     .textWrap p{
@@ -802,7 +242,7 @@ img{
         position: relative;        
         height: 1200px;
         margin-bottom: 150px;
-        
+       
     }
     .content .contList{
         width: 1240px;
@@ -1153,32 +593,6 @@ img{
 
 
 
-/* 
-    .proWrap {
-        height: 638px;
-        
-        background: url(../images/probg.png) no-repeat center fixed;
-        background-size: cover;
-        margin-bottom: 80px;
-      }
-
-      .proWrap{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .proWrap .products li{
-          float: left;
-          width: 207px;
-          margin-left: 58px;
-          text-align: center;
-      }
-      .proWrap .products li img{
-          margin: 0 auto;
-      } */
-
-
 
 
 
@@ -1445,6 +859,226 @@ img{
 
 
 
+
+
+
+
+    /* 서브페이지 top */
+ 
+    
+ 
+    .visualwrap{
+        
+        width: 100%;
+        height: 336px;      
+        padding-top: 150px;
+        margin-bottom: 10px;
+    }
+
+    .visual{
+        width: 1240px;
+        margin: 0 auto;
+    }
+    .visual h2{
+        color:#fff;
+        text-align: center;
+        margin-bottom: 72px;
+    }
+
+    .subpageMenu{
+        width: 100%;
+        
+        
+    }
+    .subpageMenu li{
+        float: left;       
+        
+    }
+    .subpageMenu li a{
+        display: block;
+        width: calc(1240px / 3);
+        height: 80px;
+        background: #fff;
+        text-align: center;
+        line-height: 80px;
+        color:#BF0F3E;
+        border: 1px solid #BF0F3E;
+        
+    }
+    .subpageMenu li a:active{
+        background: #BF0F3E;
+        color:#fff;
+    }
+    .wrapper{
+        width: 1240px;
+        margin: 0 auto;
+    }
+    .location {
+        margin-bottom: 10px;
+    }
+    .location ul li{
+        float: left;
+        padding:2px;
+    }
+    .location ul li a{
+        color: #fff;
+    }
+
+    .wrapper{
+        margin-bottom: 10px;
+    }
+
+
+    /* 회사소개 */
+
+
+    
+    .visualcom{
+        background-image: url(../images/visual.jpg);     
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+
+    /* 제품소개 */
+
+    .visualpro{
+        background-image: url(../images/visual2.jpg);     
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    .proVer li a{
+        width: calc(1240px / 6) !important;
+    }
+    .prosubpage{
+        width: 100%;
+    }
+  
+    .pro01{
+        height: 750px;
+        background: url(../images/bg1.jpg) no-repeat center fixed;
+        background-size: cover;        
+        padding:100px 0;
+        position: relative;
+        
+    }
+    .pro02{
+        height: 750px;
+        background: url(../images/bg2.jpg) no-repeat center fixed;
+        background-size: cover;        
+        padding:100px 0;
+        position: relative;
+       
+    }
+    .pro03{
+        height: 750px;
+        background: url(../images/bg3.jpg) no-repeat center fixed;
+        background-size: cover;        
+        padding:100px 0;
+        position: relative;
+     
+    }
+    .pro04{
+        height: 750px;
+        background: url(../images/bg4.jpg) no-repeat center fixed;
+        background-size: cover;        
+        padding:100px 0;
+        position: relative;
+        
+    }
+    .pro05{
+        height: 750px;
+        background: url(../images/bg5.jpg) no-repeat center fixed;
+        background-size: cover;        
+        padding:100px 0;
+        position: relative;
+        
+    }
+    .pro06{
+        height: 750px;
+        background: url(../images/bg6.jpg) no-repeat center fixed;
+        background-size: cover;        
+        padding:100px 0;
+        position: relative;
+       
+    }
+
+
+    .proText{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    } 
+    .proText h3{
+        color: #fff;
+        font-size: 46px;
+        margin-bottom: 10px;
+    }
+    .proText p{
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    .proText h4{
+        color: rgb(92, 94, 12);
+        font-size: 28px;
+    }
+
+    
+
+
+
+
+
+
+
+    /* 투자정보 */
+
+    .visualfin{
+        background-image: url(../images/visual3.jpg);     
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .finVer li a{
+        width: calc(1240px / 2) !important;
+    }
+
+
+
+
+    /* 지속가능경영 */
+
+
+    .visualcon{
+        background-image: url(../images/visual4.jpg);     
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .cnVer li a{
+        width: calc(1240px / 4) !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* 푸터 */
 
 
@@ -1539,4 +1173,5 @@ img{
         .top.view{
             opacity: 1;
         }
+
 }
