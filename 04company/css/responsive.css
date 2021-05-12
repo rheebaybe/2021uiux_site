@@ -481,6 +481,90 @@
 
 
 
+
+
+
+    /* 모바일 서브페이지 */
+
+    .subBg{
+        background: #fff;
+    }
+    .visualwrap{
+        width: 100%;
+        height: 80px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .visualfin{
+        background-image: url(../images/visual2.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .visual{
+        padding-top: 20px;
+        
+    }
+    .visual h2{
+        text-align: center;
+        color:#fff;
+    }
+    .subpageMenu{
+        position: absolute;
+        left: 50%;
+        top: 80px;
+        transform: translateX(-50%);
+        margin: 0 16px;
+        width: 100%;
+
+    }
+    
+    .subpageMenu li{
+        float: left;
+        border-bottom: 2px solid #313131;
+        padding:10px;
+        width: calc((100% - 20px) / 2);
+        
+    }
+    .subpageMenu li + li{
+        margin-left: 20px;
+    }
+
+    .subpageMenu li a{
+        font-size: 18px;
+    }
+    .wrapper{
+        margin: 0 16px;
+        
+    }
+    .location {
+        position: absolute;
+        top: 200px;
+    }
+    .location ul li{
+        float: left;
+    }
+
+    .subpage{
+        margin: 0 16px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* 모바일 푸터 */
 
     .footlogo{

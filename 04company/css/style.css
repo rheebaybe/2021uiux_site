@@ -884,7 +884,7 @@ img{
     .visual h2{
         color:#fff;
         text-align: center;
-        margin-bottom: 72px;
+        margin-bottom: 69px;
     }
 
     .subpageMenu{
@@ -893,20 +893,26 @@ img{
         
     }
     .subpageMenu li{
-        float: left;       
-        
+        float: left;  
+        width: calc(1240px / 3);     
+        border: 1px solid #BF0F3E;
+    }
+    .subpageMenu li + li{
+        border-left: none;
     }
     .subpageMenu li a{
         display: block;
-        width: calc(1240px / 3);
+        
         height: 80px;
         background: #fff;
         text-align: center;
         line-height: 80px;
         color:#BF0F3E;
-        border: 1px solid #BF0F3E;
+        
         
     }
+    
+
     .subpageMenu li a:active{
         background: #BF0F3E;
         color:#fff;
@@ -923,7 +929,7 @@ img{
         padding:2px;
     }
     .location ul li a{
-        color: #fff;
+        color: #313131;
     }
 
     .wrapper{
@@ -952,7 +958,7 @@ img{
     }
 
 
-    .proVer li a{
+    .proVer li{
         width: calc(1240px / 6) !important;
     }
     .prosubpage{
@@ -1046,7 +1052,7 @@ img{
         background-size: cover;
     }
 
-    .finVer li a{
+    .finVer li{
         width: calc(1240px / 2) !important;
     }
 
@@ -1062,7 +1068,7 @@ img{
         background-size: cover;
     }
 
-    .cnVer li a{
+    .cnVer li{
         width: calc(1240px / 4) !important;
     }
 
@@ -1135,9 +1141,7 @@ img{
         color:#736F6F;
         font-size: 15px;
     }
-    .familySub li{
-        
-    }
+    
     .familySub li a{
         color: #736F6F;
     }
@@ -1148,7 +1152,13 @@ img{
         display: none;
     }
 
-        /* commom     */
+        
+    
+    
+    
+    
+    
+    /* commom     */
         .mb20{
             margin-bottom: 20px;
         }
@@ -1177,3 +1187,7 @@ img{
         }
 
 }
+
+
+
+
