@@ -490,7 +490,12 @@
     }
 
 
-
+    .content .contList>li:nth-child(5), 
+    .content .contList>li:nth-child(6),
+    .content .contList>li:nth-child(7),
+    .content .contList>li:nth-child(8){
+        display: none;
+    }
 
 
 
