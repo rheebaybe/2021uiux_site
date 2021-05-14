@@ -896,6 +896,7 @@ img{
         float: left;  
         width: calc(1240px / 3);     
         border: 1px solid #BF0F3E;
+        background:#fff;
     }
     .subpageMenu li + li{
         border-left: none;
@@ -904,16 +905,21 @@ img{
         display: block;
         
         height: 80px;
-        background: #fff;
+        _background: #fff;
         text-align: center;
         line-height: 80px;
         color:#BF0F3E;
         
         
     }
-    
-
-    .subpageMenu li a:active{
+    .subpageMenu li.active a{
+        color:#fff
+    } 
+    .subpageMenu li.active{
+        background: #BF0F3E;
+    }
+ 
+    .subpageMenu li a:focus{
         background: #BF0F3E;
         color:#fff;
     }
@@ -964,7 +970,10 @@ img{
     .prosubpage{
         width: 100%;
     }
-  
+    /* .m_sub{
+        display: none;
+    }
+   */
     .pro01{
         height: 750px;
         background: url(../images/bg1.jpg) no-repeat center fixed;
@@ -1032,7 +1041,7 @@ img{
         font-size: 18px;
     }
     .proText h4{
-        color: rgb(92, 94, 12);
+        color: #EAB067;
         font-size: 28px;
     }
 
@@ -1076,7 +1085,14 @@ img{
 
 
 
+    /* 홍보센터 */
 
+
+    .visualnew{
+        background-image: url(../images/visual5.jpg);     
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
 
 
@@ -1121,22 +1137,71 @@ img{
         padding: 10px;
         color:#B1A7A7;
     }
-    .family li {
-        float: right;
+    .family{
+        float: left;
+        position: relative;
+        width: 120px;
+        margin-bottom: 20px;
     }
-    .family>li>a{
-        color: #736F6F;
-        width: 180px;
+    .family > button{
+        color: #736F6F;   
+        outline: none;     
         border: 1px solid #575757;
         padding:10px;
+        background: #25262A;
+        width: 120px;
     }
 
-    .family li .familySub{
+    .familySub{
         display: none;
     }
     
+    .familySub li{
+        background: #25262A;
+        border: 1px solid #575757;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    .familySub li a{
+        font-size: 13px;
+    }
+    .familySub li:nth-child(1){
+        position: absolute;
+        left: 0;
+        top: -45px;
+    }
+    .familySub li:nth-child(2){
+        position: absolute;
+        left: 0;
+        top: -90px;
+    }
+    .familySub li:nth-child(3){
+        position: absolute;
+        left: 0;
+        top: -130px;
+    }
+    .familySub li:nth-child(4){
+        position: absolute;
+        left: 0;
+        top: -175px;
+    }
+    .familySub li:nth-child(5){
+        position: absolute;
+        left: 0;
+        top: -220px;
+    }
+    .familySub li:nth-child(6){
+        position: absolute;
+        left: 0;
+        top: -265px;
+    }
+    /* .familySub li + li{
+        border-bottom:none;
+    } */
 
     .address, .copyright{
+        float: left;
         text-indent: 10px;
         color:#736F6F;
         font-size: 15px;
@@ -1146,7 +1211,7 @@ img{
         color: #736F6F;
     }
 
-
+    
 
     .m_footlogo{
         display: none;

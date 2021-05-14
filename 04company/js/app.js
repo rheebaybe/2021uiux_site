@@ -92,29 +92,30 @@ $(document).ready(function(){
 
 
 
-        $(".mainmenu > li").click(function(){
-        let t = $(this).index();       
-        $(".submenu").slideUp();
-        $(this).find(".submenu").slideDown();
-        $(".submenu").css("background","#fff").find("a").css("color","#313131");
-   });
+//         $(".mainmenu > li").click(function(){
+//         let t = $(this).index();       
+//         $(".submenu").slideUp();
+//         $(this).find(".submenu").slideDown();
+//         $(".submenu").css("background","#fff").find("a").css("color","#313131");
+//    });
+
+// $(".mainmenu > li").find("a").click(function(e){
+//     e.preventDefault();
+// });
+
    
 
 
     // 푸터
 
 
-    $(".family > li").click(function(){
+    $(".family > button").click(function(){
         let t = $(this).index();            
-        $(".familySub").hide().eq(t).show();
-        
+        $(".familySub").hide().eq(t).show();      
         
         
     });
-    $(".mainmenu > li").find("a").click(function(e){
-        e.preventDefault();
-    });
-
+   
 
 
     // 뉴스
@@ -156,7 +157,7 @@ $(document).ready(function(){
 
 
 
-
+    // 탑버튼
 
     const topPos = $(".top").offset().top;
 
@@ -173,6 +174,11 @@ $(document).ready(function(){
         $("html,body").animate({scrollTop:0},1000);
     });    
  
+
+
+
+    // 서브페이지 탭
+
 
     let num = location.href.indexOf("=") + 1;  // 번호찾기
     let string = location.href.substring(num);  //문자열자르
@@ -210,5 +216,6 @@ $(document).ready(function(){
 
 
 
+   
     
 });
