@@ -9,63 +9,202 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
-    
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-    crossorigin="anonymous"></script>
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            var mySlider = $('.slider').bxSlider({
-                auto:true,
-                pager:false,
-                controls:false
-            });
-           
-        });
-    </script>
     <style>
-        :root{
-            --primary-color-1:#7A48FF;
+        :root {
+            --primary-color-1: #7A48FF;
+            --primary-color-2: #141414;
+            --box-shadow: 0 10px 20px rgba(57, 56, 61, 0.3);
+            --bg-color2: #fff;
         }
-        .menu li{
+
+        .menu li {
             margin-left: 60px;
         }
-      
-        .freeEvent h2.title{
+
+        .freeEvent h2.title {
             letter-spacing: 15px;
         }
+
         .freeEvent h2.title:after,
-        .mediacenter h2.title:after{
-            content:"";
+        .mediacenter h2.title:after {
+            content: "";
             display: block;
             width: 340px;
             height: 2px;
             background: var(--primary-color-1);
             margin: 10px auto;
         }
-        .primary-button{
-            color:var(--primary-color-1);
-            
+
+        .primary-button {
+            color: var(--primary-color-1);
+
         }
-        .contents h2{
+
+        /* freeevent */
+        .freeEvent p {
+            font-size: 10px;
+        }
+
+        .freeEvent h4 {
+            font-size: 18px;
+        }
+
+        .freeEvent button {
+            border: 0 none;
+            background: none;
+            outline: 0 none;
+            font-size: 10px;
+            transition: 0.3s;
+        }
+
+        .freeEvent button:hover {
+            color: var(--primary-color-1);
+            font-size: 12px;
+        }
+
+        .freeEvent img {
+            transition: 0.3s;
+        }
+
+        .freeEvent img:hover {
+            box-shadow: var(--box-shadow);
+
+        }
+
+        .freeEvent p,
+        .freeEvent h4 {
+            width: 300px;
+        }
+
+
+        /* contents */
+        .contents h2 {
             font-size: 18px;
             font-weight: bold;
         }
+
+        /* comming */
+        .commingSoon .owl-item {
+            transition: 0.2s;
+            padding: 20px;
+            opacity: 0.4;
+        }
+
+        .commingSoon .owl-item.center {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        /* newyork */
+        .newyorkFf .container {
+            background: url(assets/newff.png) no-repeat center fixed;
+            background-size: cover;
+            height: 476px;
+        }
+
+        .newyorkFf .titleBox {
+            flex: 1;
+
+        }
+
+        .newyorkFf .titleBox h2 {
+            color: #fff;
+            font-size: 28.8px;
+            font-weight: bold;
+        }
+
+
+
+        /* getticket */
+        .ffpass {
+            background: url(assets/ffpass.png) no-repeat center;
+            background-size: cover;
+            height: 276px;
+        }
+
+        .forgot {
+            background: url(assets/forgotme.png) no-repeat center;
+            background-size: cover;
+            height: 276px;
+        }
+
+        .getTicket h3 {
+            flex: 1;
+            flex-direction: column;
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 10px;
+            transition: 0.3s;
+        }
+
+        .ffpass:hover h3,
+        .forgot:hover h3 {
+            font-size: 26px;
+        }
+
+
+        /* comment */
+        .card {
+            border: 0 none;
+        }
+
+        .comment1 {
+            background: var(--bg-color1);
+
+        }
+
+        .comment2 {
+            background: url(assets/comment/athome.png) no-repeat center;
+            background-size: cover;
+
+        }
+
+        .comment3 {
+            background: url(assets/comment/living.png) no-repeat center;
+            background-size: cover;
+
+        }
+
+        .comment4 {
+            background: url(assets/comment/cutting.png) no-repeat center;
+            background-size: cover;
+
+        }
+
+        .card-body {
+
+            height: 241px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+
+        .card-title.first {
+            color: var(--primary-color-2);
+        }
     </style>
 
-  
-       
-    
+
+
+
 </head>
 
 <body>
     <div class="headerWrap">
-        <div class="container">
+        <div class="container px-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html"><img src="assets/TOP_logo.svg" alt=""
@@ -81,7 +220,7 @@
                         <ul class="menu navbar-nav d-flex justify-content-center">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false" data-toggle="dropdown" >
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-toggle="dropdown">
                                     FILM
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -118,250 +257,340 @@
         </div>
     </div>
 
-<!-- slider -->
-<!-- <div class="sliderWrap mb-5">
-        <ul class="slider">
-            <li><img src="assets/slide01/slide_1.jpg" alt=""></li>
-            <li><img src="assets/slide01/slide_2.jpg" alt=""></li>
-            <li><img src="assets/slide01/slide_3.jpg" alt=""></li>            
-        </ul>
-</div> -->
-
-<style>
-    
-    .box{
-        background: var(--primary-color-1);    
-        display: flex;
-        
-        flex-direction: column;      
-        justify-content: center;
-        align-items: center;
-                
-          
-    }
-</style>
 
 
+    <style>
+        .box {
+            background: var(--primary-color-1);
+            display: flex;
 
-<div class="sliderWrap mb-5">
-    <div class="owl-carousel owl-theme owl-loaded">
-        <!-- #1 -->
-        <div>
-            <div class="sliderView sliderImg_1 d-flex justify-content-center">
-                <img src="assets/slide01/slide_1.jpg" alt="">
-                <div class="box d-none d-md-block">
-                    <h2>Lorem, ipsum.</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
-                </div>
-            </div>
-        </div>
-        <!-- #1 -->
-        <!-- #1 -->
-        <div>
-            <div class="sliderView sliderImg_1 d-flex justify-content-center">
-                <img src="assets/slide01/slide_2.jpg" alt="">
-                <div class="box d-none d-md-block">
-                    <h2>Lorem, ipsum.</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
-                </div>
-            </div>
-        </div>
-        <!-- #1 -->
-        <!-- #1 -->
-        <div>
-            <div class="sliderView sliderImg_1 d-flex justify-content-center">
-                <img src="assets/slide01/slide_3.jpg" alt="">
-                <div class="box d-none d-md-block">
-                    <h2>Lorem, ipsum.</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
-                </div>
-            </div>
-        </div>
-        <!-- #1 -->
-       
-    </div>
-</div>
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
 
+        }
+    </style>
 
 
-<!-- freeevent -->
-<div class="freeEvent">
-    <div class="container py-5">
-        <h2 class="title text-center mb-5">FREE EVENT</h2>
-    
-    <div class="btn-group">
-        <!-- <p>years</p> -->
-        <button data-filter="" class="active">2021</button>
-        <!-- <p>time</p> -->
-        <button data-filter=".six" id="trig">60min</button>
-        <button data-filter=".four">40min</button>
-    </div>
-    <div class="row view">
-        <div class="col-6 element-item six">
-            <img src="assets/free_event/event01.png" alt="" class="img-fluid">
-            <p class="text-center">2021 / 60min</p>
-            <h4 class="text-center">ND/NF 2021 Critics’ Preview</h4>
-        </div>
-        <div class="col-6 element-item six">
-            <img src="assets/free_event/event02.png" alt="" class="img-fluid">
-            <p class="text-center">2021 / 60min</p>
-            <h4 class="text-center">ND/NF 2021 Critics’ Preview</h4>
-        </div>
-        <div class="col-6 element-item six">
-            <img src="assets/free_event/event03.png" alt="" class="img-fluid">
-            <p class="text-center">2021 / 60min</p>
-            <h4 class="text-center">ND/NF 2021 Critics’ Preview</h4>
-        </div>
-        <div class="col-6 element-item four">
-            <img src="assets/free_event/event04.png" alt="" class="img-fluid">
-            <p class="text-center">2021 / 60min</p>
-            <h4 class="text-center">ND/NF 2021 Critics’ Preview</h4>
-        </div>
-        <div class="col-6 element-item four">
-            <img src="assets/free_event/event05.png" alt="" class="img-fluid">
-            <p class="text-center">2021 / 60min</p>
-            <h4 class="text-center">ND/NF 2021 Critics’ Preview</h4>
-        </div>
-        <div class="col-6 element-item four">
-            <img src="assets/free_event/event06.png" alt="" class="img-fluid">
-            <p class="text-center">2021 / 60min</p>
-            <h4 class="text-center">ND/NF 2021 Critics’ Preview</h4>
-        </div>
-    </div>
-</div>
-</div>
+<!-- 메인슬라이더 -->
 
-
-
-
-
-
-<!-- comming soon -->
-<div class="commingSoon">
-    <div class="container">
-        <div class="owl-comming owl-theme owl-loaded">
+    <div class="sliderWrap mb-5">
+        <div class="owl-carousel owl-theme owl-loaded" id="slider0">
             <!-- #1 -->
             <div>
-                <div class="sliderView d-flex">
-                    <img src="assets/owl_slider/owl01.png" alt="" class="img-fluid">                    
-                </div>
-            </div>
-            <!-- #1 -->
-            <!-- #1 -->
-            <div>
-                <div class="sliderView d-flex">
-                    <img src="assets/owl_slider/owl02.png" alt="" class="img-fluid">                    
-                </div>
-            </div>
-            <!-- #1 -->
-            <!-- #1 -->
-            <div>
-                <div class="sliderView d-flex">
-                    <img src="assets/owl_slider/owl03.png" alt="" class="img-fluid">                    
-                </div>
-            </div>
-            <!-- #1 -->
-        </div>
-    </div>
-</div>
-
-<script>
-   
-   
-   
-
-
-    const btns = $(".freeEvent .btn-group button");
-    btns.click(function(){
-      let i = $(this).index();
-      console.log(i);
-      btns.removeClass("active");
-      btns.eq(i).addClass("active");
-
-      let selector = btns.eq(i).attr("data-filter");
-      console.log(selector);
-
-      $(".freeEvent .view").isotope({
-        filter: selector
-      })
-    });
-
-
-    
-    window.onload = function(){
-        $(".freeEvent .btn-group #trig").trigger("click")
-    }
-    $(".sliderWrap .owl-carousel").owlCarousel({
-      loop:true,
-      margin:50,
-      autoplay:true,
-      responsive:{
-        0:{items:2},
-        600:{items:2},
-        1000:{items:1}
-      }
-    });
-
-    $(".commingSoon .owl-comming").owlCarousel({
-      loop:false,
-      margin:50,
-      autoplay:true,
-      responsive:{
-        0:{items:1},
-        600:{items:1},
-        1000:{items:2}
-      }
-    });
-</script>
-
-
-<!-- contents -->
-<div class="contents">
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-4 d-block order-1 ">
-                <h2>Reopening Safety & Health Policies</h2>
-            </div>
-            <div class="col-8 d-block order-2 ">
-                <p>The well-being of our audience members and theater team remains our top priority, which is why Film at Lincoln Center 
-                    has developed a comprehensive series of health and safety policies in coordination with state, city, and medical experts.</p>
-                <p>
-                    Please note: policies will be strictly enforced for the protection of our staff and guests. 
-Management reserves the right to deny admission or dismiss any customer for noncompliance with FLC policies. 
-                </p>
-            <a href="#!" class="btn button primary-button">more</a>    
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- media center -->
-
-<div class="mediacenter">
-    <div class="container py-5">
-        <h2 class="title text-center mb-5">MEDIA CENTER</h2>
-        <div class="row">
-            <div class="col-6">
-                <img src="assets/media_center/media02.png" alt="">
-                <p class="text-center">20th Anniversary Restoration of Wong Kar Wai’s...</p>
-                <div class="row">
-                    <div class="col-12">
-                        <img src="assets/media_center/media03.png" alt="">
-                        <p class="text-center">Ethan Hawke Kicks Off Rendez-Vous with French ..</p>
+                <div class="sliderView sliderImg_1 d-flex justify-content-center">
+                    <img src="assets/slide01/slide_1.jpg" alt="">
+                    <div class="box d-none d-md-block">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-6 d-none d-lg-block">
-                <img src="assets/media_center/media01.png" alt="">
-                <p class="text-center">ND/NF 50th Anniversary Talk: Wendy Keys with Sara Driver</p>
+            <!-- #1 -->
+            <!-- #2 -->
+            <div>
+                <div class="sliderView sliderImg_1 d-flex justify-content-center">
+                    <img src="assets/slide01/slide_2.jpg" alt="">
+                    <div class="box d-none d-md-block">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- #2 -->
+            <!-- #3 -->
+            <div>
+                <div class="sliderView sliderImg_1 d-flex justify-content-center">
+                    <img src="assets/slide01/slide_3.jpg" alt="">
+                    <div class="box d-none d-md-block">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- #3 -->
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- freeevent -->
+    <div class="freeEvent">
+        <div class="container py-5 px-0">
+            <h2 class="title text-center mb-5">FREE EVENT</h2>
+
+            <div class="btn-group d-flex justify-content-center mb-3">
+                <!-- <p>years</p> -->
+                <button data-filter="" class="active">2021</button>&nbsp
+                <!-- <p>time</p> -->
+                <button data-filter=".six" id="trig">60min</button>&nbsp
+                <button data-filter=".four">40min</button>
+            </div>
+            <div class="row view">
+                <div class="col-md-6 p-0 element-item six">
+                    <img src="assets/free_event/event01.png" alt="" class="img-fluid mr-40">
+                    <p class="">2021 / 60min</p>
+                    <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
+                </div>
+                <div class="col-md-6 p-0 element-item six">
+                    <img src="assets/free_event/event02.png" alt="" class="img-fluid">
+                    <p class="">2021 / 60min</p>
+                    <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
+                </div>
+                <div class="col-md-6 p-0 element-item six">
+                    <img src="assets/free_event/event03.png" alt="" class="img-fluid">
+                    <p class="">2021 / 60min</p>
+                    <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
+                </div>
+                <div class="col-md-6 p-0 element-item four">
+                    <img src="assets/free_event/event04.png" alt="" class="img-fluid">
+                    <p class="">2021 / 60min</p>
+                    <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
+                </div>
+                <div class="col-md-6 p-0 element-item four">
+                    <img src="assets/free_event/event05.png" alt="" class="img-fluid">
+                    <p class="">2021 / 60min</p>
+                    <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
+                </div>
+                <div class="col-md-6 p-0 element-item four">
+                    <img src="assets/free_event/event06.png" alt="" class="img-fluid">
+                    <p class="">2021 / 60min</p>
+                    <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
+
+
+
+
+
+    <!-- comming soon -->
+    <div class="commingSoon sliderWrap">
+        <div class="container px-0">
+            <div class="owl-carousel owl-theme owl-loaded" id="slider1">
+                <!-- #1 -->
+                <div>
+                    <div class="sliderView d-flex">
+                        <img src="assets/owl_slider/owl01.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <!-- #1 -->
+                <!-- #2 -->
+                <div>
+                    <div class="sliderView d-flex">
+                        <img src="assets/owl_slider/owl02.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <!-- #2 -->
+                <!-- #3 -->
+                <div>
+                    <div class="sliderView d-flex">
+                        <img src="assets/owl_slider/owl03.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <!-- #3 -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+
+
+
+
+        const btns = $(".freeEvent .btn-group button");
+        btns.click(function () {
+            let i = $(this).index();
+            console.log(i);
+            btns.removeClass("active");
+            btns.eq(i).addClass("active");
+
+            let selector = btns.eq(i).attr("data-filter");
+            console.log(selector);
+
+            $(".freeEvent .view").isotope({
+                filter: selector
+            })
+        });
+
+
+
+        window.onload = function () {
+            $(".freeEvent .btn-group #trig").trigger("click")
+        }
+
+        // 메인슬라이더
+
+        $("#slider0").owlCarousel({
+            loop: true,
+            margin: 50,
+            autoplay: true,
+            responsive: {
+                0: { items: 2 },
+                600: { items: 2 },
+                1000: { items: 1 }
+            }
+        });
+
+        // comming soon 슬라이더
+
+        $("#slider1").owlCarousel({
+            center: true,
+            loop: true,
+            margin: 50,
+            autoplay: true,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 3 },
+                1000: { items: 3 }
+            }
+        });
+
+    </script>
+
+
+
+
+
+    <!-- contents -->
+    <div class="contents">
+        <div class="container py-5 px-0">
+            <div class="row">
+                <div class="col-4 d-block order-1 ">
+                    <h2>Reopening Safety & Health Policies</h2>
+                </div>
+                <div class="col-8 d-block order-2 ">
+                    <p>The well-being of our audience members and theater team remains our top priority, which is why
+                        Film at Lincoln Center
+                        has developed a comprehensive series of health and safety policies in coordination with state,
+                        city, and medical experts.</p>
+                    <p>
+                        Please note: policies will be strictly enforced for the protection of our staff and guests.
+                        Management reserves the right to deny admission or dismiss any customer for noncompliance with
+                        FLC policies.
+                    </p>
+                    <a href="#!" class="btn button primary-button">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- media center -->
+
+    <div class="mediacenter mb-5">
+        <div class="container py-5 px-0">
+            <h2 class="title text-center mb-5">MEDIA CENTER</h2>
+            <div class="row">
+                <div class="col-6 text-center px-0">
+                    <img src="assets/media_center/media02.png" alt="" class="img-fluid">
+                    <p class="text-center">20th Anniversary Restoration of Wong Kar Wai’s...</p>
+                    <div class="row">
+                        <div class="col-12 text-center px-0">
+                            <img src="assets/media_center/media03.png" alt="" class="img-fluid">
+                            <p class="text-center">Ethan Hawke Kicks Off Rendez-Vous with French ..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 text-center d-none d-md-block">
+                    <img src="assets/media_center/media01.png" alt="" class="img-fluid">
+                    <p class="text-center">ND/NF 50th Anniversary Talk: Wendy Keys with Sara Driver</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+
+    </style>
+
+    <!-- newyork ff -->
+
+    <div class="newyorkFf mb-0">
+        <div class="container px-0 d-flex justify-content-center">
+            <div class="titleBox d-flex justify-content-center align-items-center">
+                <h2>New York Film Festival 59th</h2>
+            </div>
+        </div>
+    </div>
+
+    <style>
+
+    </style>
+
+    <!-- getTicket -->
+    <div class="getTicket mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 px-0 ffpass d-flex">
+
+                    <h3 class="d-flex justify-content-center align-items-center">FILM FESITIVAL PASS</h3>
+                </div>
+                <div class="col-md-6 px-0 forgot d-flex">
+
+                    <h3 class="d-flex justify-content-center align-items-center">FILM FESITIVAL PASS</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- comment -->
+
+    <div class="comment">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 px-0">
+                    <div class="card comment1 text-center">
+                        <div class="card-body">
+                            <h2 class="card-title first">FILM COMMENTS</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12  col-md-4 px-0">
+                    <div class="card comment2 text-center">
+                        <div class="card-body">
+                            <h2 class="card-title">At Home, Palestinian Cinema </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12  col-md-4 px-0">
+                    <div class="card comment3 text-center">
+                        <div class="card-body">
+                            <h2 class="card-title">A Living Nightmare</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-md-8 px-0">
+                    <div class="card comment4 text-center">
+                        <div class="card-body">
+                            <div class="card-title">Cutting Edge</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
