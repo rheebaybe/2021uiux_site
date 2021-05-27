@@ -128,18 +128,15 @@
 </div> -->
 
 <style>
-    .sliderView img{
-       
-    }
+    
     .box{
-        background: var(--primary-color-1);
+        background: var(--primary-color-1);    
         display: flex;
-        flex-direction: column;
-        flex:1;
-        justify-content: center;
-        align-items: flex-end;
-       
         
+        flex-direction: column;      
+        justify-content: center;
+        align-items: center;
+                
           
     }
 </style>
@@ -150,8 +147,30 @@
     <div class="owl-carousel owl-theme owl-loaded">
         <!-- #1 -->
         <div>
-            <div class="sliderView ">
-                <img src="assets/slide01/slide_1.jpg" alt="" class="img-fluid d-flex justify-content-center">
+            <div class="sliderView sliderImg_1 d-flex justify-content-center">
+                <img src="assets/slide01/slide_1.jpg" alt="">
+                <div class="box d-none d-md-block">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
+                </div>
+            </div>
+        </div>
+        <!-- #1 -->
+        <!-- #1 -->
+        <div>
+            <div class="sliderView sliderImg_1 d-flex justify-content-center">
+                <img src="assets/slide01/slide_2.jpg" alt="">
+                <div class="box d-none d-md-block">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
+                </div>
+            </div>
+        </div>
+        <!-- #1 -->
+        <!-- #1 -->
+        <div>
+            <div class="sliderView sliderImg_1 d-flex justify-content-center">
+                <img src="assets/slide01/slide_3.jpg" alt="">
                 <div class="box d-none d-md-block">
                     <h2>Lorem, ipsum.</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
@@ -213,27 +232,68 @@
 </div>
 </div>
 
+
+
+
+
+
+<!-- comming soon -->
+<div class="commingSoon">
+    <div class="container">
+        <div class="owl-comming owl-theme owl-loaded">
+            <!-- #1 -->
+            <div>
+                <div class="sliderView d-flex">
+                    <img src="assets/owl_slider/owl01.png" alt="" class="img-fluid">                    
+                </div>
+            </div>
+            <!-- #1 -->
+            <!-- #1 -->
+            <div>
+                <div class="sliderView d-flex">
+                    <img src="assets/owl_slider/owl02.png" alt="" class="img-fluid">                    
+                </div>
+            </div>
+            <!-- #1 -->
+            <!-- #1 -->
+            <div>
+                <div class="sliderView d-flex">
+                    <img src="assets/owl_slider/owl03.png" alt="" class="img-fluid">                    
+                </div>
+            </div>
+            <!-- #1 -->
+        </div>
+    </div>
+</div>
+
 <script>
+   
+   
+   
+
+
     const btns = $(".freeEvent .btn-group button");
     btns.click(function(){
-        let i = $(this).index();
-        console.log(i);
-        btns.removeClass("active");
+      let i = $(this).index();
+      console.log(i);
+      btns.removeClass("active");
       btns.eq(i).addClass("active");
 
-        let selector = btns.eq(i).attr("data-filter");
-        console.log(selector);
-        $(".freeEvent .view").isotope({
-            fliter: selector
-        })
+      let selector = btns.eq(i).attr("data-filter");
+      console.log(selector);
 
-        window.onload = function(){
-            $(".freeEvent .btn-group #trig").trigger("click")
-        }
+      $(".freeEvent .view").isotope({
+        filter: selector
+      })
     });
 
+
+    
+    window.onload = function(){
+        $(".freeEvent .btn-group #trig").trigger("click")
+    }
     $(".sliderWrap .owl-carousel").owlCarousel({
-      loop:false,
+      loop:true,
       margin:50,
       autoplay:true,
       responsive:{
@@ -242,15 +302,18 @@
         1000:{items:1}
       }
     });
+
+    $(".commingSoon .owl-comming").owlCarousel({
+      loop:false,
+      margin:50,
+      autoplay:true,
+      responsive:{
+        0:{items:1},
+        600:{items:1},
+        1000:{items:2}
+      }
+    });
 </script>
-
-
-
-
-
-<!-- owl slider -->
-
-
 
 
 <!-- contents -->
@@ -274,6 +337,7 @@ Management reserves the right to deny admission or dismiss any customer for nonc
 </div>
 
 
+<!-- media center -->
 
 <div class="mediacenter">
     <div class="container py-5">
@@ -281,17 +345,17 @@ Management reserves the right to deny admission or dismiss any customer for nonc
         <div class="row">
             <div class="col-6">
                 <img src="assets/media_center/media02.png" alt="">
-                <p>20th Anniversary Restoration of Wong Kar Wai’s...</p>
+                <p class="text-center">20th Anniversary Restoration of Wong Kar Wai’s...</p>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12">
                         <img src="assets/media_center/media03.png" alt="">
-                        <p>Ethan Hawke Kicks Off Rendez-Vous with French ..</p>
+                        <p class="text-center">Ethan Hawke Kicks Off Rendez-Vous with French ..</p>
                     </div>
                 </div>
             </div>
             <div class="col-6 d-none d-lg-block">
                 <img src="assets/media_center/media01.png" alt="">
-                <p>ND/NF 50th Anniversary Talk: Wendy Keys with Sara Driver</p>
+                <p class="text-center">ND/NF 50th Anniversary Talk: Wendy Keys with Sara Driver</p>
             </div>
         </div>
     </div>
