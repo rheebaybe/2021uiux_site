@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film at Lincoln Center</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -21,28 +22,38 @@
         :root {
             --primary-color-1: #7A48FF;
             --primary-color-2: #141414;
+            --primary-color-3: #f4f4f4;
+            --primary-color-4: #4b4b4b;
             --box-shadow: 0 10px 20px rgba(57, 56, 61, 0.3);
             --bg-color2: #fff;
         }
 
         .menu li {
-            margin-left: 60px;
+            margin-left: 40px;
+            
+            
+        }
+        .menu li a{
+            transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
         }
 
-        .freeEvent h2.title {
+        h2.title {
             letter-spacing: 15px;
+
         }
 
-        .freeEvent h2.title:after,
-        .mediacenter h2.title:after {
-            content: "";
-            display: block;
-            width: 340px;
-            height: 2px;
-            background: var(--primary-color-1);
-            margin: 10px auto;
+        .menu li:hover a{
+            transform: scale(1.05);
+            color: var(--primary-color-1) !important;
         }
 
+        .menu li:active {
+            transform: scale(.9);
+        }
+
+        .dropdown-menu li{
+            padding:0;
+        }
         .primary-button {
             color: var(--primary-color-1);
 
@@ -72,6 +83,7 @@
 
         .freeEvent img {
             transition: 0.3s;
+            
         }
 
         .freeEvent img:hover {
@@ -79,10 +91,7 @@
 
         }
 
-        .freeEvent p,
-        .freeEvent h4 {
-            width: 300px;
-        }
+        
 
 
         /* contents */
@@ -103,11 +112,28 @@
             opacity: 1;
         }
 
+
+
+        /* mediacenter */
+        .mediacenter p{
+            font-size: 18px;
+        }
+        .mediacenter div{
+            overflow: hidden;
+        }
+        .mediacenter img{
+            transition: 1.8s;
+        }
+        .mediacenter img:hover{
+            transform: scale(1.1);
+        }
         /* newyork */
         .newyorkFf .container {
             background: url(assets/newff.png) no-repeat center fixed;
             background-size: cover;
-            height: 476px;
+           height: 476px;
+           
+           
         }
 
         .newyorkFf .titleBox {
@@ -119,6 +145,7 @@
             color: #fff;
             font-size: 28.8px;
             font-weight: bold;
+            letter-spacing: 10px;
         }
 
 
@@ -126,13 +153,13 @@
         /* getticket */
         .ffpass {
             background: url(assets/ffpass.png) no-repeat center;
-            background-size: cover;
+            
             height: 276px;
         }
 
         .forgot {
             background: url(assets/forgotme.png) no-repeat center;
-            background-size: cover;
+            
             height: 276px;
         }
 
@@ -164,19 +191,18 @@
 
         .comment2 {
             background: url(assets/comment/athome.png) no-repeat center;
-            background-size: cover;
-
+            
         }
 
         .comment3 {
             background: url(assets/comment/living.png) no-repeat center;
-            background-size: cover;
+            
 
         }
 
         .comment4 {
             background: url(assets/comment/cutting.png) no-repeat center;
-            background-size: cover;
+            
 
         }
 
@@ -184,16 +210,26 @@
 
             height: 241px;
         }
-
+        
         .card-title {
             font-size: 18px;
             color: #fff;
             font-weight: bold;
             letter-spacing: 5px;
+            transition: 1s;
+            cursor: pointer;
         }
-
+        .card-body:hover .card-title{
+            color:var(--primary-color-4);
+            
+        }
+       
         .card-title.first {
             color: var(--primary-color-2);
+        }
+        
+        .footer p{
+            font-size: 18px;
         }
     </style>
 
@@ -258,55 +294,48 @@
     </div>
 
 
-
     <style>
-        .box {
-            background: var(--primary-color-1);
-            display: flex;
-
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-
+     
+        .textSlider{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            
         }
+        .textSlider .sliderView{
+            width: 600px;
+            height: 400px;
+            background: red;
+        }
+        
+    
     </style>
-
 
 <!-- 메인슬라이더 -->
 
     <div class="sliderWrap mb-5">
-        <div class="owl-carousel owl-theme owl-loaded" id="slider0">
+        <div class="owl-carousel owl-theme owl-loaded px-0" id="slider0">
             <!-- #1 -->
             <div>
-                <div class="sliderView sliderImg_1 d-flex justify-content-center">
+                <div class="sliderView d-flex justify-content-center">
                     <img src="assets/slide01/slide_1.jpg" alt="">
-                    <div class="box d-none d-md-block">
-                        <h2>Lorem, ipsum.</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
-                    </div>
+                    
                 </div>
             </div>
             <!-- #1 -->
             <!-- #2 -->
             <div>
-                <div class="sliderView sliderImg_1 d-flex justify-content-center">
+                <div class="sliderView d-flex justify-content-center">
                     <img src="assets/slide01/slide_2.jpg" alt="">
-                    <div class="box d-none d-md-block">
-                        <h2>Lorem, ipsum.</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
-                    </div>
+                    
                 </div>
             </div>
             <!-- #2 -->
             <!-- #3 -->
             <div>
-                <div class="sliderView sliderImg_1 d-flex justify-content-center">
+                <div class="sliderView d-flex justify-content-center">
                     <img src="assets/slide01/slide_3.jpg" alt="">
-                    <div class="box d-none d-md-block">
-                        <h2>Lorem, ipsum.</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, autem.</p>
-                    </div>
+                    
                 </div>
             </div>
             <!-- #3 -->
@@ -314,6 +343,47 @@
         </div>
     </div>
 
+
+<div class="container textSlider">
+    <div class="owl-carousel owl-theme owl-loaded px-0" id="slider3">
+       <!-- #1 -->
+        <div>
+            
+            <div class="sliderView d-flex">
+                <div class="box">
+                    <h2>1Lorem, ipsum.</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, hic!</p>
+                </div>
+            </div>
+                      
+        </div>
+        <!-- #1 --> 
+       <!-- #1 -->
+        <div>
+            
+            <div class="sliderView d-flex">
+                <div class="box">
+                    <h2>2Lorem, ipsum.</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, hic!</p>
+                </div>
+            </div>
+                      
+        </div>
+        <!-- #1 --> 
+       <!-- #1 -->
+        <div>
+            
+            <div class="sliderView d-flex">
+                <div class="box">
+                    <h2>3Lorem, ipsum.</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, hic!</p>
+                </div>
+            </div>
+                      
+        </div>
+        <!-- #1 --> 
+    </div>
+</div>
 
 
 
@@ -335,34 +405,34 @@
                 <button data-filter=".four">40min</button>
             </div>
             <div class="row view">
-                <div class="col-md-6 p-0 element-item six">
-                    <img src="assets/free_event/event01.png" alt="" class="img-fluid mr-40">
-                    <p class="">2021 / 60min</p>
+                <div class="col-md-6 element-item six text-center">
+                    <img src="assets/free_event/event01.png" alt="" class="img-fluid mr-40 w-100">
+                    <p>2021 / 60min</p>
                     <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
                 </div>
-                <div class="col-md-6 p-0 element-item six">
-                    <img src="assets/free_event/event02.png" alt="" class="img-fluid">
-                    <p class="">2021 / 60min</p>
+                <div class="col-md-6  element-item six text-center">
+                    <img src="assets/free_event/event02.png" alt="" class="img-fluid w-100">
+                    <p>2021 / 60min</p>
                     <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
                 </div>
-                <div class="col-md-6 p-0 element-item six">
-                    <img src="assets/free_event/event03.png" alt="" class="img-fluid">
-                    <p class="">2021 / 60min</p>
+                <div class="col-md-6  element-item six text-center">
+                    <img src="assets/free_event/event03.png" alt="" class="img-fluid w-100">
+                    <p>2021 / 60min</p>
                     <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
                 </div>
-                <div class="col-md-6 p-0 element-item four">
-                    <img src="assets/free_event/event04.png" alt="" class="img-fluid">
-                    <p class="">2021 / 60min</p>
+                <div class="col-md-6  element-item four text-center">
+                    <img src="assets/free_event/event04.png" alt="" class="img-fluid w-100">
+                    <p>2021 / 60min</p>
                     <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
                 </div>
-                <div class="col-md-6 p-0 element-item four">
-                    <img src="assets/free_event/event05.png" alt="" class="img-fluid">
-                    <p class="">2021 / 60min</p>
+                <div class="col-md-6  element-item four text-center">
+                    <img src="assets/free_event/event05.png" alt="" class="img-fluid w-100">
+                    <p>2021 / 60min</p>
                     <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
                 </div>
-                <div class="col-md-6 p-0 element-item four">
-                    <img src="assets/free_event/event06.png" alt="" class="img-fluid">
-                    <p class="">2021 / 60min</p>
+                <div class="col-md-6  element-item four text-center">
+                    <img src="assets/free_event/event06.png" alt="" class="img-fluid w-100">
+                    <p >2021 / 60min</p>
                     <h4 class="mb-3">ND/NF 2021 Critics’ Preview</h4>
                 </div>
             </div>
@@ -440,6 +510,7 @@
         $("#slider0").owlCarousel({
             loop: true,
             margin: 50,
+            autoplaySpeed : 3000,
             autoplay: true,
             responsive: {
                 0: { items: 2 },
@@ -459,6 +530,19 @@
                 0: { items: 1 },
                 600: { items: 3 },
                 1000: { items: 3 }
+            }
+        });
+       
+        $("#slider3").owlCarousel({
+            loop: true,
+            dots:false,
+            autoplaySpeed : 2000,
+            margin: 10,
+            autoplay: true,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 1 },
+                1000: { items: 1 }
             }
         });
 
@@ -498,18 +582,18 @@
         <div class="container py-5 px-0">
             <h2 class="title text-center mb-5">MEDIA CENTER</h2>
             <div class="row">
-                <div class="col-6 text-center px-0">
-                    <img src="assets/media_center/media02.png" alt="" class="img-fluid">
+                <div class="col-12 col-md-6 text-center">
+                    <img src="assets/media_center/media02.png" alt="" class="img-fluid w-100 mb-3" >
                     <p class="text-center">20th Anniversary Restoration of Wong Kar Wai’s...</p>
                     <div class="row">
-                        <div class="col-12 text-center px-0">
-                            <img src="assets/media_center/media03.png" alt="" class="img-fluid">
+                        <div class="col-12 text-center ">
+                            <img src="assets/media_center/media03.png" alt="" class="img-fluid w-100 mb-3">
                             <p class="text-center">Ethan Hawke Kicks Off Rendez-Vous with French ..</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 text-center d-none d-md-block">
-                    <img src="assets/media_center/media01.png" alt="" class="img-fluid">
+                <div class="col-6 text-center d-none d-md-block" style="padding-top:80px">
+                    <img src="assets/media_center/media01.png" alt="" class="img-fluid w-100 mb-3">
                     <p class="text-center">ND/NF 50th Anniversary Talk: Wendy Keys with Sara Driver</p>
                 </div>
             </div>
@@ -523,7 +607,7 @@
     <!-- newyork ff -->
 
     <div class="newyorkFf mb-0">
-        <div class="container px-0 d-flex justify-content-center">
+        <div class="container d-flex justify-content-center px-0">
             <div class="titleBox d-flex justify-content-center align-items-center">
                 <h2>New York Film Festival 59th</h2>
             </div>
@@ -536,58 +620,91 @@
 
     <!-- getTicket -->
     <div class="getTicket mb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 px-0 ffpass d-flex">
+        <div class="container px-0">
+            <div class="row no-gutters">
+                <div class="col-md-6 px-0 ffpass d-flex  ">
 
                     <h3 class="d-flex justify-content-center align-items-center">FILM FESITIVAL PASS</h3>
                 </div>
                 <div class="col-md-6 px-0 forgot d-flex">
 
-                    <h3 class="d-flex justify-content-center align-items-center">FILM FESITIVAL PASS</h3>
+                    <h3 class="d-flex justify-content-center align-items-center">FORGOT ME</h3>
                 </div>
 
             </div>
         </div>
     </div>
 
-
+<style>
+   
+   
+</style>
 
     <!-- comment -->
 
-    <div class="comment">
-        <div class="container">
-            <div class="row">
+    <div class="comment mb-5">
+        <div class="container px-0">
+            <div class="row no-gutters">
                 <div class="col-12 col-md-4 px-0">
-                    <div class="card comment1 text-center">
-                        <div class="card-body">
+                    <div class="card comment1 ">
+                        <div class="card-body d-flex justify-content-center align-items-center">
                             <h2 class="card-title first">FILM COMMENTS</h2>
                         </div>
                     </div>
                 </div>
                 <div class="col-12  col-md-4 px-0">
-                    <div class="card comment2 text-center">
-                        <div class="card-body">
+                    <div class="card comment2">
+                        <div class="card-body d-flex justify-content-center align-items-center">
                             <h2 class="card-title">At Home, Palestinian Cinema </h2>
                         </div>
                     </div>
                 </div>
                 <div class="col-12  col-md-4 px-0">
-                    <div class="card comment3 text-center">
-                        <div class="card-body">
+                    <div class="card comment3">
+                        <div class="card-body d-flex justify-content-center align-items-center">
                             <h2 class="card-title">A Living Nightmare</h2>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
                 <div class="col col-md-8 px-0">
-                    <div class="card comment4 text-center">
-                        <div class="card-body">
+                    <div class="card comment4">
+                        <div class="card-body d-flex justify-content-center align-items-center">
                             <div class="card-title">Cutting Edge</div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+<style>
+    .footer{
+        background: var(--primary-color-3);
+    }
+</style>
+
+    <!-- footer -->
+    <div class="footer py-5">        
+        <div class="container px-0">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <ul class="icon d-md-flex">
+                        <li><a href="#!"><img src="assets/footer_icon01.png" alt=""></a></li>
+                        <li><a href="#!"><img src="assets/footer_icon02.png" alt=""></a></li>
+                        <li><a href="#!"><img src="assets/footer_icon03.png" alt=""></a></li>
+                        <li><a href="#!"><img src="assets/footer_icon04.png" alt=""></a></li>
+                        <li><a href="#!"><img src="assets/footer_icon05.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-3 text-center mb-3 text-md-left">
+                    <img src="assets/footer_logo.svg" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-9 py-3 text-center text-md-left"><p>For 50 years, Film at Lincoln Center has been dedicated to supporting the art and elevating
+                    the craft of cinema and enriching film culture.</p></div>
             </div>
         </div>
     </div>
