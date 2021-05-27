@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film at Lincoln Center</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <script src="js/jquery.3.4.1.js"></script>
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script>
@@ -30,19 +29,27 @@
         :root{
             --primary-color-1:#7A48FF;
         }
-        .freeEvent h2:after{
+        .freeEvent h2.title{
+            letter-spacing: 15px;
+        }
+        .freeEvent h2.title:after,
+        .mediacenter h2.title:after{
             content:"";
             display: block;
-            width: 320px;
+            width: 340px;
             height: 2px;
             background: var(--primary-color-1);
             margin: 10px auto;
+        }
+        .primary-button{
+            color:var(--primary-color-1);
         }
     </style>
 
     <style>
         .contents h2{
             font-size: 18px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -63,9 +70,19 @@
 
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav m-auto">
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                              </li> -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-toggle="dropdown" >
                                     FILM
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -113,13 +130,13 @@
 
 <!-- freeevent -->
 <div class="freeEvent">
-    <div class="container">
-        <h2 class="title text-center">FREE EVENT</h2>
+    <div class="container py-5">
+        <h2 class="title text-center mb-5">FREE EVENT</h2>
     
     <div class="btn-group">
-        <p>years</p>
+        <!-- <p>years</p> -->
         <button data-filter="" class="active">2021</button>
-        <p>time</p>
+        <!-- <p>time</p> -->
         <button data-filter=".six" id="trig">60min</button>
         <button data-filter=".four">40min</button>
     </div>
@@ -189,24 +206,47 @@
 
 <!-- contents -->
 <div class="contents">
-    <div class="container">
+    <div class="container py-5">
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 d-block order-1 ">
                 <h2>Reopening Safety & Health Policies</h2>
             </div>
-            <div class="col-8">
+            <div class="col-8 d-block order-2 ">
                 <p>The well-being of our audience members and theater team remains our top priority, which is why Film at Lincoln Center 
                     has developed a comprehensive series of health and safety policies in coordination with state, city, and medical experts.</p>
                 <p>
                     Please note: policies will be strictly enforced for the protection of our staff and guests. 
 Management reserves the right to deny admission or dismiss any customer for noncompliance with FLC policies. 
                 </p>
+            <a href="#!" class="btn button primary-button">more</a>    
             </div>
         </div>
     </div>
 </div>
 
 
+
+<div class="mediacenter">
+    <div class="container py-5">
+        <h2 class="title text-center mb-5">MEDIA CENTER</h2>
+        <div class="row">
+            <div class="col-6">
+                <img src="assets/media_center/media02.png" alt="">
+                <p>20th Anniversary Restoration of Wong Kar Wai’s...</p>
+                <div class="row">
+                    <div class="col">
+                        <img src="assets/media_center/media03.png" alt="">
+                        <p>Ethan Hawke Kicks Off Rendez-Vous with French ..</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 d-none d-lg-block">
+                <img src="assets/media_center/media01.png" alt="">
+                <p>ND/NF 50th Anniversary Talk: Wendy Keys with Sara Driver</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 </body>
