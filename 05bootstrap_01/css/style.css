@@ -42,10 +42,7 @@ h2.title {
     padding: 0;
 }
 
-.primary-button {
-    color: var(--primary-color-1);
 
-}
 
 /* freeevent */
 .freeEvent p {
@@ -62,6 +59,7 @@ h2.title {
     outline: 0 none;
     font-size: 10px;
     transition: 0.3s;
+    
 }
 
 .freeEvent button:hover {
@@ -92,15 +90,15 @@ h2.title {
     background: var(--primary-color-3);
 }
 
-.textSlider h3 {
-    color: var(--primary-color-1);
-}
 
 
 /* contents */
 .contents h2 {
     font-size: 18px;
 
+}
+.contents a{
+    color:var(--primary-color-1);
 }
 
 /* comming */
@@ -348,3 +346,14 @@ h4.location a{
 .become p{
     color:#787878 
 }
+
+
+
+/* NOWPLAYING */
+.now_topImg{
+    background: url(../assets/subpage_top/nowplaying.png) no-repeat fixed;
+    height: 400px;
+}
+
+
+

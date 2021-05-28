@@ -85,40 +85,129 @@
   
 
 <!-- top -->
-<div class="faq_topImg d-flex justify-content-center align-items-center mb-3">
-    <h2 class="textdeco">FAQ</h2>
-</div>
+<div class="virtualSlider01 mb-5">
+    <div class="owl-carousel owl-theme owl-loaded px-0" id="slider4">
+        <!-- #1 -->
+        <div>
+            <div class="sliderView d-flex justify-content-center">
+                <img src="assets/subpage/virtual_01.jpg" alt="">
 
+            </div>
+        </div>
+        <!-- #1 -->
+        <!-- #2 -->
+        <div>
+            <div class="sliderView d-flex justify-content-center">
+                <img src="assets/subpage/virtual_02.jpg" alt="">
 
-<div class="about">
-    <div class="container mb-5">
-        <h4 class="location mb-3"><a href="index.html">Home  ></a><a href="about.html">  About</a> </h4>
-        <div class="row mb-3">
-            <div class="col text-center text-md-left">
-                <h2 class="mb-3">About Us</h2>
-                <p class="d-inline">Film at Lincoln Center is devoted to supporting the art and elevating the craft of cinema. The only branch of the world-renowned arts complex Lincoln Center to shine a light on the everlasting yet evolving importance of the moving image, this nonprofit organization was founded in 1969 to celebrate American and international film. Via year-round programming and discussions; its annual New York Film Festival; and its publications,including</p> <span class="purple">Film Comment</span>, the U.S.’s premier magazine about films and film culture, Film at Lincoln Center endeavors to make the discussion and appreciation of cinema accessible to a broader audience, as well as to ensure that it will remain an essential art form for years to come.</p>
-                
             </div>
         </div>
-        <div class="row mb-3">
-            <div class="col text-center">
-                <h4 class="purple font-weight-bold">Explore our history in a new interactive timeline.</h4>
-                
+        <!-- #2 -->
+        <!-- #3 -->
+        <div>
+            <div class="sliderView d-flex justify-content-center">
+                <img src="assets/subpage/virtual_03.jpg" alt="">
+
             </div>
         </div>
-        <div class="row">
-            <div class="col text-center text-md-left">
-                <p>As an independent constituent of the world’s foremost performing arts center, Film at Lincoln Center presents year-round programming that includes premieres of new films from an international roster of established and emerging directors, major retrospectives, in-depth filmmaker talks, and high profile events. Film at Lincoln Center is one of those rare institutions whose stature is matched by its popularity, each year welcoming an aggregate audience of more than 200,000 film aficionados, filmmakers, and industry leaders of every nationality, age, economic, and ethnic group. The organization has been a pioneer among film institutions and one of the film world’s most respected and influential arbiters of cinematic trends and discoveries. Martin Scorsese, Rainer Werner Fassbinder, Agnès Varda, Wong Kar-Wai, Pedro Almodóvar, Spike Lee, Wes Anderson—over the last four decades there is scarcely a major director who has not been introduced to American audiences by Film at Lincoln Center.</p>
-                <p>Film at Lincoln Center is best known for two world-class international festivals—the New York Film Festival (the most famous and prestigious in the country), and New Directors/New Films (celebrating new cinematic artists). It runs two state-of-the-art, year-round cinemas, the Walter Reade Theater (268 seats) and the Elinor Bunin Munroe Film Center—Francesca Beale Theater (150 seats), Howard Gilman Theater (90 seats), and Amphitheater (75 seats)—and publishes the country’s most respected cinematic journal, Film Comment. Each year the organization presents its annual Chaplin Award Gala Tribute honoring legendary stars and industry leaders of our generation at Lincoln Center’s Alice Tully Hall. At various times of the year, Film at Lincoln Center partners with Hollywood studios to present premieres and special live appearances.</p>
-                <p>Film at Lincoln Center is a proud supporter of the International Federation of Film Archives (FIAF).</p>
-                <p>Film at Lincoln Center has received four stars, the highest possible rating, from Charity Navigator, America’s premier independent charity evaluator.</p>
+        <!-- #3 -->
+        <!-- #4 -->
+        <div>
+            <div class="sliderView d-flex justify-content-center">
+                <img src="assets/subpage/virtual_04.jpg" alt="">
+
             </div>
         </div>
+        <!-- #4 -->
+        <!-- #5 -->
+        <div>
+            <div class="sliderView d-flex justify-content-center">
+                <img src="assets/subpage/virtual_05.jpg" alt="">
+
+            </div>
+        </div>
+        <!-- #5 -->
+
     </div>
 </div>
 
 
+<div class="virtual">
+    <div class="container">
+        <h4 class="location mb-3"><a href="index.html">Home  ></a><a href="#">  Film  ></a><a href="virtual_cinema.html">  Virtual Cinema</a> </h4>
+        <div class="virtualSlider02 mb-5">
+            <h3>Now Playing</h3>
+            <div class="owl-carousel owl-theme owl-loaded px-0" id="slider5">
+                <!-- #1 -->
+                <div>
+                    <div class="sliderView d-flex justify-content-center">
+                        <img src="assets/subpage/v_slide_01.jpg" alt="">
+        
+                    </div>
+                </div>
+                <!-- #1 -->
+                <!-- #2 -->
+                <div>
+                    <div class="sliderView d-flex justify-content-center">
+                        <img src="assets/subpage/v_slide_02.jpg" alt="">
+        
+                    </div>
+                </div>
+                <!-- #2 -->
+                <!-- #3 -->
+                <div>
+                    <div class="sliderView d-flex justify-content-center">
+                        <img src="assets/subpage/v_slide_03.jpg" alt="">
+        
+                    </div>
+                </div>
+                <!-- #3 -->
+                <!-- #4 -->
+                <div>
+                    <div class="sliderView d-flex justify-content-center">
+                        <img src="assets/subpage/v_slide_04.jpg" alt="">
+        
+                    </div>
+                </div>
+                <!-- #4 -->
+                <!-- #5 -->
+                <div>
+                    <div class="sliderView d-flex justify-content-center">
+                        <img src="assets/subpage/v_slide_05.jpg" alt="">
+        
+                    </div>
+                </div>
+                <!-- #5 -->
+        
+            </div>
+        </div>        
+    </div>
+</div>
 
+<script>
+     $("#slider4").owlCarousel({
+            loop: true,
+            margin: 50,
+            // autoplaySpeed : 3000,
+            autoplay: true,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 1 }
+            }
+        });
+     $("#slider5").owlCarousel({
+            loop: true,
+            margin: 50,
+            // autoplaySpeed : 3000,
+            autoplay: true,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 5 }
+            }
+        });
+</script>
 
 <div class="footer py-5">
     <div class="container px-0">
@@ -145,6 +234,8 @@
     </div>
 </div>
 
-
+<script>
+    $(".view .popup_link").magnificPopup({type:"image"});
+</script>
 </body>
 </html>
