@@ -1,0 +1,350 @@
+@charset "UTF-8";
+
+
+:root {
+    --primary-color-1: #7A48FF;
+    --primary-color-2: #141414;
+    --primary-color-3: #f4f4f4;
+    --primary-color-4: #4b4b4b;
+    --primary-color-5: #1C3251;
+    --primary-color-6: #AF2022;
+    --box-shadow: 0 10px 20px rgba(57, 56, 61, 0.3);
+    --bg-color2: #fff;
+    
+    
+}
+
+.menu .nav-item {
+    margin-left: 40px;
+
+
+}
+
+.menu li a {
+    transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+h2.title {
+    letter-spacing: 15px;
+
+}
+
+.menu li:hover a {
+    transform: scale(1.05);
+    color: var(--primary-color-1) !important;
+}
+
+.menu li:active {
+    transform: scale(.9);
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.primary-button {
+    color: var(--primary-color-1);
+
+}
+
+/* freeevent */
+.freeEvent p {
+    font-size: 10px;
+}
+
+.freeEvent h4 {
+    font-size: 18px;
+}
+
+.freeEvent button {
+    border: 0 none;
+    background: none;
+    outline: 0 none;
+    font-size: 10px;
+    transition: 0.3s;
+}
+
+.freeEvent button:hover {
+    color: var(--primary-color-1);
+    font-size: 12px;
+}
+
+.freeEvent img {
+    transition: 0.3s;
+
+}
+
+.freeEvent img:hover {
+    box-shadow: var(--box-shadow);
+
+}
+
+.textSlider {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+}
+
+.textSlider .sliderView {
+    width: 600px;
+    height: 400px;
+    background: var(--primary-color-3);
+}
+
+.textSlider h3 {
+    color: var(--primary-color-1);
+}
+
+
+/* contents */
+.contents h2 {
+    font-size: 18px;
+
+}
+
+/* comming */
+.commingSoon .owl-item {
+    transition: 0.2s;
+    padding: 20px;
+    opacity: 0.4;
+}
+
+.commingSoon .owl-item.center {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+
+
+/* mediacenter */
+.mediacenter p {
+    font-size: 18px;
+}
+
+.mediacenter div {
+    overflow: hidden;
+}
+
+.mediacenter img {
+    transition: 1.8s;
+}
+
+.mediacenter img:hover {
+    transform: scale(1.1);
+}
+
+/* newyork */
+.newyorkFf .container {
+    background: url(../assets/newff.png) no-repeat center fixed;
+    background-size: cover;
+    height: 476px;
+
+
+}
+
+.newyorkFf .titleBox {
+    flex: 1;
+
+}
+
+.newyorkFf .titleBox h2 {
+    color: #fff;
+    font-size: 28.8px;
+
+    letter-spacing: 10px;
+}
+
+
+
+/* getticket */
+.ffpass {
+    background: url(../assets/ffpass.png) no-repeat center;
+
+    height: 276px;
+}
+
+.forgot {
+    background: url(../assets/forgotme.png) no-repeat center;
+
+    height: 276px;
+}
+
+.getTicket h3 {
+    flex: 1;
+    flex-direction: column;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 10px;
+    transition: 0.3s;
+}
+
+.ffpass:hover h3,
+.forgot:hover h3 {
+    font-size: 26px;
+}
+
+
+/* comment */
+.card {
+    border: 0 none;
+    border-radius: 0 !important;
+}
+
+.comment1 {
+    background: var(--bg-color1);
+
+}
+
+.comment2 {
+    background: url(../assets/comment/athome.png) no-repeat center;
+
+}
+
+.comment3 {
+    background: url(../assets/comment/living.png) no-repeat center;
+
+
+}
+
+.comment4 {
+    background: url(../assets/comment/cutting.png) no-repeat center;
+
+
+}
+
+.card-body {
+
+    height: 241px;
+}
+
+.card-title {
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 5px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.card-body:hover .card-title {
+    color: var(--primary-color-4);
+
+}
+
+.card-title.first {
+    color: var(--primary-color-2);
+}
+
+.footer p {
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+.footer {
+    background: var(--primary-color-3);
+}
+
+
+
+
+
+/* 서브페이지 시작*/
+
+
+
+
+
+/* MEDIACENTER */
+.media_topImg{
+    background:url(../assets/subpage_top/media.png) no-repeat fixed;
+   
+    height: 400px;
+}
+
+.textdeco{
+    color:var(--bg-color2);
+    letter-spacing: 10px;
+    font-size: 28px;
+}
+
+h4.location a{
+    color:var(--primary-color-2);
+    font-size: 16px;
+}
+
+
+
+
+/* filmcommnet */
+
+.comment_topImg{
+    background: url(../assets/subpage_top/comment.png) no-repeat fixed;
+    height: 400px;
+}
+
+.film_comment .card .card-title{
+    color:var(--primary-color-5);
+}
+.film_comment .card .card-subtitle{
+    color:var(--primary-color-6);
+}
+
+/* free_event */
+.free_topImg{
+    background: url(../assets/subpage_top/free.png) no-repeat fixed;
+    height: 400px;
+}
+
+.free_event h2{
+    font-size: 24px;
+}
+.free_event .time,
+.free_event .place,
+.free_event p
+{
+    font-size: 14px;
+}
+
+
+.free_event .row a{
+    color:var(--primary-color-1);
+}
+
+
+
+
+
+
+/* faq */
+
+.faq_topImg{
+    background: url(../assets/subpage_top/faq.png) no-repeat fixed;
+    height: 400px;
+}
+
+.accordion-title{
+    color:var(--primary-color-2);
+    font-size: 18px;
+}
+
+
+/* support */
+.support_topImg{
+    background: url(../assets/subpage_top/support.png) no-repeat fixed;
+    height: 400px;
+}
+
+.purple{
+    color:var(--primary-color-1);
+}
+
+
+.become p{
+    color:#787878 
+}
