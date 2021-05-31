@@ -32,6 +32,13 @@
 </head>
 
 <body>
+    <style>
+        .headerWrap{position: relative;z-index: 99999;}
+        .headerWrap.fixed-top{
+    box-shadow: var(--box-shadow);
+    background: var(--bgcolor2);
+  }
+    </style>
     <div class="headerWrap">
         <div class="container px-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -425,15 +432,27 @@
                         the craft of cinema and enriching film culture.</p>
                 </div>
             </div>
-        </div>
-    </div>
+        </div>  
 
 
 
     <script>
 
 
+let navOffset = $(".headerWrap").height()+100;
 
+  $(window).scroll(function(){
+    hScroll();
+  });
+  function hScroll(){
+    let scroll = $(window).scrollTop();
+    if(navOffset < scroll){
+      $(".headerWrap").addClass("fixed-top");
+    }else{
+        $(".headerWrap").removeClass("fixed-top");
+    }
+  }
+  hScroll();
 
 
         const btns = $(".freeEvent .btn-group button");

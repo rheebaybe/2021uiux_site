@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+
+:root{
+    --primary-color1:#F47435;
+}
+body{
+    background: #F2F1EB;
+    padding-top: 90px;
+}
+
+.container{
+    padding:40px;
+    background: #fff;
+    border-radius: 15px;
+}
+.container nav{
+    
+}
+
+.navbar-nav li a{
+    font-size: 12px;
+}
+nav{
+    padding-right: 5px;
+}
+.btn{
+   background: var(--primary-color1);
+}
