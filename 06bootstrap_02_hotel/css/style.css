@@ -26,4 +26,34 @@ nav{
 }
 .btn{
    background: var(--primary-color1);
+   
+}
+
+#exp .card{
+    border:0 none;
+    
+}
+
+#exp .row>div{
+    transition:.3s;
+    opacity: 0.5;
+   
+}
+#exp .row>div:hover{
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.5);
+    transform:translate(-10px,-10px);
+    opacity: 1;
+}
+#room .row .card{
+    border-radius: 20px;
+    overflow: hidden;
+}
+#room .card .card-title{
+    font-size: 20px;
+}
+#room .card .card-subtitle{
+    font-size: 18px;
+}
+#room .card p{
+    font-size: 12px;
 }
