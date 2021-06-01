@@ -14,9 +14,17 @@
     <!-- Bootstrap cal form css -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+        <!-- swiper css -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- font awesome     -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- cssgram -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.10/cssgram.min.css">    
+
+
+
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -30,225 +38,592 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- swiper js -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>Hello, world!</title>
 </head>
+    
 
 <body>
 
 
 
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light px-3">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/logo.png" alt="" class="img-fluid">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active mr-2">
-                        <a class="nav-link" href="#">INFORMATION</a>
-                    </li>
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="#">ROOMS & SUITES</a>
-                    </li>
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="#">THE MARK EXPERIENCE</a>
-                    </li>
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="#">GALLERY</a>
-                    </li>
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="#">NEIGHBORHOOD</a>
-                    </li>
+    <div class="container mb-5" id="Wrap">
+        <div class="container mb-5">
+            <nav class="navbar navbar-expand-lg navbar-light px-0">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo.png" alt="" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="information.html">INFORMATION</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="room.html">ROOMS & SUITES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">THE MARK EXPERIENCE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">NEIGHBORHOOD</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#!" class="btn btn-style d-none d-md-block text-white flicker">RESERVATION</a>
+                
+            </nav>
+        </div>
 
-                </ul>
-            </div>
-            <button type="button" class="btn d-none d-md-block">RESERVATION</button>
-        </nav>
-    </div>
 
 
 
-
-<!-- main start -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 order-2 order-md-1">
-                <h2 class="text-center mb-3">New York's Most Boldly <br> Lavish Hotel is open!!! </h2>
-                <h5 class="mb-5">ENJOY DELICIOUS ROOM SERVICE, INDOOR AND OUTDOOR DINING BY CHEF JEAN-GEORGES</h5>
-                <div class="row">
-                    <div class="col-md-3 no-gutters px-0 text-center">
-                        <p>I’d like to arrive on</p>
-                    </div>
-                    <div class='col-md-3 col-xs-4 no-gutters px-0'>
-                        <div class="form-group">
-                            <div class="input-group date" id="datetimepicker1" data-target-input="nearest"> <input
-                                    type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"
-                                    value="01/11/2020">
-                                <div class="input-group-append" data-target="#datetimepicker1"
-                                    data-toggle="datetimepicker">
-                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+        <!-- main start -->
+        <div class="container mb-md-5 py-5" id="main">
+            <div class="row">
+                <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+                    <h1 class=" mb-3 font-weight-bold">New York's Most Boldly <br> Lavish Hotel is open!!! </h1>
+                    <h5 class="mb-5">ENJOY DELICIOUS ROOM SERVICE, INDOOR AND OUTDOOR DINING BY CHEF JEAN-GEORGES</h5>
+                    <div class="row mb-3 cal-form p-3">
+                        <div class="col-md-3 no-gutters px-0 text-center">
+                            <p>I’d like to arrive on</p>
+                        </div>
+                        <div class='col-md-3 col-xs-4 no-gutters px-0'>
+                            <div class="form-group">
+                                <div class="input-group date" id="datetimepicker1" data-target-input="nearest"> <input
+                                        type="text" class="form-control datetimepicker-input"
+                                        data-target="#datetimepicker1" value="01/11/2020">
+                                    <div class="input-group-append" data-target="#datetimepicker1"
+                                        data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 no-gutters px-0 text-center">
+                            <p>and stay until</p>
+                        </div>
+                        <div class='col-md-3 col-xs-4 px-0'>
+                            <div class="form-group">
+                                <div class="input-group date" id="datetimepicker2" data-target-input="nearest"> <input
+                                        type="text" class="form-control datetimepicker-input"
+                                        data-target="#datetimepicker2" value="01/15/2020">
+                                    <div class="input-group-append" data-target="#datetimepicker2"
+                                        data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 no-gutters px-0 text-center">
-                        <p>and stay until</p>
+                    <!--cal form-->
+                    <div class="row">
+                        <div class="col-12 mb-3 px-0 text-center mb-3">
+                            <a href="#!" class="btn btn-style d-block d-md-inline-block text-white">RESERVATION</a>
+                        </div>
                     </div>
-                    <div class='col-md-3 col-xs-4 px-0'>
-                        <div class="form-group">
-                            <div class="input-group date" id="datetimepicker2" data-target-input="nearest"> <input
-                                    type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2"
-                                    value="01/15/2020">
-                                <div class="input-group-append" data-target="#datetimepicker2"
-                                    data-toggle="datetimepicker">
-                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    <div class="row">
+                        <div class="col-12 text-center sns">
+                            <a href=""><i class="fab fa-facebook-f px-3 px-md-5"></i></a>
+                            <a href=""><i class="fab fa-twitter px-3 px-md-5"></i></a>
+                            <i class="fab fa-instagram px-3 px-md-5"></i>
+                            <i class="fab fa-tripadvisor px-3 px-md-5"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-1 order-md-2">
+                    <img src="assets/home_themark.png" alt="" class="img-fluid w-100">
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!-- main end -->
+
+
+
+        <!-- exp start -->
+        <div class="container mb-md-5 py-5" id="exp">
+            <div class="exp-title text-center py-5">
+                <h2 class="font-weight-bold">THE MARK EXPERIENCE</h2>
+                <p class="mb-3">
+                    <a href="#!" class="more">more</a>
+                </p>
+            </div>
+            <div class="row text-center">
+                <!--#1-->
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/experience/exp_01.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">For Furry Guest</div>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--#1-->
+                <!--#2-->
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/experience/exp_02.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">In-Room Dining</div>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--#2-->
+                <!--#3-->
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/experience/exp_03.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">The Mark Pedicabs</div>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--#3-->
+                <!--#4-->
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/experience/exp_04.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Bergdorf Goodman</div>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--#4-->
+            </div>
+        </div>
+
+        <!-- exp end -->
+
+
+
+
+        <!-- room start -->
+        <div class="container mb-3 mb-md-5 py-5" id="room">
+            <div class="room-title text-center py-5">
+                <h2 class="font-weight-bold">ROOM & SUITES</h2>
+                <p><a href="#!" class="more">more</a></p>
+            </div>
+            <div class="row text-center">
+                <!--#room1-->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/room/room_01.png" alt="" class="img-fluid w-100 img-1st">
+                            <a href="#!"><i class="fas fa-share-square img-2nd text-white"></i></a>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title font-weight-bold">Two Bedroom Grand Suite</div>
+                            <div class="card-subtitle">Southeast exposures open city views</div>
+                            <p>1 King Bedroom, 1 Queen Bedroom, Foyer, Living Room, Dining Area, Eat-In Kitchen, 2.5
+                                Bathrooms</p>
+                            <a href="#!" class="btn text-white btn-style">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!--#room1-->
+                <!--#room2-->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/room/room_02.png" alt="" class="img-fluid w-100 img-1st">
+                            <a href="#!"><i class="fas fa-share-square img-2nd text-white"></i></a>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title font-weight-bold">Two Bedroom Terrace Suite</div>
+                            <div class="card-subtitle">Terrace access, South exposures</div>
+                            <p>1 King Bedroom, 1 Full Bedroom, Foyer, Living Room, Dining Room, Eat-In Kitchen, Terrace,
+                                2.5 Bathrooms</p>
+                            <a href="#!" class="btn text-white btn-style">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!--#room2-->
+                <!--#room3-->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/room/room_03.png" alt="" class="img-fluid w-100 img-1st">
+                            <a href="#!"><i class="fas fa-share-square img-2nd text-white"></i></a>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title font-weight-bold">The Mark Signature Suite</div>
+                            <div class="card-subtitle">South, partial view of Central Park</div>
+                            <p>3 King Bedrooms, 1 Queen Bedroom, Additional Living and Dining Areas, 4 Full Bathrooms, 2
+                                Powder Bathrooms</p>
+                            <a href="#!" class="btn text-white btn-style">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!--#room3-->
+                <!--#room4-->
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/room/room_04.png" alt="" class="img-fluid w-100 img-1st">
+                            <a href="#!"><i class="fas fa-share-square img-2nd text-white"></i></a>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title font-weight-bold">The Mark Penthouse</div>
+                            <div class="card-subtitle">Panoramic Views of Central Park</div>
+                            <p>3 King Bedrooms, 2 Queen Bedrooms, 6 Bathrooms, 1 Library Lounge, Dining Room for 12, 2
+                                Powder Rooms</p>
+                            <a href="#!" class="btn text-white btn-style">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!--#room4-->
+                <!--#room5-->
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/room/room_05.png" alt="" class="img-fluid w-100 img-1st">
+                            <a href="#!"><i class="fas fa-share-square img-2nd text-white"></i></a>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title font-weight-bold">Three Bedroom Terrace Suite</div>
+                            <div class="card-subtitle">Terrace access, Madison Avenue views</div>
+                            <p>1 King Bedroom, 2 Queen Bedrooms Foyer, Living Room, Dining Area, Eat-In Kitchen,
+                                Terrace, 4.5 Bathrooms</p>
+                            <a href="#!" class="btn text-white btn-style">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!--#room5-->
+                <!--#room6-->
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/room/room_06.png" alt="" class="img-fluid w-100 img-1st">
+                            <a href="#!"><i class="fas fa-share-square img-2nd text-white"></i></a>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title font-weight-bold">Five Bedroom Terrace Suite</div>
+                            <div class="card-subtitle">Terrace access, North exposures</div>
+                            <p>2 King Bedrooms, 2 Queen Bedrooms, 1 Full bedroom, Foyer, Living Room, Dining Room,
+                                Eat-In Kitchen, Terrace, 5.5 Bathrooms</p>
+                            <a href="#!" class="btn text-white btn-style">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!--#room6-->
+            </div>
+        </div>
+
+        <!-- inside & slide -->
+<div class="container mb-md-5 py-5" id="inside">
+    <div class="inside-title text-center py-5">
+        <h2 class="font-weight-bold">INSIDE THE MARK</h2>
+        <p>
+            <a href="#!" class="more">more</a>
+        </p>
+    </div>
+            <div class="row">
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <div class="slide-title mb-5 text-center">
+                              <h5 class="mb-2">CELEBRATE BASTILLE DAY AT THE MARK</h5>
+                              <p class="font-italic">Posted on July 9, 2013</p>
+                          </div>
+                          <img src="assets/inside/inside01.png" alt="" class="img-fluid w-100">
+                      </div>
+                      
+                      <div class="swiper-slide">
+                          <div class="slide-title mb-5 text-center">
+                              <h5 class="mb-2">TOAST THE NEW YEAR AT THE MARK</h5>
+                              <p class="font-italic">Posted on December 7, 2015</p>
+                          </div>
+                          <img src="assets/inside/inside02.png" alt="" class="img-fluid w-100">
+                      </div>
+                      
+                      <div class="swiper-slide">
+                          <div class="slide-title mb-5 text-center">
+                              <h5 class="mb-2">MET <br>AT THE MARK</h5>
+                              <p class="font-italic">Posted on April 13, 2018</p>
+                          </div>
+                          <img src="assets/inside/inside03.png" alt="" class="img-fluid w-100">
+                      </div>
+                      
+                      <div class="swiper-slide">
+                          <div class="slide-title mb-5 text-center">
+                              <h5 class="mb-2">PREPPING FOR THE NYC MARATHON AT THE MARK</h5>
+                              <p class="font-italic">Posted on October 27, 2014</p>
+                          </div>
+                          <img src="assets/inside/inside04.png" alt="" class="img-fluid w-100">
+                      </div>
+                      
+                      <div class="swiper-slide">
+                          <div class="slide-title mb-5 text-center">
+                              <h5 class="mb-2">COLOR YOUR DAY!</h5>
+                              <p class="font-italic">Posted on August 5, 2020</p>
+                          </div>
+                          <img src="assets/inside/inside05.png" alt="" class="img-fluid w-100">
+                      </div>
+                      
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+</div>
+
+
+
+        <!-- question start -->
+
+        <div class="container mb-md-5 py-5" id="question">
+            <div class="row">
+                <div class="col-12 col-md-6 order-2 order-md-1">
+                    <div class="question-title text-center text-md-left mb-5">
+                        <h2 class="font-weight-bold">Hotel Terms and Conditions</h2>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button"
+                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        SERVICE RESERVATIONS
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    All Service reservations that are placed on or through the Website are subject to
+                                    our acceptance, in our sole discretion. We also reserve the right, in our sole
+                                    discretion, to take steps to verify your identity to process your reservation.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        YOUR ACCOUNT AND YOUR USER INFORMATION
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    If you are able to create an account (“Your Account”) or otherwise provide user or
+                                    login information (“Your User Information”) when accessing the Website, you must
+                                    provide us with complete and accurate information. You agree not to falsely identify
+                                    yourself in any manner or provide any false or inaccurate information. You grant to
+                                    us, the MP Parties, and all other persons and entities involved in the operation of
+                                    the Website the right to use, store, monitor, retrieve and transmit Your User
+                                    Information in connection with the operation of the Website. Our information
+                                    collection and use policies with respect to the privacy of Your User Information are
+                                    set forth in our Privacy Policy, which is incorporated in these Terms by reference
+                                    for all purposes.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header pl-3 py-3" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        YOUR USE AND YOUR CONTENT; LICENSE GRANT; RIGHT TO MONITOR AND EDITORIAL CONTROL
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    You may access, browse and use the Website and the Website Content only for your
+                                    personal, non-commercial use, on a single computer or other Internet-compatible
+                                    device.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header pl-3 py-3" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        WARRANTY DISCLAIMERS
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    You may access, browse and use the Website and the Website Content only for your
+                                    personal, non-commercial use, on a single computer or other Internet-compatible
+                                    device.
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3 mb-md-0 order-1 order-md-2">
+                    <img src="assets/quest.png" alt="" class="img-fluid w-100">
+                </div>
+                
+            </div>
+        </div>
+
+
+
+
+
+<!-- email -->
+        <div class="container mb-md-5 py-5" id="email">
+            <div class="row">
+                <div class="col-md-8 offset-2 p-5 text-center">
+                    <h4 class="mb-5 font-weight-bold">Sign up for updates and special offers from The Mark</h4>
+                    <form class="form-md-inline d-md-flex justify-content-center align-items-center">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="inputPassword2" class="sr-only">Enter E-mail Address</label>
+                            <input type="password" class="form-control" id="inputPassword2"
+                                placeholder="Enter E-mail Address">
+                        </div>
+                        <a href="#!" class="btn btn-style text-white">Submit</a>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- footer -->
+        <div class="container py-5" id="footer">
+            <div class="row py-3">
+                <div class=" col-12 col-lg-3 text-center mb-3 mb-md-0">
+                    <a href="#!"><img src="assets/foot_logo.png" alt="" class="img-fluid mb-3"></a>
+                    <p class="small">MADISON AVENUE AT 77TH STREET ⬩ NEW YORK, NY 10075 PHONE 212 744 4300 ⬩ TOLL FREE RESERVATIONS 866 744 4300</p>
+                </div>
+                <div class="col-4 col-lg text-md-center">
+                    <h5>Information</h5>
+                    <ul>
+                        <li><a href="information.html">contact</a></li>
+                        <li><a href="information.html">press</a></li>
+                        <li><a href="information.html">career</a></li>
+                        <li><a href="information.html">legal</a></li>
+                        <li><a href="information.html">privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-lg text-md-center">
+                    <h5>Getting here</h5>
+                    <ul>
+                        <li><a href="information.html">contact</a></li>
+                        <li><a href="information.html">press</a></li>
+                        <li><a href="information.html">career</a></li>
+                        <li><a href="information.html">legal</a></li>
+                        <li><a href="information.html">privacy</a></li>
+                    </ul>
                     
-                    
-                </div> <!--cal form-->
-
-                <div class="row">
-                    <div class="col-12 mb-3 px-0 text-center">
-                        <a href="#!" class="btn d-block d-md-inline-block">RESERVATION</a>
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <i class="fab fa-facebook-f px-3 px-md-5"></i>
-                        <i class="fab fa-twitter px-3 px-md-5"></i>
-                        <i class="fab fa-instagram px-3 px-md-5"></i>
-                        <i class="fab fa-tripadvisor px-3 px-md-5"></i>
-                    </div>
+                <div class="col-4 col-lg text-md-center">
+                    <h5>Privacy</h5>
+                    <ul>
+                        <li><a href="information.html">contact</a></li>
+                        <li><a href="information.html">press</a></li>
+                        <li><a href="information.html">career</a></li>
+                        <li><a href="information.html">legal</a></li>
+                        <li><a href="information.html">privacy</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 order-1 order-md-2">
-                <img src="assets/home_themark.png" alt="" class="img-fluid w-100">
-            </div>
-        </div>
-    </div>
-
-
-<!-- main end -->
-
-
-
-
-<!-- exp start -->
-<div class="container" id="exp">
-    <div class="exp-title text-center">
-        <h2>THE MARK EXPERIENCE</h2>
-        <p class="mb-"><a href="#!">more</a></p>
-    </div>
-    <div class="row text-center">
-        <!--#1-->
-        <div class="col-6 col-md-3">
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/experience/exp_01.png" alt="">
+                <div class="col-4 col-lg text-md-center">
+                    <h5>Accessibility</h5>
+                    <ul>
+                        <li><a href="information.html">contact</a></li>
+                        <li><a href="information.html">press</a></li>
+                        <li><a href="information.html">career</a></li>
+                        <li><a href="information.html">legal</a></li>
+                        <li><a href="information.html">privacy</a></li>
+                    </ul>
+                   
                 </div>
-                <div class="card-body">
-                    <div class="card-title">For Furry Guest</div>
-                    <i class="fas fa-chevron-circle-right"></i>
+                <div class="col-8 col-lg d-flex justify-content-center align-items-center align-items-md-start">
+                    <a href="#!" class="btn btn-style d-block text-white">Reserve Now</a>
                 </div>
-            </div>
-        </div>
-         <!--#1-->
-        <!--#2-->
-        <div class="col-6 col-md-3">
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/experience/exp_02.png" alt="">
-                </div>
-                <div class="card-body">
-                    <div class="card-title">In-Room Dining by Jean-Georges</div>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </div>
-            </div>
-        </div>
-         <!--#2-->
-        <!--#3-->
-        <div class="col-6 col-md-3">
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/experience/exp_03.png" alt="">
-                </div>
-                <div class="card-body">
-                    <div class="card-title">The Mark Pedicabs</div>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </div>
-            </div>
-        </div>
-         <!--#3-->
-        <!--#4-->
-        <div class="col-6 col-md-3">
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/experience/exp_04.png" alt="">
-                </div>
-                <div class="card-body">
-                    <div class="card-title">Bergdorf Goodman</div>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </div>
-            </div>
-        </div>
-         <!--#4-->
-    </div>
-</div>
-
-<!-- exp end -->
-
-
-
-
-<!-- room start -->
-<div class="container" id="room">
-    <div class="room-title text-center">
-        <h2>ROOM & SUITES</h2>
-        <p><a href="#!">more</a></p>
-    </div>
-    <div class="row text-center">
-        <div class="col-6 col-md-4">
-            <div class="card">
-                <div class="card-img">
-                    <img src="assets/room/room_01.png" alt="" class="img-fluid w-100">
-                </div>
-                <div class="card-body">
-                    <div class="card-title font-bold-weight">Two Bedroom Grand Suite</div>
-                    <div class="card-subtitle">Southeast exposures open city views</div>
-                    <p>1 King Bedroom, 1 Queen Bedroom, Foyer, Living Room, Dining Area, Eat-In Kitchen, 2.5 Bathrooms</p>
-                    <a href="#!" class="btn">View</a>
-                </div>
+                
             </div>
         </div>
     </div>
-</div>
+    <!--Wrap-->
 
 
 
-    <script type="text/javascript"> 
-    $(function () { 
-        $('#datetimepicker1').datetimepicker({
-             format: 'L' 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker({
+                format: 'L'
             });
-     $('#datetimepicker2').datetimepicker({
-          format: 'L', 
-          useCurrent: false 
-        });
-      $("#datetimepicker1").on("change.datetimepicker", function (e) { 
-          $('#datetimepicker2').datetimepicker('minDate', e.date); 
-        }); 
-      $("#datetimepicker2").on("change.datetimepicker", function (e) {
-           $('#datetimepicker1').datetimepicker('maxDate', e.date); 
-        }); 
-      });</script>
-
+            $('#datetimepicker2').datetimepicker({
+                format: 'L',
+                useCurrent: false
+            });
+            $("#datetimepicker1").on("change.datetimepicker", function (e) {
+                $('#datetimepicker2').datetimepicker('minDate', e.date);
+            });
+            $("#datetimepicker2").on("change.datetimepicker", function (e) {
+                $('#datetimepicker1').datetimepicker('maxDate', e.date);
+            });
+        });</script>
+ <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop:true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 
 </body>
 

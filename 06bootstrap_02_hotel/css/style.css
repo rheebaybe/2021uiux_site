@@ -3,57 +3,227 @@
 
 :root{
     --primary-color1:#F47435;
+    --primary-color2:#035AA6;
+    --primary-color3:rgba(225,225,225,0.5);
+    --primary-color4:#677078;
+    --box-shadow1:7px 10px 46px -11px rgba(0,0,0,0.89);
+    --box-shadow2:8px 8px 10px rgba(0,0,0,0.5);
+    --font-color:#0D0D0D;
+    
 }
 body{
     background: #F2F1EB;
     padding-top: 90px;
+    padding-bottom: 90px;
+    height: 100%;
+   
 }
 
-.container{
+#Wrap{
     padding:40px;
     background: #fff;
+    
     border-radius: 15px;
 }
-.container nav{
-    
-}
+
+
 
 .navbar-nav li a{
     font-size: 12px;
 }
-nav{
-    padding-right: 5px;
-}
-.btn{
-   background: var(--primary-color1);
-   
-}
 
-#exp .card{
-    border:0 none;
+
+.btn-style{
+   background: var(--primary-color1);
+  
+   transition: .1s;
+}
+.btn:hover{
+    transform: translate(3px,3px);
     
 }
 
-#exp .row>div{
+.container h1{
+    color:var(--primary-color2);
+}
+.container h2{
+    color:var(--primary-color2);
+}
+
+
+.more:hover{
+    color:var(--primary-color1);
+}  
+
+
+
+#main .sns i:hover{
+    color:var(--primary-color2);
+}
+
+#main .cal-form{
+    background-color: rgba(225,225,225,0.5);
+    border-radius: 10px;
+}
+
+
+
+#exp .row .card{
+    /* border:0 none; */
+    border-radius: 15px;
+    overflow: hidden;
     transition:.3s;
     opacity: 0.5;
-   
 }
-#exp .row>div:hover{
-    box-shadow: 8px 8px 10px rgba(0,0,0,0.5);
+
+
+#exp .row .card:hover{
+    box-shadow:var(--box-shadow2);
     transform:translate(-10px,-10px);
     opacity: 1;
 }
+
+
+
+#exp .row .card-body i{
+    transition: .3s;
+}
+
+#exp .row .card-body i:hover{
+    transform:translateX(5px);
+    
+}
+
+
 #room .row .card{
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
+    transition:.3s;
 }
 #room .card .card-title{
     font-size: 20px;
+    color:var(--primary-color2);
 }
 #room .card .card-subtitle{
     font-size: 18px;
+    color:var(--primary-color1);
 }
 #room .card p{
-    font-size: 12px;
+    font-size: 10px;
+}
+
+#room .card:hover{
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow2);
+}
+ 
+
+#room .card{
+    position: relative
+}
+
+#room .card .card-img .img-2nd{
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+}
+
+
+#question .accordion .card{
+    border:0 none;
+
+}
+#question .accordion .card .card-header {
+    background-color: rgba(225,225,225,0.1);
+    padding: .75rem 1.25rem;
+}
+
+#question .accordion .card .card-header button{
+    color:var(--primary-color2)
+}
+
+
+
+
+#email .row>div{
+    background: var(--primary-color3);
+    border-radius: 5px;
+    
+}
+#email h4{
+    color:var(--primary-color2)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 서브페이지 */
+
+.container .sub-title{
+    font-size: 30px;
+    color:#0D0D0D;
+}
+
+.btn-style-sub{
+    border: 1px solid #fff !important;
+    background: #0D0D0D;
+}
+
+.subpage .row h4{
+    color:var(--primary-color1)
+}
+.subpage .row .card-body{
+    color:var(--primary-color4)
+}
+
+.subpage .container #info-card{
+    border: 0 none !important;
+    background: transparent;
+}
+.subpage .container .card-header2{
+    border-top: 1px solid #0D0D0D;
+    
+    
+}
+.subpage .container .card-header2 h2 button{
+    color:var(--font-color);
+}
+.sub-menu ul li a{
+    transition: .3s;
+}
+.sub-menu ul li a:hover{
+    color:var(--primary-color1)
+}
+
+
+
+
+
+
+
+
+
+
+/* room */
+
+#room ul li{
+    border-bottom: 1px solid #0d0d0d;
+}
+
+.room-list-title:after{
+    content:"";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #0d0d0d;
 }
