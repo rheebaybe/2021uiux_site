@@ -20,7 +20,7 @@ body{
 }
 
 #Wrap{
-    padding:40px;
+    padding:20px;
     background: #fff;
     
     border-radius: 15px;
@@ -226,4 +226,51 @@ body{
     height: 2px;
     width: 100%;
     background: #0d0d0d;
+}
+
+
+
+#experience .row h2:after{
+    content:"";
+    display: block;
+    height: 2px;
+    width: 50px;
+    background: #0d0d0d;
+    align-items: center;
+    margin: 10px auto;
+    
+}
+
+#experience .row > div{
+    border: 1px solid #677078;
+}
+
+#experience .row > div + div{
+    border-left:0 none;
+}
+
+#experience .row h5{
+    transition: .5s;
+}
+#experience .row > div:hover h5{
+    transform:translateY(10px);
+}
+#experience .row .noborder{
+    border-bottom: 0 none;
+}
+
+
+#gallery .sub-title h2{
+    color:var(--font-color);
+}
+
+#gallery .sub-title h2:after{
+    content:"";
+    display: block;
+    height: 2px;
+    width: 50px;
+    background: #0d0d0d;
+    align-items: center;
+    margin: 10px auto;
+    
 }

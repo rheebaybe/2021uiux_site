@@ -393,11 +393,11 @@
         <!-- question start -->
 
         <div class="container mb-md-5 py-5" id="question">
+            <div class="question-title text-center text-md-left mb-5">
+                <h2 class="font-weight-bold">Hotel Terms and Conditions</h2>
+            </div>
             <div class="row">
                 <div class="col-12 col-md-6 order-2 order-md-1">
-                    <div class="question-title text-center text-md-left mb-5">
-                        <h2 class="font-weight-bold">Hotel Terms and Conditions</h2>
-                    </div>
                     <div class="accordion" id="accordionExample">
                         <div class="card">
                             <div class="card-header" id="headingOne">
@@ -484,7 +484,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 mb-3 mb-md-0 order-1 order-md-2">
+                <div class="col-12 col-md-6 mb-3 mb-md-0 order-1 order-md-2 d-md-flex flex-column justify-content-center align-items-center">
                     <img src="assets/quest.png" alt="" class="img-fluid w-100">
                 </div>
                 
@@ -617,11 +617,15 @@
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
       spaceBetween: 30,
+      
       loop:true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
+      autoplay: {
+   delay: 2000,
+ },
     });
   </script>
 
