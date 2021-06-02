@@ -16,6 +16,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
         <!-- swiper css -->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <!-- wow css -->
+    <link rel="stylesheet" href="css/animate.css">
     <!-- font awesome     -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -40,7 +42,13 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
         <!-- swiper js -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <title>Hello, world!</title>
+        <!-- wow js -->
+    <script src="js/wow.js"></script>
+    <title>The Mark</title>
+
+    <script>
+        new WOW().init();
+    </script>
 </head>
     
 
@@ -67,13 +75,13 @@
                             <a class="nav-link" href="room.html">ROOMS & SUITES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">THE MARK EXPERIENCE</a>
+                            <a class="nav-link" href="experience.html">THE MARK EXPERIENCE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">GALLERY</a>
+                            <a class="nav-link" href="gallery.html">GALLERY</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">NEIGHBORHOOD</a>
+                            <a class="nav-link" href="neighborhood.html">NEIGHBORHOOD</a>
                         </li>
                     </ul>
                 </div>
@@ -83,15 +91,15 @@
         </div>
 
 
-
+        
 
         <!-- main start -->
         <div class="container mb-md-5 py-5" id="main">
             <div class="row">
                 <div class="col-12 col-md-6 order-2 order-md-1 text-center">
-                    <h1 class=" mb-3 font-weight-bold">New York's Most Boldly <br> Lavish Hotel is open!!! </h1>
-                    <h5 class="mb-5">ENJOY DELICIOUS ROOM SERVICE, INDOOR AND OUTDOOR DINING BY CHEF JEAN-GEORGES</h5>
-                    <div class="row mb-3 cal-form p-3">
+                    <h1 class=" mb-3 font-weight-bold wow fadeInDown">New York's Most Boldly <br> Lavish Hotel is open!!! </h1>
+                    <h5 class="mb-5 wow fadeInDown">ENJOY DELICIOUS ROOM SERVICE, INDOOR AND OUTDOOR DINING BY CHEF JEAN-GEORGES</h5>
+                    <div class="row mb-3 cal-form p-3 d-flex flex-row justify-content-center align-items-center">
                         <div class="col-md-3 no-gutters px-0 text-center">
                             <p>I’d like to arrive on</p>
                         </div>
@@ -139,7 +147,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-1 order-md-2">
-                    <img src="assets/home_themark.png" alt="" class="img-fluid w-100">
+                    <img src="assets/home_themark.png" alt="" class=" wow fadeInDown img-fluid w-100">
                 </div>
                 
             </div>
@@ -148,10 +156,37 @@
 
         <!-- main end -->
 
+<style>
 
+        .exp,
+        .room,
+        .inside,
+        .quest,
+        .email
+        {                      
+            opacity: 0;
+            transition: .3s;
+        }
+   
+        .exp.see{
+            opacity: 1;
+        }
+        .room.see{
+            opacity: 1;
+        }
+        .inside.see{
+            opacity: 1;
+        }
+        .quest.see{
+            opacity: 1;
+        }
+        .email.see{
+            opacity: 1;
+        }
+</style>
 
         <!-- exp start -->
-        <div class="container mb-md-5 py-5" id="exp">
+        <div class="container mb-md-5 py-5 exp" id="exp">
             <div class="exp-title text-center py-5">
                 <h2 class="font-weight-bold">THE MARK EXPERIENCE</h2>
                 <p class="mb-3">
@@ -220,7 +255,7 @@
 
 
         <!-- room start -->
-        <div class="container mb-3 mb-md-5 py-5" id="room">
+        <div class="container mb-3 mb-md-5 py-5 room" id="room">
             <div class="room-title text-center py-5">
                 <h2 class="font-weight-bold">ROOM & SUITES</h2>
                 <p><a href="#!" class="more">more</a></p>
@@ -332,7 +367,7 @@
         </div>
 
         <!-- inside & slide -->
-<div class="container mb-md-5 py-5" id="inside">
+<div class="container mb-md-5 py-5 inside" id="inside">
     <div class="inside-title text-center py-5">
         <h2 class="font-weight-bold">INSIDE THE MARK</h2>
         <p>
@@ -392,7 +427,7 @@
 
         <!-- question start -->
 
-        <div class="container mb-md-5 py-5" id="question">
+        <div class="container mb-md-5 py-5 quest" id="question">
             <div class="question-title text-center text-md-left mb-5">
                 <h2 class="font-weight-bold">Hotel Terms and Conditions</h2>
             </div>
@@ -496,7 +531,7 @@
 
 
 <!-- email -->
-        <div class="container mb-md-5 py-5" id="email">
+        <div class="container mb-md-5 py-5 email" id="email">
             <div class="row">
                 <div class="col-md-8 offset-2 p-5 text-center">
                     <h4 class="mb-5 font-weight-bold">Sign up for updates and special offers from The Mark</h4>
@@ -612,8 +647,8 @@
             $("#datetimepicker2").on("change.datetimepicker", function (e) {
                 $('#datetimepicker1').datetimepicker('maxDate', e.date);
             });
-        });</script>
- <script>
+        });
+
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
       spaceBetween: 30,
@@ -627,6 +662,74 @@
    delay: 2000,
  },
     });
+
+    $(window).scroll(function(){
+            let scrollY = $(window).scrollTop();
+            console.log(scrollY);
+
+            const titleTop = $(".exp").offset().top;
+            // 나타나야하는 위치-> div
+            if(titleTop < scrollY+400){
+                $(".exp").addClass("see");
+            }else{
+                $(".exp").removeClass("see");
+            }
+            
+        });
+    $(window).scroll(function(){
+            let scrollY = $(window).scrollTop();
+            console.log(scrollY);
+
+            const titleTop = $(".room").offset().top;
+            // 나타나야하는 위치-> div
+            if(titleTop < scrollY+400){
+                $(".room").addClass("see");
+            }else{
+                $(".room").removeClass("see");
+            }
+            
+        });
+    $(window).scroll(function(){
+            let scrollY = $(window).scrollTop();
+            console.log(scrollY);
+
+            const titleTop = $(".inside").offset().top;
+            // 나타나야하는 위치-> div
+            if(titleTop < scrollY+400){
+                $(".inside").addClass("see");
+            }else{
+                $(".inside").removeClass("see");
+            }
+            
+        });
+    $(window).scroll(function(){
+            let scrollY = $(window).scrollTop();
+            console.log(scrollY);
+
+            const titleTop = $(".quest").offset().top;
+            // 나타나야하는 위치-> div
+            if(titleTop < scrollY+400){
+                $(".quest").addClass("see");
+            }else{
+                $(".quest").removeClass("see");
+            }
+            
+        });
+    $(window).scroll(function(){
+            let scrollY = $(window).scrollTop();
+            console.log(scrollY);
+
+            const titleTop = $(".email").offset().top;
+            // 나타나야하는 위치-> div
+            if(titleTop < scrollY+400){
+                $(".email").addClass("see");
+            }else{
+                $(".email").removeClass("see");
+            }
+            
+        });
+
+
   </script>
 
 </body>
