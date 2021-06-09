@@ -6,7 +6,12 @@
 
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -16,6 +21,9 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    
 
     <!-- Fullpage JS     -->
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -33,7 +41,7 @@
     <script>
         $(document).ready(function(){
             $("#fullpage").fullpage({
-                anchors:['main01','main02','main03','main04'],
+                anchors:['main01','main02','main03','main04','main05'],
                 navigation:true,
                 showActiveTooltip:true,
                 responsiveWidth:1000,
@@ -44,9 +52,24 @@
                     }else{
                         $(".title").removeClass("text-opacity");
                     }
+                   
                 }
             });
+            var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,      
+      loop:true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+   delay: 2000,
+ },
+    });
         });
+        
+   
     </script>
       
   </head>
@@ -79,17 +102,85 @@
                 </div>
             </div>
         </div>
+
+
+
+
         <div class="section page2" data-achor="main02">
             <video loop muted data-autoplay>
                 <source src="assets/video/A New Era - 2021 Season - The Australian Ballet.mp4">
             </video>
         </div>
-        <div class="section page3" data-achor="main03">3</div>
-        <div class="section page4" data-achor="main04">4</div>
-        <div class="section page5" data-achor="main05">5</div>
-        <div class="section page6" data-achor="main06">6</div>
 
+
+
+
+        <div class="section page3" data-achor="main03">
+            <div class="row mb-5 mb-md-0">
+                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                    <div class="swiper-container mySwiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide">
+                              <img src="assets/fullpage/page03.png" alt="" class="w-100">
+                          </div>
+                          <div class="swiper-slide">
+                              <img src="assets/fullpage/page03-2.png" alt="" class="w-100">
+                          </div>                
+                          <div class="swiper-button-prev"></div>
+                          <div class="swiper-button-next"></div>
+                        </div>
+                      
+                      </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="text-box text-center">
+                        <h4 class="font-weight-lighter">THE REGIONAL TOUR</h4>
+                        <h2 class="font-weight-bold">40TH ANNIVERSARY GALA</h2>
+                        <p class="font-weight-light py-3">NEW SOUTH WALES | VICTORIA | SOUTH AUSTRALIA </p>
+                        <p class="font-weight-light date">JULY - AUGUST 2021</p>
+                        
+                        <a href="#!" class="ticket font-italic font-weight-bold">Buy Ticket</a>
+                    </div>
+              
+                   
+                      
+                    
+                </div>
+            </div>
+        </div>
+        <div class="section page4" data-achor="main04">
+         <img src="assets/fullpage/21-SEASON-Rep_Split3 (1).jpg" alt="">
+         <div class="container">
+            
+                <div class="text-box text-center text-white">
+                    <h4 class="font-weight-lighter">A TRIPLE BILL</h4>
+                    <h2 class="font-weight-bold">NEW YORK DIALECTS</h2>
+                    <p class="font-weight-light py-3">MELBOURNE </p>
+                    <p class="font-weight-light date"> 7 – 16 OCTOBER</p>
+                    
+                    <a href="#!" class="ticket font-italic font-weight-bold text-white">Buy Ticket</a>
+                </div>
+         </div>
+        </div>
+        
+        <div class="section page5" data-achor="main05">
+            <img src="assets/fullpage/T2021-367-21-RJ-website-assets-1280x550 (1).jpg" alt="">
+            <div class="container">
+            
+                <div class="text-box text-left text-white">
+                    <h4 class="font-weight-lighter">“THESE VIOLENT DELIGHTS HAVE VIOLENT ENDS …” — WILLIAM SHAKESPEARE</h4>
+                    <h2 class="font-weight-bold">ROMEO AND JULIET</h2>
+                    <p class="font-weight-light py-3">NEW SOUTH WALES | VICTORIA | SOUTH AUSTRALIA </p>
+                    <p class="font-weight-light date">JULY - AUGUST 2021</p>
+                    
+                    <a href="#!" class="ticket font-italic font-weight-bold text-white">Buy Ticket</a>
+                </div>
+         </div>
+        </div>
     </div>
+    <div class="section page6" data-achor="main06">6</div>
 
    
   </body>

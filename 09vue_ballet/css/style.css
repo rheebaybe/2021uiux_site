@@ -9,7 +9,12 @@
   .section.page1{
       background-image: url(../assets/fullpage/page01.png);
   }
-
+  .text-box h4{
+      font-size: 30px;
+  }
+  .text-box h2{
+      font-size: 48px;
+  }
 
 
 #fp-nav{
@@ -24,7 +29,6 @@
     background: transparent;
     border: 2px solid #232323;
 }
-
 
 
 
@@ -61,4 +65,132 @@
       to{
           bottom: 40px;
       }
+  }
+
+
+
+  /* page3 */
+
+  .page3 .date{
+      margin-bottom: 150px;
+  }
+  .page3 .ticket{   
+      transition: .3s;
+  }
+  .page3 .ticket:hover{
+      transform:scale(1.1);
+      
+  }
+
+
+
+
+
+
+
+/* page4 */
+
+
+
+  .page4{
+      position: relative;
+  }
+  
+  .page4 img{
+      position: absolute;
+      left: -100px;
+      top: 0;
+      animation-name:Xani;
+      animation-duration: 2s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+  }
+  @keyframes Xani {
+      from{
+          left: -300px;
+      }
+      to{
+          left: 0;
+      }
+  }
+
+
+  .page4 .container{
+      position: absolute;
+      z-index:1;
+      top: 50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+  }
+
+
+
+
+
+
+
+/* page5 */
+
+
+
+
+    .page5{
+        position: relative;
+    }
+
+   .page5 img{
+  
+      position: absolute;
+      left: 0;
+      top: 0;
+      animation-name:XYani;
+      animation-duration: 3s;
+      animation-direction: alternate-reverse;
+      animation-iteration-count: infinite;
+      animation-timing-function:ease-in;
+  }
+  @keyframes XYani {
+      0%{
+          left: 0;
+          top: 0;
+          
+      }
+      25%{
+          left: -50%;
+          top: 0;
+      }
+      75%{
+          left: 0;
+          top: -30%;
+      }
+      100%{
+          left: -50%;
+          top: -30%;
+          
+      }
+  }
+  .page5 .container{
+    position: absolute;
+    z-index:1;
+    top: 40%;
+    left: 30%;
+    
+}
+
+
+
+
+  @media screen and (max-width:1000px) {
+      .page4 img{
+          animation:none;
+          
+      }
+      .page4 .container{
+        position: absolute;
+        z-index:1;
+        top: 50%;
+        left: 8%;
+        transform:translateY(-50%);
+    }
+  
   }
