@@ -45,7 +45,7 @@
     <script>
         $(document).ready(function () {
             $("#fullpage").fullpage({
-                anchors: ['main01', 'main02', 'main03', 'main04', 'main05'],
+                anchors: ['main01', 'main02', 'main03', 'main04', 'main05','main06','main07'],
                 navigation: true,
                 showActiveTooltip: true,
                 responsiveWidth: 1000,
@@ -89,8 +89,10 @@
             <div class="fixed-top">
                 <div class="collapse" id="navbarToggleExternalContent">
                     <div class="p-4">
-                        <h5 class="text-white h4">Collapsed content</h5>
-                        <span class="text-muted">Toggleable via the navbar brand.</span>
+                        <ul>
+                            <li><a href="#!">About us</a></li>
+                            <li><a href="#!">Shop</a></li>
+                        </ul>
                     </div>
                 </div>
                 <nav class="navbar navbar-dark">
@@ -154,7 +156,7 @@
                         <p class="font-weight-light py-3">NEW SOUTH WALES | VICTORIA | SOUTH AUSTRALIA </p>
                         <p class="font-weight-light date">JULY - AUGUST 2021</p>
 
-                        <a href="#!" class="ticket font-italic font-weight-bold">Buy Ticket</a>
+                        <a href="#!" class="ticket font-italic font-weight-bold"><p>Buy Ticket</p></a>
                     </div>
 
 
@@ -172,13 +174,14 @@
             <img src="assets/fullpage/21-SEASON-Rep_Split3 (1).jpg" alt="">
             <div class="container">
 
-                <div class="text-box text-center text-white">
-                    <h4 class="font-weight-lighter">A TRIPLE BILL</h4>
-                    <h2 class="font-weight-bold">NEW YORK DIALECTS</h2>
-                    <p class="font-weight-light py-3">MELBOURNE </p>
-                    <p class="font-weight-light date"> 7 – 16 OCTOBER</p>
-
-                    <a href="#!" class="ticket font-italic font-weight-bold text-white">Buy Ticket</a>
+                <div class="row">
+                    <div class="text-box col-12 text-center text-white">
+                        <h4 class="font-weight-lighter">A TRIPLE BILL</h4>
+                        <h2 class="font-weight-bold">NEW YORK DIALECTS</h2>
+                        <p class="font-weight-light py-3">MELBOURNE </p>
+                        <p class="font-weight-light date mb-5"> 7 – 16 OCTOBER</p>
+                        <a href="#!" class="ticket font-italic font-weight-bold text-white"><p>Buy Ticket</p></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -190,20 +193,64 @@
             <img src="assets/fullpage/T2021-367-21-RJ-website-assets-1280x550 (1).jpg" alt="">
             <div class="container">
 
-                <div class="text-box text-left text-white">
+                <div class="text-box text-center text-md-left text-white">
                     <h4 class="font-weight-lighter">“THESE VIOLENT DELIGHTS HAVE VIOLENT ENDS …” — WILLIAM SHAKESPEARE
                     </h4>
                     <h2 class="font-weight-bold">ROMEO AND JULIET</h2>
                     <p class="font-weight-light py-3">NEW SOUTH WALES | VICTORIA | SOUTH AUSTRALIA </p>
                     <p class="font-weight-light date">JULY - AUGUST 2021</p>
 
-                    <a href="#!" class="ticket font-italic font-weight-bold text-white">Buy Ticket</a>
+                    <p><a href="#!" class="ticket font-italic font-weight-bold text-white">Buy Ticket</a></p>
                 </div>
             </div>
         </div>
         <!-- page5 --> 
 
-        <div class="section page6" data-achor="main06">6</div>
+
+        <!-- page6 --> 
+        <div class="section page6" data-achor="main06">
+           
+                <div class="sub-title text-center">
+                    <h2>GIFT SHOP</h2>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/gift_04.png" alt="" class="w-100 shoes">
+                        <p>SIGNED POINTE SHOES</p>
+                        <p>$99.00</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/gift_03.png" alt="" class="w-100 bow">
+                        <p>BALLET BOW - PINK</p>
+                        <p>$10.00</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/gift_02.png" alt="" class="w-100 bag">
+                        <p>PINK DUFFLE BAG</p>
+                        <p>$90.00</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/gift_01.png" alt="" class="w-100 book">
+                        <p>HARD COVER BOOK</p>
+                        <p>$20.00</p>
+                    </div>
+                </div>
+            
+        </div>
+        <!-- page6 --> 
+
+        <div class="section page7 fp-auto-height" data-achor="main07">
+            
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/logo.svg" alt="" class="px-5 img-fluid">
+                    </div>
+                    <div class="col-md-8 text-center text-md-right">
+                        <p class="px-5">© COPYRIGHT 2021 THE AUSTRALIAN BALLET</p>
+                    </div>
+                </div>
+            
+        </div>
 
     </div> <!--fullpage-->
 

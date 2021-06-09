@@ -5,6 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
   .section.page1{
       background-image: url(../assets/fullpage/page01.png);
@@ -74,11 +75,11 @@
   .page3 .date{
       margin-bottom: 150px;
   }
-  .page3 .ticket{   
+  .ticket p{   
       transition: .3s;
   }
-  .page3 .ticket:hover{
-      transform:scale(1.1);
+  .ticket p:hover{
+      transform: scale(1.1);
       
   }
 
@@ -179,6 +180,50 @@
 
 
 
+/* page6 */
+
+.shoes{
+    animation-name: shoes;
+    animation-duration: .5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes shoes {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(20deg);
+    }
+}
+.bow{
+    animation-name: bow;
+    animation-duration: .5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes bow {
+    from{
+        transform: translate(10px,10px)
+    }
+    to{
+        transform: translate(10px,30px)
+    }
+}
+.bag{
+    animation-name: bag;
+    animation-duration: .5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes bag {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(-20deg);
+    }
+}
 
 
 
@@ -188,15 +233,31 @@
 
 
   @media screen and (max-width:1000px) {
-      .page4 img{
+    .page3 .date{
+        margin-bottom: 50px;
+    }
+    
+    video{
+        height: 100%;
+        width: 100%;
+    }
+      .page4 img,
+      .page5 img{
           animation:none;
-          
+          height: 100%;
       }
       .page4 .container{
         position: absolute;
         z-index:1;
         top: 50%;
-        left: 8%;
+        left: 0;
+        transform:translateY(-50%);
+    }
+      .page5 .container{
+        position: absolute;
+        z-index:1;
+        top: 50%;
+        left: 0;
         transform:translateY(-50%);
     }
   
