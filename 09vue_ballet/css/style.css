@@ -31,7 +31,20 @@
     border: 2px solid #232323;
 }
 
-
+.next{
+    background-image: url(../assets/caret-down-solid.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.prev{
+    background-image: url(../assets/caret-up-solid.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
 
 
 
@@ -41,7 +54,15 @@
       opacity: 0;
       transition:.5s
   }
-  .title.text-opacity{
+  .newyork,
+  .gala,
+  .romeo
+  {
+    opacity: 0;
+    transition:.5s
+  }
+  
+  .text-opacity{
       opacity:1;
   }
 
@@ -139,7 +160,7 @@
         position: relative;
     }
 
-   .page5 img{
+   .page5 .romeo_jul{
   
       position: absolute;
       left: 0;
@@ -212,7 +233,7 @@
 }
 .bag{
     animation-name: bag;
-    animation-duration: .5s;
+    animation-duration: .7s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
 }
@@ -224,11 +245,40 @@
         transform: rotate(-20deg);
     }
 }
+.book{
+    animation-name: book;
+    animation-duration: 1s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes book {
+    from{
+        transform: translate(10px,10px)
+    }
+    to{
+        transform: translate(10px,30px)
+    }
+}
+.gift{
+    overflow: hidden;
+}
+.page6 .product:hover{
+    color:#AB5E59;
+}
 
 
 
 
 
+
+
+.share{
+    cursor: pointer;
+}
+
+.share:hover ul>li{
+    opacity: 0;
+}
 
 
 

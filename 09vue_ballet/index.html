@@ -48,6 +48,8 @@
                 anchors: ['main01', 'main02', 'main03', 'main04', 'main05','main06','main07'],
                 navigation: true,
                 showActiveTooltip: true,
+                loopBottom:true,
+
                 responsiveWidth: 1000,
                 afterLoad: function (anchorslink, index) {
                     console.log(anchorslink + ',' + index);
@@ -56,9 +58,43 @@
                     } else {
                         $(".title").removeClass("text-opacity");
                     }
-
-                }
+                    if (index == 3) {
+                    $(".gala").addClass("text-opacity");
+                    } else {
+                        $(".gala").removeClass("text-opacity");
+                    }
+                    if (index == 4) {
+                        $(".newyork").addClass("text-opacity");
+                     } else {
+                       $(".newyork").removeClass("text-opacity");
+                     }
+                    if (index == 5) {
+                        $(".romeo").addClass("text-opacity");
+                     } else {
+                       $(".romeo").removeClass("text-opacity");
+                     }
+                    if (index == 7) {
+                        $(".gift").addClass("text-opacity");
+                     } else {
+                       $(".gift").removeClass("text-opacity");
+                     }
+                    
+                },
+            
+                    
+             
             });
+            $("#fp-nav ul").append("<li class='next'></li>");
+            $("#fp-nav ul").prepend("<li class='prev'></li>")
+
+
+                $('.next').click(function(){
+                    $.fn.fullpage.moveSectionDown();
+                });
+
+                $('.prev').click(function(){
+                    $.fn.fullpage.moveSectionUp();
+                });
 
             // Swiper start
 
@@ -150,7 +186,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                    <div class="text-box text-center">
+                    <div class="text-box gala text-center">
                         <h4 class="font-weight-lighter">THE REGIONAL TOUR</h4>
                         <h2 class="font-weight-bold">40TH ANNIVERSARY GALA</h2>
                         <p class="font-weight-light py-3">NEW SOUTH WALES | VICTORIA | SOUTH AUSTRALIA </p>
@@ -175,7 +211,7 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="text-box col-12 text-center text-white">
+                    <div class="text-box newyork col-12 text-center text-white">
                         <h4 class="font-weight-lighter">A TRIPLE BILL</h4>
                         <h2 class="font-weight-bold">NEW YORK DIALECTS</h2>
                         <p class="font-weight-light py-3">MELBOURNE </p>
@@ -189,18 +225,18 @@
 
 
         <!-- page5 ROMEO--> 
-        <div class="section page5" data-achor="main05">
-            <img src="assets/fullpage/T2021-367-21-RJ-website-assets-1280x550 (1).jpg" alt="">
+        <div class="section page5 mb-5 mb-md-0" data-achor="main05">
+            <img src="assets/fullpage/T2021-367-21-RJ-website-assets-1280x550 (1).jpg" alt="" class="romeo_jul">
             <div class="container">
 
-                <div class="text-box text-center text-md-left text-white">
+                <div class="text-box romeo text-center text-md-left text-white">
                     <h4 class="font-weight-lighter">“THESE VIOLENT DELIGHTS HAVE VIOLENT ENDS …” — WILLIAM SHAKESPEARE
                     </h4>
                     <h2 class="font-weight-bold">ROMEO AND JULIET</h2>
                     <p class="font-weight-light py-3">NEW SOUTH WALES | VICTORIA | SOUTH AUSTRALIA </p>
                     <p class="font-weight-light date">JULY - AUGUST 2021</p>
 
-                    <p><a href="#!" class="ticket font-italic font-weight-bold text-white">Buy Ticket</a></p>
+                    <a href="#!" class="ticket font-italic font-weight-bold text-white"><p>Buy Ticket</p></a>
                 </div>
             </div>
         </div>
@@ -208,31 +244,31 @@
 
 
         <!-- page6 --> 
-        <div class="section page6" data-achor="main06">
+        <div class="section page6 mb-5 mb-md-0" data-achor="main06">
            
-                <div class="sub-title text-center">
-                    <h2>GIFT SHOP</h2>
+                <div class="sub-title text-center mb-5 mb-md-0">
+                    <h2 class="gift">GIFT SHOP</h2>
                 </div>
                 <div class="row text-center">
                     <div class="col-6 col-md-3">
-                        <img src="assets/gift_04.png" alt="" class="w-100 shoes">
-                        <p>SIGNED POINTE SHOES</p>
-                        <p>$99.00</p>
+                        <div class="gift"><img src="assets/gift_04.png" alt="" class="w-100 shoes"></div>
+                        <p class="product">SIGNED POINTE SHOES</p>
+                        <p class="price">$99.00</p>
                     </div>
                     <div class="col-6 col-md-3">
-                        <img src="assets/gift_03.png" alt="" class="w-100 bow">
-                        <p>BALLET BOW - PINK</p>
-                        <p>$10.00</p>
+                        <div class="gift"><img src="assets/gift_03.png" alt="" class="w-100 bow"></div>
+                        <p class="product">BALLET BOW - PINK</p>
+                        <p class="price">$10.00</p>
                     </div>
                     <div class="col-6 col-md-3">
-                        <img src="assets/gift_02.png" alt="" class="w-100 bag">
-                        <p>PINK DUFFLE BAG</p>
-                        <p>$90.00</p>
+                        <div class="gift"><img src="assets/gift_02.png" alt="" class="w-100 bag"></div>
+                        <p class="product">PINK DUFFLE BAG</p>
+                        <p class="price">$90.00</p>
                     </div>
                     <div class="col-6 col-md-3">
-                        <img src="assets/gift_01.png" alt="" class="w-100 book">
-                        <p>HARD COVER BOOK</p>
-                        <p>$20.00</p>
+                        <div class="gift"><img src="assets/gift_01.png" alt="" class="w-100 book"></div>
+                        <p class="product">HARD COVER BOOK</p>
+                        <p class="price">$20.00</p>
                     </div>
                 </div>
             
@@ -242,10 +278,19 @@
         <div class="section page7 fp-auto-height" data-achor="main07">
             
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <img src="assets/logo.svg" alt="" class="px-5 img-fluid">
+                        <ul>
+                            
+                            <li><img src="assets/bx_bx-share-alt.png" alt="" class="img-fluid share"></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-facebook-f"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                            
+                        </ul>
                     </div>
-                    <div class="col-md-8 text-center text-md-right">
+                    
+                    <div class="col-md-6 text-center text-md-right">
                         <p class="px-5">© COPYRIGHT 2021 THE AUSTRALIAN BALLET</p>
                     </div>
                 </div>
@@ -253,7 +298,6 @@
         </div>
 
     </div> <!--fullpage-->
-
 
 </body>
 
