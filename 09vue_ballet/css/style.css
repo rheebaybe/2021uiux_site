@@ -276,8 +276,8 @@
     cursor: pointer;
 }
 
-.share:hover ul>li{
-    opacity: 0;
+.share:hover .fab{
+    color: red;
 }
 
 

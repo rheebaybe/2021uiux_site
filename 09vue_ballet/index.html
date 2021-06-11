@@ -95,7 +95,7 @@
                 $('.prev').click(function(){
                     $.fn.fullpage.moveSectionUp();
                 });
-
+          
             // Swiper start
 
             var swiper = new Swiper(".mySwiper", {
@@ -280,14 +280,15 @@
                 <div class="row">
                     <div class="col-md-6">
                         <img src="assets/logo.svg" alt="" class="px-5 img-fluid">
-                        <ul>
-                            
-                            <li><img src="assets/bx_bx-share-alt.png" alt="" class="img-fluid share"></li>
+                        
+                        <div id='dis'>
+                            <ul>                      
                                 <li><i class="fab fa-twitter"></i></li>
                                 <li><i class="fab fa-facebook-f"></i></li>
                                 <li><i class="fab fa-instagram"></i></li>
-                            
                         </ul>
+                        </div>
+                        <div id='show' onclick="dis()"><img src="assets/bx_bx-share-alt.png" alt="" class="img-fluid"></div>
                     </div>
                     
                     <div class="col-md-6 text-center text-md-right">
@@ -298,7 +299,15 @@
         </div>
 
     </div> <!--fullpage-->
-
+<script>
+    function dis(){
+      if($('#dis').css('display') == 'none'){
+      $('#dis').show();
+    }else{
+      $('#dis').hide();
+    }
+    }
+</script>
 </body>
 
 </html>
