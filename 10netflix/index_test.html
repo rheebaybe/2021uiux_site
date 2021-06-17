@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--bootstrap css-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <!--font awesome-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <title>Netflix</title>
+
+  <!--Jquery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <!--bootstrap js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <!--swiper js-->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!--fullpage js-->
+  <script src="js/jquery.fullPage.js"></script>
+  <script>
+    // $(document).ready(function () {
+    //  $("#fullpage").fullpage({
+    //   anchors: ['main01', 'main02', 'main03', 'main04', 'main05','main06','main07'],
+    //             navigation: true,
+    //  });
+
+
+    // })
+
+    $(document).ready(function () {
+      const navPos = $("nav").offset().left;
+
+      $(window).scroll(function () {
+        let scrollX = $(window).scrollTop();
+
+        if (navPos < scrollX) {
+
+          $(".nav-item").addClass("active");
+        } else {
+          $(".nav-item").removeClass("active");
+        }
+
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+<!--navigation-->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img src="assets/netflix_logo.svg" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">홈 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">TV프로그램</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">요즘대세콘텐츠</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">내가찜한콘텐츠</a>
+
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search text-white"></i></button>
+      </form>
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          profile
+        </button>
+        <div class="dropdown-menu">
+          ...
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--navigation-->
+
+  <div id="Wrap">
+    <div class="section">
+      <div class="sliderWrap">
+        <div class="slider d-flex flex-direction-row">
+
+          <!--1page-->
+
+          <div class="slide main01">
+              <video loop muted data-autoplay class="w-100">
+                <source src="assets/sweet.mp4" type="video/mp4">
+              </video>           
+          </div>
+          <!--1page-->
+
+          <!--2page-->
+          <div class="slide main02 bg-dark">
+            
+            <div class="container">
+              <div class="row">
+                <h2 class="title text-white text-center mb-3">오늘 한국의 TOP10 TV 프로그램</h2>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-3">
+                    <div class="card bg-dark border-dark">
+                      <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="w-100" class="mb-3">
+                      <source src="assets/this.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-title text-white text-center"> 이 구역의 미친 X </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="w-100" class="mb-3">
+                      <source src="assets/eight.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-title text-white text-center"> 제 8일의 밤 </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="w-100" class="mb-3">
+                      <source src="assets/seven.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-title text-white text-center"> 시카고 7 </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <video muted onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="w-100" class="mb-3">
+                      <source src="assets/call.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-title text-white text-center"> 콜 </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <h2 class="title text-white text-center mb-3">넷플릭스 인기 콘텐츠</h2>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <img src="assets/dis.jpg" alt="" class="mb-3">
+                    <div class="card-title text-white text-center">디스인첸트</div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <img src="assets/la.jpg" alt="" class="mb-3">
+                    <div class="card-title text-white text-center">라 뤼빌레시옹</div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <img src="assets/str.jpg" alt="" class="mb-3">
+                    <div class="card-title text-white text-center">기묘한이야기</div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <img src="assets/ru.jpg" alt="" class="mb-3">
+                    <div class="card-title text-white text-center">루시퍼</div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <h2 class="title text-white text-center mb-3">신규 콘텐츠</h2>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <img src="assets/queen.jpg" alt="" class="mb-3">
+                    <div class="card-title text-white text-center">퀸스캠빗</div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <img src="assets/un.jpg" alt="" class="mb-3">
+                    <div class="card-title text-white text-center">언브레이커블</div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <img src="assets/orange.jpg" alt="" class="mb-3">
+                    <div class="card-title text-white text-center">오렌지이즈더뉴블랙</div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-dark border-dark">
+                    <img src="assets/lake.jpg" alt="" class="mb-3">
+                    <div class="card-title text-white text-center">투더레이크</div>
+                  </div>
+                </div>
+              </div>
+            </div><!--container-->
+          </div><!--2page-->
+
+
+          <div class="slide main03"></div>
+          <div class="slide main04"></div>
+        </div>
+      </div>
+
+      <script>
+        
+
+      </script>
+
+
+    </div>
+    <!--section-->
+
+
+
+  </div>
+  <!--Wrap-->
+
+</body>
+
+</html>
+

@@ -3,3 +3,42 @@
 #fp-nav{
     right: 20px;
 }
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+  }
+  .slider {
+    
+    width: 400vw;
+  }
+  .slide.main02 .container{
+      padding-top:100px;
+  }
+  
+
+  .slider {
+      transform: rotate(90deg) translateY(-100vh);
+      transform-origin: top left;
+    }
+    .sliderWrap {
+      width: 100vh;
+      height: 100vw;
+      transform: rotate(-90deg) translateX(-100vh);
+      transform-origin: top left;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      position: absolute;
+      /* scrollbar-width: none; */
+          -ms-overflow-style: none;
+    }
+
+.card{
+    cursor: pointer;
+}
+.top{
+    position: relative;
+    bottom: 0;
+    background: #000;
+    height: 160px;
+}
