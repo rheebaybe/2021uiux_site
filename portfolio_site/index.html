@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/fullpage.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script src="js/jquery-3.1.1.min.js"></script>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
@@ -34,7 +34,7 @@
                 navigation: true,
                 showActiveTooltip: true,
                 
-                anchors: ['ch0', 'ch1', 'ch2'],
+                anchors: ['ch0', 'ch1', 'ch2', 'ch3', 'ch4'],
             });
 
 
@@ -65,12 +65,18 @@
                     <li class="nav-item" data-menuanchor="ch2">
                       <a class="nav-link" href="#">Chapter 2</a>
                     </li>
+                    <li class="nav-item" data-menuanchor="ch3">
+                      <a class="nav-link" href="#">Chapter 3</a>
+                    </li>
+                    <li class="nav-item" data-menuanchor="ch4">
+                      <a class="nav-link" href="#">Chapter 4</a>
+                    </li>
                     
                   </ul>
                 </div>
               </nav>
             
-        
+        d
     <div id="fullpage">
         <div class="section page1" data-anchor="ch0">
             <div class="container">
@@ -171,6 +177,63 @@
             </div>
         </div>
         
+
+        <div class="section page4" data-anchor="ch3">
+            <div class="container mb-5">
+                <div class="chapter-title text-center py-3">
+                    <h4>Chapter 3</h4>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-6 text-md-left">
+                        <div class="title py-5">
+                            <h2>Vue</h2>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="explain">
+                            <p>swiper 슬라이드 구현</p>
+                            <p>modal 팝업창 구현</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="assets/vue04.png" alt="" class="img-fluid w-100">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="assets/vue03.png" alt="" class="img-fluid w-100 py-5">                        
+                    </div>
+                    <div class="col-md-3">
+                        <img src="assets/vue02.png" alt="" class="img-fluid w-100">                        
+                    </div>                   
+                </div>
+               
+            </div>
+        </div>
+
+
+        <div class="section page5" data-anchor="ch4">
+            <div class="container">
+                <div class="chapter-title text-center py-3">
+                    <h4>Chapter 4</h4>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-6 text-md-left">
+                        <div class="title py-5">
+                            <h2>Contact</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6 py-5">
+                        <div class="name">
+                            <p>이보배</p>
+                        </div>
+                        <a href="https://github.com/rheebaybe/2021uiux_site"><i class="fab fa-github"></i></a>
+                        <i class="fas fa-at"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
