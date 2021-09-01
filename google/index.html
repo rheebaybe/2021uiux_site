@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+</head>
+<style>
+    li{
+        list-style: none;
+        
+    }
+    a{
+        text-decoration: none;
+    }
+    header{
+        width: 100%;
+        height: 40px;
+        margin: 0 auto;
+    }
+    .sidemenu{
+        float: right;
+    }
+    .sidemenu li{
+        float:left;
+        margin-left: 5px;
+    }
+    .clearfix:after{
+        content:"";
+        clear:both;
+        display: block;
+    }
+    .google{
+        width: 100%;
+        height: 300px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .title{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .title li{
+        float: left;        
+        
+    }
+    .t_t{
+        font-size: 6rem;
+        font-weight:600;
+    }
+    .g{
+        color:blue;
+        
+    }
+    .red_o{
+        color:red;
+    }
+    .y_o{
+        color:yellow;
+    }
+    .small_g{
+        color:blue;
+    }
+    .l{
+        color:green;
+    }
+    .e{
+        color:red;
+    }
+    .search{
+        width: 500px;
+        margin: 0 auto;
+    }
+    form legend{
+        display: none;
+
+    }
+    fieldset{
+        border-radius: 30px;
+        border-color:gray;
+        padding:10px;
+    }    
+    input{
+        border: none;
+        width: 80%;
+        
+    }
+</style>
+<body>
+    <div class="wrap">
+        <header>
+            <ul class="sidemenu">
+                <a href="">
+                    <li>Gmail</li>
+                </a>
+                <a href="">
+                    <li>이미지</li>
+                </a>
+                <a href="">
+                    <li>menu</li>
+                </a>
+            </ul>
+        </header>
+        <section class="google clearfix">
+            <ul class="title">
+                <li class="g t_t">G</li>
+                <li class="red_o t_t">o</li>
+                <li class="y_o t_t">o</li>
+                <li class="small_g t_t">g</li>
+                <li class="l t_t">l</li>
+                <li class="e t_t">e</li>
+            </div>
+        </section>
+        <section class="search clearfix">
+            <form action="">
+                <fieldset>
+                    <legend>search</legend>
+                    <label for="search">se</label>
+                    <input type="text" placeholder="Google 검색 또는 URL 입력">
+                </fieldset>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
